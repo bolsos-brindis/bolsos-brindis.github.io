@@ -1,0 +1,76 @@
+/* ===== ✍️ FUENTES ===== */
+
+/* 
+* Fuentes alternativas para "TT Chocolates": 
+* "Poppins", "Helvetica Neue", Arial, sans-serif
+*/
+@font-face {
+    font-family: "TT Chocolates";
+    src: url("/assets/fonts/tt-chocolates/tt-chocolates-regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+* Fuentes alternativas para "Univers 67 Condensed":
+* "Helvetica Neue Condensed", "Arial Narrow", sans-serif
+*/
+@font-face {
+    font-family: "Univers 67 Condensed";
+    src: url("/assets/fonts/univers-67-condensed/univers-67-condensed-bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*
+* Fuentes alternativas para "Univers LT Std":
+* "Helvetica Neue", Helvetica, Arial, sans-serif
+*/
+@font-face {
+    font-family: "Univers LT Std";
+    src: url("/assets/fonts/univers-lt-std/univers-lt-std-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Univers LT Std";
+    src: url("/assets/fonts/univers-lt-std/univers-lt-std-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ===== 🎨 COLORES ===== */
+
+:root {
+
+}
+
+/* ===== 🧱 ESTILOS BÁSICOS ===== */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    /* 
+    * Evita que el navegador haga cosas raras al intentar aplicar un font-style 
+    * no disponible a una fuente personalizada (@font-face) 
+    */
+    font-synthesis: none;
+}
+
+
+
+
+
+
+
