@@ -1,8 +1,8 @@
 /* ===== ✍️ FUENTES ===== */
 
 /* 
-* Fuentes alternativas para "TT Chocolates": 
-* "Poppins", "Helvetica Neue", Arial, sans-serif
+    Fuentes alternativas para "TT Chocolates": 
+    "Poppins", "Helvetica Neue", Arial, sans-serif
 */
 @font-face {
     font-family: "TT Chocolates";
@@ -12,8 +12,8 @@
 }
 
 /*
-* Fuentes alternativas para "Univers 67 Condensed":
-* "Helvetica Neue Condensed", "Arial Narrow", sans-serif
+    Fuentes alternativas para "Univers 67 Condensed":
+    "Helvetica Neue Condensed", "Arial Narrow", sans-serif
 */
 @font-face {
     font-family: "Univers 67 Condensed";
@@ -23,8 +23,8 @@
 }
 
 /*
-* Fuentes alternativas para "Univers LT Std":
-* "Helvetica Neue", Helvetica, Arial, sans-serif
+    Fuentes alternativas para "Univers LT Std":
+    "Helvetica Neue", Helvetica, Arial, sans-serif
 */
 @font-face {
     font-family: "Univers LT Std";
@@ -42,16 +42,23 @@
 
 /* ===== 🎨 COLORES ===== */
 
-:root {
+/* :root {
 
-}
+} */
 
 /* ===== 🧱 ESTILOS BÁSICOS ===== */
 
-* {
+/* Mejor control y más eficiente que utilizar el selector */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 *,
@@ -62,15 +69,36 @@
 
 body {
     /* 
-    * Evita que el navegador haga cosas raras al intentar aplicar un font-style 
-    * no disponible a una fuente personalizada (@font-face) 
+        Evita que el navegador haga cosas raras al intentar aplicar un font-style 
+        no disponible a una fuente personalizada (@font-face) 
     */
     font-synthesis: none;
 }
 
+ul,
+ol {
+    list-style-type: none;
+}
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
+button {
+    all: unset;
+    cursor: pointer;
+    /* Mostrar el contorno (outline) al tabular sobre el botón */
+    outline: revert;
+}
 
-
-
+/* Asegurar que los elementos que reciben el foco a través de la tabulación muestren su contorno */
+:focus-visible {
+    outline: auto;
+}
