@@ -42,9 +42,24 @@
 
 /* ===== 🎨 COLORES ===== */
 
-/* :root {
+:root {
+    /* ----- Brindis ----- */
+    --color-barbie: #f43662;
+    --color-chicle: #f691a9;
+    --color-mandarina: #f4863e;
+    --color-pomelo: #f86d68;
+    --color-baby-pink: #f7d4d8;
+    --color-sunshine: #e3b055;
 
-} */
+    /* ----- Kylie Cosmetics ----- */
+    /* Fondo general y hoven en navbar */
+    --color-fondo: #f8f1f4;
+    /* Encabezados e íconos de redes sociales */
+    --color-principal: #b3848f;
+    --color-texto: #393939;
+    /* Banner promocional */
+    --color-acento: #efd7e5;
+}
 
 /* ===== 🧱 ESTILOS BÁSICOS ===== */
 
@@ -68,6 +83,8 @@ ol {
 }
 
 body {
+    /* Funciona mejor que `vh` para móviles */
+    min-height: 100dvh;
     /* 
         Evita que el navegador haga cosas raras al intentar aplicar un font-style 
         no disponible a una fuente personalizada (@font-face) 
