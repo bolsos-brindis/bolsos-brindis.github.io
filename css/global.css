@@ -137,5 +137,16 @@ button {
     pointer-events: auto;
 }
 
+/* body.no-scroll {
+    overflow: hidden;
+    touch-action: none;
+    
+} */
+
+/* Cuadrado gris en iphone */
+button, a, input, textarea, select {
+    -webkit-tap-highlight-color: transparent;
+  }
+
 
 

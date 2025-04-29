@@ -129,7 +129,32 @@ body {
 
 
 body {
-    height: 500vh;
+    min-height: 500vh;
 }
 
+/* Debería de tener menos z-index que el navbar */
+/* No se incluye el top ni el height ya que se calculan dinámicamente en JS */
+.menu-lateral {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    /* transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 1s ease; */
+    overflow: hidden;
 
+    clip-path: inset(0 0 100% 0);
+    /* fully hidden */
+    transition: clip-path 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu-lateral.activo {
+    /* transform: scaleY(1); */
+    clip-path: inset(0 0 0% 0);
+    /* fully shown */
+    opacity: 1;
+    pointer-events: auto;
+}

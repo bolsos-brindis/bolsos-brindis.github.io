@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥂</text></svg>">
-    <script src="/js/app.js"></script>
+    <script src="/js/app.js" defer></script>
 </head>
 
 <body>
@@ -19,11 +19,11 @@
         <p>💓 Envío gratis para alumnos MEDAC 💓</p>
     </section>
 
-    <nav class="barra-navegacion">
+    <nav id="navbar" class="barra-navegacion">
         <div class="barra-navegacion-izquierda">
             <ul class="barra-navegacion-izquierda-movil">
                 <li>
-                    <button type="button" aria-label="Abrir menú lateral">
+                    <button id="hamburger" type="button" aria-label="Abrir menú lateral">
                         <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                             <path d="M1 19h22M1 12h22M1 5h22" stroke="currentColor" stroke-width="1.5"
                                 stroke-linecap="square" />
@@ -51,8 +51,8 @@
             </ul>
         </div>
 
-        <div class="logo no-seleccionar">
-            <h1><a href="#">BRINDIS</a></h1>
+        <div class="logo">
+            <h1><a href="/index.html">BRINDIS</a></h1>
         </div>
 
         <div class="barra-navegacion-derecha">
@@ -90,12 +90,17 @@
                 </li>
             </ul>
         </div>
+
+        
     </nav>
 
-    <!-- <aside class="menu-lateral">
-
-    </aside> -->
-
+    <aside id="sideMenu" class="menu-lateral">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur maxime, accusamus a harum eaque officiis eius totam sapiente ipsum. Hic necessitatibus delectus voluptatibus laborum et non totam nulla harum blanditiis.</p>
+        <ol>
+            <li>List 1</li>
+            <li>Item 2</li>
+        </ol>
+    </aside>
 
 </body>
 
