@@ -6,7 +6,16 @@ body {
     background-color: var(--color-fondo);
 }
 
-/* Playground */
+/* BANNER PROMOCIONAL */
+.banner-promocional {
+    padding: .25rem;
+    background-color: var(--color-acento);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
 
 
 /* Nivel Superior */
@@ -16,6 +25,9 @@ body {
     padding: 1.5rem 3rem;
 
     background-color: white;
+
+    position: sticky;
+    top: 0;
 }
 
 .barra-navegacion-izquierda {
@@ -30,7 +42,16 @@ body {
     justify-content: flex-end;
 }
 
-/* ⬅️ Parte Izquierda (Escritorio) */
+/* Soluciona un error donde <li> mide +5px de alto */
+.barra-navegacion li {
+    display: flex;
+}
+
+/* ⬅️ Parte Izquierda */
+.barra-navegacion-izquierda-movil {
+    display: none;
+}
+
 .barra-navegacion-izquierda-escritorio {
     display: flex;
     gap: 1rem;
@@ -46,9 +67,20 @@ body {
     border-radius: .25rem;
 }
 
-/* ⬅️ Parte Izquierda (Móvil) */
-.barra-navegacion-izquierda-movil {
-    display: none;
+@media (max-width: 1200px) {
+    .barra-navegacion-izquierda-escritorio {
+        display: none;
+    }
+
+    /* Necesita la referencia específica para sobrescribir el estilo que soluciona el +5px de alto */
+    .barra-navegacion-acciones .boton-cuenta {
+        display: none;
+    }
+
+    .barra-navegacion-izquierda-movil {
+        display: flex;
+        gap: 1.5rem;
+    }
 }
 
 /* ➡️ Parte Derecha */
@@ -57,28 +89,14 @@ body {
     gap: 1.5rem;
 }
 
-/* Soluciona un error donde <li> mide +5px de alto */
-/* Esto es lo que hace que se vea un icono de más en móvil */
-.barra-navegacion-acciones li {
-    display: flex;
-}
-
-
-
-
-
-
-
-
-
-
-
+/* 🖼️ Logo */
 .logo {
     font-family: "Univers 67 Condensed";
     font-size: 1.2rem;
     color: var(--color-texto);
 }
 
+/* Iconos */
 .icono {
     width: 1.5rem;
     color: var(--color-texto);
@@ -96,17 +114,22 @@ body {
     transform: rotate(15deg) scale(1.2);
 }
 
-@media (max-width: 768px) {
-    .barra-navegacion-izquierda-movil {
-        display: flex;
+/* 📱 Responsive */
+@media (max-width: 1200px) {
+    .barra-navegacion {
+        padding: 1rem 1.25rem;
     }
 
-    .barra-navegacion-izquierda-escritorio {
-        display: none;
-    }
-
-    /* Necesita la referencia específica para sobrescribir el estilo que soluciona el +5px de alto */
-    .barra-navegacion-acciones .boton-cuenta {
-        display: none;
+    .logo {
+        font-size: 1rem;
     }
 }
+
+
+
+
+body {
+    height: 500vh;
+}
+
+
