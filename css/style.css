@@ -1,13 +1,95 @@
-h1 {
-    font-family: "Univers 67 Condensed";
-    color: #393939;
-}
-
-h2 {
-    font-family: "Univers LT Std", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-}
-
-p {
+/* Tipografía */
+/* 👁️ Add fallback fonts and more default styling and move it to global.css */
+body {
     font-family: "TT Chocolates";
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+/* Playground */
+.barra-navegacion {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3rem;
+
+    background-color: white;
+}
+
+.barra-navegacion-izquierda {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.barra-navegacion-derecha {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.barra-navegacion-enlaces,
+.barra-navegacion-botones-movil {
+    display: flex;
+}
+
+.barra-navegacion-enlaces {
+    gap: 1rem;
+}
+
+.barra-navegacion-enlaces li a {
+    display: block;
+    padding: .6rem;
+}
+
+.barra-navegacion-enlaces li a:hover {
+    background-color: var(--color-fondo);
+    border-radius: .25rem;
+}
+
+.barra-navegacion-acciones {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Soluciona un error donde <li> mide +5px de alto */
+.barra-navegacion-acciones li {
+    display: flex;
+}
+
+.logo {
+    font-family: "Univers 67 Condensed";
+    font-size: 1.2rem;
+    color: var(--color-texto);
+}
+
+.icono {
+    width: 1.5rem;
+    color: var(--color-texto);
+}
+
+.icono-favoritos {
+    fill: transparent;
+    transition-property: fill transform;
+    transition-duration: .35s;
+}
+
+/* Se puede mejorar asignando una clase especial al <li> de favoritos */
+.barra-navegacion-acciones button:hover .icono-favoritos {
+    fill: var(--color-barbie);
+    transform: rotate(15deg) scale(1.2);
+}
+
+
+
+/* Issues */
+@media (max-width: 768px) {
+    .solo-escritorio {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .solo-movil {
+        display: none;
+    }
 }
