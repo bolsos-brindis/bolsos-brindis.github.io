@@ -7,6 +7,9 @@ body {
 }
 
 /* Playground */
+
+
+/* Nivel Superior */
 .barra-navegacion {
     display: flex;
     align-items: center;
@@ -27,34 +30,48 @@ body {
     justify-content: flex-end;
 }
 
-.barra-navegacion-enlaces,
-.barra-navegacion-botones-movil {
+/* ⬅️ Parte Izquierda (Escritorio) */
+.barra-navegacion-izquierda-escritorio {
     display: flex;
-}
-
-.barra-navegacion-enlaces {
     gap: 1rem;
 }
 
-.barra-navegacion-enlaces li a {
+.barra-navegacion-izquierda-escritorio li a {
     display: block;
     padding: .6rem;
 }
 
-.barra-navegacion-enlaces li a:hover {
+.barra-navegacion-izquierda-escritorio li a:hover {
     background-color: var(--color-fondo);
     border-radius: .25rem;
 }
 
+/* ⬅️ Parte Izquierda (Móvil) */
+.barra-navegacion-izquierda-movil {
+    display: none;
+}
+
+/* ➡️ Parte Derecha */
 .barra-navegacion-acciones {
     display: flex;
     gap: 1.5rem;
 }
 
 /* Soluciona un error donde <li> mide +5px de alto */
+/* Esto es lo que hace que se vea un icono de más en móvil */
 .barra-navegacion-acciones li {
     display: flex;
 }
+
+
+
+
+
+
+
+
+
+
 
 .logo {
     font-family: "Univers 67 Condensed";
@@ -79,17 +96,17 @@ body {
     transform: rotate(15deg) scale(1.2);
 }
 
-
-
-/* Issues */
 @media (max-width: 768px) {
-    .solo-escritorio {
+    .barra-navegacion-izquierda-movil {
+        display: flex;
+    }
+
+    .barra-navegacion-izquierda-escritorio {
         display: none;
     }
-}
 
-@media (min-width: 769px) {
-    .solo-movil {
+    /* Necesita la referencia específica para sobrescribir el estilo que soluciona el +5px de alto */
+    .barra-navegacion-acciones .boton-cuenta {
         display: none;
     }
 }
