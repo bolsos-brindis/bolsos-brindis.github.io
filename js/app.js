@@ -1,14 +1,13 @@
 /* ===== 🍾 BARRA DE NAVEGACIÓN ===== */
 
-const botonHamburguesa = document.getElementById("botonHamburguesa");
 const menuLateral = document.getElementById("menuLateral");
 const barraNavegacion = document.getElementById("barraNavegacion");
 
-// Hamburguesa
-// const iconoHamburguesa = document.getElementById('icono-hamburguesa');
-// const topLine = burger.querySelector('.superior');
-// const middleLine = burger.querySelector('.central');
-// const bottomLine = burger.querySelector('.inferior');
+const botonHamburguesa = document.getElementById("botonHamburguesa");
+const iconoHamburguesa = document.getElementById('iconoHamburguesa');
+const lineaSuperior = iconoHamburguesa.querySelector('.superior');
+const lineaCentral = iconoHamburguesa.querySelector('.central');
+const lineaInferior = iconoHamburguesa.querySelector('.inferior');
 
 // Almacenar la posición de deslizamiento para volver al mismo sitio al cerrar el menú lateral
 let posicionDeslizamiento = 0;
@@ -26,23 +25,28 @@ botonHamburguesa.addEventListener('click', () => {
     botonHamburguesa.setAttribute('aria-expanded', 'true');
 
     // Hamburguesa
-    // topLine.style.transform = 'translateY(7px)';
-    // bottomLine.style.transform = 'translateY(-7px)';
-    // middleLine.style.opacity = '0';
+    lineaSuperior.style.transform = 'translateY(7px)';
+    lineaInferior.style.transform = 'translateY(-7px)';
+    lineaCentral.style.opacity = '0';
 
-    // setTimeout(() => {
-    //   topLine.style.transform += ' rotate(45deg)';
-    //   bottomLine.style.transform += ' rotate(-45deg)';
-    // }, 300);
+    setTimeout(() => {
+      lineaSuperior.style.transform += 'rotate(45deg)';
+      lineaInferior.style.transform += 'rotate(-45deg)';
+    }, 300);
 
   } else {
     desbloquearDeslizamiento();
     botonHamburguesa.setAttribute('aria-expanded', 'false');
 
     // Hamburguesa
-    // topLine.style.transform = '';
-    // bottomLine.style.transform = '';
-    // middleLine.style.opacity = '1';
+    lineaSuperior.style.transform = 'translateY(7px) rotate(0deg)';
+    lineaInferior.style.transform = 'translateY(-7px) rotate(0deg)';
+
+    setTimeout(() => {
+      lineaSuperior.style.transform = '';
+      lineaInferior.style.transform = '';
+      lineaCentral.style.opacity = '1';
+    }, 300);
   }
 });
 

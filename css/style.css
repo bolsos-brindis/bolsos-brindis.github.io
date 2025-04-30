@@ -140,47 +140,14 @@ body {
 
 /* Animación icono hamburguesa */
 .boton-hamburguesa .linea {
-    transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
     transform-origin: center;
+    transform-box: fill-box;
+    transition: transform 300ms ease, opacity 300ms ease;
 }
 
 .boton-hamburguesa[aria-expanded="true"] .linea {
-    transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+    transition: transform 300ms ease, opacity 300ms ease;
 }
-
-.boton-hamburguesa[aria-expanded="true"] :is(.superior, .inferior) {
-    y: 11.25;
-}
-
-.boton-hamburguesa[aria-expanded="true"] .superior {
-    rotate: 45deg;
-}
-
-.boton-hamburguesa[aria-expanded="true"] .central {
-    opacity: 0;
-}
-
-.boton-hamburguesa[aria-expanded="true"] .inferior {
-    rotate: -45deg;
-}
-
-/* .boton-hamburguesa .linea {
-    transform-origin: center;
-    transform-box: fill-box;
-    transition: transform 300ms ease, opacity 0ms 300ms;
-  }
-  
-  .boton-hamburguesa[aria-expanded="true"] .superior {
-    transform: translateY(100%) rotate(45deg);
-  }
-  
-  .boton-hamburguesa[aria-expanded="true"] .central {
-    opacity: 0;
-  }
-  
-  .boton-hamburguesa[aria-expanded="true"] .inferior {
-    transform: translateY(-100%) rotate(-45deg);
-  } */
 
 /* 📱 Responsive */
 @media (max-width: 1200px) {
