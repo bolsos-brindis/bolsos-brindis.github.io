@@ -1,9 +1,13 @@
-/* Tipografía */
+/* Debug */
 /* 👁️ Add fallback fonts and more default styling and move it to global.css */
 body {
     font-family: "TT Chocolates";
     color: var(--color-texto);
     background-color: var(--color-fondo);
+}
+
+body {
+    min-height: 500vh;
 }
 
 /* BANNER PROMOCIONAL */
@@ -16,8 +20,7 @@ body {
     line-height: 1.5rem;
 }
 
-
-
+/* BARRA DE NAVEGACIÓN */
 /* Nivel Superior */
 .barra-navegacion {
     display: flex;
@@ -114,6 +117,48 @@ body {
     transform: rotate(15deg) scale(1.2);
 }
 
+/* Menú Lateral */
+/* 👁️: Cuidado con los z-index. El menú lateral debería de tener uno menor que el navbar */
+/* El top, height y width se calculan dinámicamente desde JS */
+.menu-lateral {
+    position: fixed;
+    left: 0;
+    background-color: white;
+
+    overflow: hidden;
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu-lateral.activo {
+    clip-path: inset(0 0 0% 0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Animación icono hamburguesa */
+.icono-hamburguesa .linea {
+    transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+    transform-origin: center;
+}
+
+.icono-hamburguesa.activo .superior {
+}
+
+.icono-hamburguesa.activo .central {
+}
+
+.icono-hamburguesa.activo .inferior {
+    translate: 0 -5px;
+    /* transform: rotate(-45deg); */
+}
+
+svg {
+    overflow: visible;
+}
+
 /* 📱 Responsive */
 @media (max-width: 1200px) {
     .barra-navegacion {
@@ -125,36 +170,3 @@ body {
     }
 }
 
-
-
-
-body {
-    min-height: 500vh;
-}
-
-/* Debería de tener menos z-index que el navbar */
-/* No se incluye el top ni el height ya que se calculan dinámicamente en JS */
-.menu-lateral {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    /* transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 1s ease; */
-    overflow: hidden;
-
-    clip-path: inset(0 0 100% 0);
-    /* fully hidden */
-    transition: clip-path 0.4s ease, opacity 0.4s ease;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.menu-lateral.activo {
-    /* transform: scaleY(1); */
-    clip-path: inset(0 0 0% 0);
-    /* fully shown */
-    opacity: 1;
-    pointer-events: auto;
-}

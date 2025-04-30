@@ -14,20 +14,29 @@
 
 <body>
 
-
+    <!-- Banner Promocional -->
     <section class="banner-promocional" aria-label="Banner promocional">
         <p>💓 Envío gratis para alumnos MEDAC 💓</p>
     </section>
 
-    <nav id="navbar" class="barra-navegacion">
+
+    <nav id="barraNavegacion" class="barra-navegacion">
+        <!-- Parte Izquierda -->
         <div class="barra-navegacion-izquierda">
             <ul class="barra-navegacion-izquierda-movil">
                 <li>
-                    <button id="hamburger" type="button" aria-label="Abrir menú lateral">
-                        <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                            <path d="M1 19h22M1 12h22M1 5h22" stroke="currentColor" stroke-width="1.5"
+                    <button id="botonHamburguesa" type="button" aria-label="Abrir menú lateral" aria-expanded="false"
+                        aria-controls="menuLateral">
+                        <svg class="icono icono-hamburguesa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="none">
+                            <path class="linea superior" d="M1 5h22" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="square" />
+                            <path class="linea central" d="M1 12h22" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="square" />
+                            <path class="linea inferior" d="M1 19h22" stroke="currentColor" stroke-width="1.5"
                                 stroke-linecap="square" />
                         </svg>
+
                     </button>
                 </li>
                 <li>
@@ -51,16 +60,19 @@
             </ul>
         </div>
 
+        <!-- Logo -->
         <div class="logo">
             <h1><a href="/index.html">BRINDIS</a></h1>
         </div>
 
+        <!-- Parte Derecha -->
         <div class="barra-navegacion-derecha">
             <ul class="barra-navegacion-acciones">
                 <li>
                     <button type="button" aria-label="Favoritos">
-                        <svg class="icono icono-favoritos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentColor"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <svg class="icono icono-favoritos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                            fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2">
                             <path
                                 d="M4 16 C1 12 2 6 7 4 12 2 15 6 16 8 17 6 21 2 26 4 31 6 31 12 28 16 25 20 16 28 16 28 16 28 7 20 4 16 Z" />
                         </svg>
@@ -90,12 +102,12 @@
                 </li>
             </ul>
         </div>
-
-        
     </nav>
 
-    <aside id="sideMenu" class="menu-lateral">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur maxime, accusamus a harum eaque officiis eius totam sapiente ipsum. Hic necessitatibus delectus voluptatibus laborum et non totam nulla harum blanditiis.</p>
+    <aside id="menuLateral" class="menu-lateral">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur maxime, accusamus a harum eaque officiis
+            eius totam sapiente ipsum. Hic necessitatibus delectus voluptatibus laborum et non totam nulla harum
+            blanditiis.</p>
         <ol>
             <li>List 1</li>
             <li>Item 2</li>

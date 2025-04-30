@@ -1,37 +1,55 @@
-const hamburger = document.getElementById("hamburger");
-const sideMenu = document.getElementById("sideMenu");
-const navbar = document.getElementById("navbar");
+/* ===== 🍾 BARRA DE NAVEGACIÓN ===== */
 
-let scrollPosition = 0;
+const botonHamburguesa = document.getElementById("botonHamburguesa");
+const menuLateral = document.getElementById("menuLateral");
+const barraNavegacion = document.getElementById("barraNavegacion");
 
-function lockScroll() {
-  scrollPosition = window.scrollY;
+// Almacenar la posición de deslizamiento para volver al mismo sitio al cerrar el menú lateral
+let posicionDeslizamiento = 0;
+
+botonHamburguesa.addEventListener('click', () => {
+  // Distancia desde el comienzo del documento hasta el final de la barra de navegación
+  const distanciaDesdeArriba = barraNavegacion.getBoundingClientRect().bottom;
+
+  menuLateral.style.top = `${distanciaDesdeArriba}px`;
+  menuLateral.style.width = `calc(100% - ${calcularAnchoBarraDeslizamiento()}px)`;
+  menuLateral.style.height = `calc(100vh - ${distanciaDesdeArriba}px)`;
+
+  if (menuLateral.classList.toggle('activo')) {
+    bloquearDeslizamiento();
+    botonHamburguesa.setAttribute('aria-expanded', 'true');
+
+  } else {
+    desbloquearDeslizamiento();
+    botonHamburguesa.setAttribute('aria-expanded', 'false');
+  }
+});
+
+function bloquearDeslizamiento() {
+  // Compensar espaciado de la barra de desplazamiento. Esto evita que todo el contenido
+  //  se mueva a la derecha al abrir / cerrar el menú de deslizamiento.
+  // Técnica inspirada en la página de Hermès
+  // Tiene que ejecutarse antes de hacerlo fijo, o no se calcula correctamente
+  document.body.style.paddingRight = `${calcularAnchoBarraDeslizamiento()}px`;
+
+  posicionDeslizamiento = window.scrollY;
+
   document.body.style.position = 'fixed';
-  document.body.style.top = `-${scrollPosition}px`;
+  document.body.style.top = `-${posicionDeslizamiento}px`;
   document.body.style.width = '100%';
 }
 
-function unlockScroll() {
+function desbloquearDeslizamiento() {
+  // Revertir el espaciado de la barra de desplazamiento
+  document.body.style.paddingRight = '';
+  
   document.body.style.position = '';
   document.body.style.top = '';
   document.body.style.width = '';
-  window.scrollTo(0, scrollPosition);
+  
+  window.scrollTo(0, posicionDeslizamiento);
 }
 
-hamburger.addEventListener("click", () => {
-    const navbarRect = navbar.getBoundingClientRect();
-    const distanceFromTop = navbarRect.bottom;
-
-    sideMenu.style.top = `${distanceFromTop}px`;
-    sideMenu.style.height = `calc(100vh - ${distanceFromTop}px)`;
-
-    // document.body.classList.toggle("no-scroll");
-    sideMenu.classList.toggle("activo");
-
-    if(sideMenu.classList.toggle('active')) {
-        lockScroll();
-    } else {
-      unlockScroll();
-    }
-
-});
+function calcularAnchoBarraDeslizamiento() {
+  return window.innerWidth - document.documentElement.clientWidth;
+}

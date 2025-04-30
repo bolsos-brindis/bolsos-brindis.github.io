@@ -137,13 +137,7 @@ button {
     pointer-events: auto;
 }
 
-/* body.no-scroll {
-    overflow: hidden;
-    touch-action: none;
-    
-} */
-
-/* Cuadrado gris en iphone */
+/* Quitar cuadrado gris al pulsar en iPhone */
 button, a, input, textarea, select {
     -webkit-tap-highlight-color: transparent;
   }
