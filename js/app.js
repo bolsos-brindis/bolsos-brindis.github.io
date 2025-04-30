@@ -4,6 +4,12 @@ const botonHamburguesa = document.getElementById("botonHamburguesa");
 const menuLateral = document.getElementById("menuLateral");
 const barraNavegacion = document.getElementById("barraNavegacion");
 
+// Hamburguesa
+// const iconoHamburguesa = document.getElementById('icono-hamburguesa');
+// const topLine = burger.querySelector('.superior');
+// const middleLine = burger.querySelector('.central');
+// const bottomLine = burger.querySelector('.inferior');
+
 // Almacenar la posición de deslizamiento para volver al mismo sitio al cerrar el menú lateral
 let posicionDeslizamiento = 0;
 
@@ -19,9 +25,24 @@ botonHamburguesa.addEventListener('click', () => {
     bloquearDeslizamiento();
     botonHamburguesa.setAttribute('aria-expanded', 'true');
 
+    // Hamburguesa
+    // topLine.style.transform = 'translateY(7px)';
+    // bottomLine.style.transform = 'translateY(-7px)';
+    // middleLine.style.opacity = '0';
+
+    // setTimeout(() => {
+    //   topLine.style.transform += ' rotate(45deg)';
+    //   bottomLine.style.transform += ' rotate(-45deg)';
+    // }, 300);
+
   } else {
     desbloquearDeslizamiento();
     botonHamburguesa.setAttribute('aria-expanded', 'false');
+
+    // Hamburguesa
+    // topLine.style.transform = '';
+    // bottomLine.style.transform = '';
+    // middleLine.style.opacity = '1';
   }
 });
 
@@ -42,11 +63,11 @@ function bloquearDeslizamiento() {
 function desbloquearDeslizamiento() {
   // Revertir el espaciado de la barra de desplazamiento
   document.body.style.paddingRight = '';
-  
+
   document.body.style.position = '';
   document.body.style.top = '';
   document.body.style.width = '';
-  
+
   window.scrollTo(0, posicionDeslizamiento);
 }
 

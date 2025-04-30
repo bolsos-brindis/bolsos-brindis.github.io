@@ -139,25 +139,48 @@ body {
 }
 
 /* Animación icono hamburguesa */
-.icono-hamburguesa .linea {
+.boton-hamburguesa .linea {
     transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
     transform-origin: center;
 }
 
-.icono-hamburguesa.activo .superior {
+.boton-hamburguesa[aria-expanded="true"] .linea {
+    transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
 }
 
-.icono-hamburguesa.activo .central {
+.boton-hamburguesa[aria-expanded="true"] :is(.superior, .inferior) {
+    y: 11.25;
 }
 
-.icono-hamburguesa.activo .inferior {
-    translate: 0 -5px;
-    /* transform: rotate(-45deg); */
+.boton-hamburguesa[aria-expanded="true"] .superior {
+    rotate: 45deg;
 }
 
-svg {
-    overflow: visible;
+.boton-hamburguesa[aria-expanded="true"] .central {
+    opacity: 0;
 }
+
+.boton-hamburguesa[aria-expanded="true"] .inferior {
+    rotate: -45deg;
+}
+
+/* .boton-hamburguesa .linea {
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: transform 300ms ease, opacity 0ms 300ms;
+  }
+  
+  .boton-hamburguesa[aria-expanded="true"] .superior {
+    transform: translateY(100%) rotate(45deg);
+  }
+  
+  .boton-hamburguesa[aria-expanded="true"] .central {
+    opacity: 0;
+  }
+  
+  .boton-hamburguesa[aria-expanded="true"] .inferior {
+    transform: translateY(-100%) rotate(-45deg);
+  } */
 
 /* 📱 Responsive */
 @media (max-width: 1200px) {
@@ -169,4 +192,3 @@ svg {
         font-size: 1rem;
     }
 }
-
