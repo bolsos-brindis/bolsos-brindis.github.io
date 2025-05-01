@@ -22,9 +22,9 @@ botonHamburguesa.addEventListener('click', () => {
 
   if (menuLateral.classList.toggle('activo')) {
     bloquearDeslizamiento();
-    botonHamburguesa.setAttribute('aria-expanded', 'true');
 
     // Hamburguesa
+    botonHamburguesa.setAttribute('aria-expanded', 'true');
     lineaSuperior.style.transform = 'translateY(7px)';
     lineaInferior.style.transform = 'translateY(-7px)';
     lineaCentral.style.opacity = '0';
@@ -34,11 +34,13 @@ botonHamburguesa.addEventListener('click', () => {
       lineaInferior.style.transform += 'rotate(-45deg)';
     }, 300);
 
+
+
   } else {
     desbloquearDeslizamiento();
-    botonHamburguesa.setAttribute('aria-expanded', 'false');
 
     // Hamburguesa
+    botonHamburguesa.setAttribute('aria-expanded', 'false');
     lineaSuperior.style.transform = 'translateY(7px) rotate(0deg)';
     lineaInferior.style.transform = 'translateY(-7px) rotate(0deg)';
 
@@ -48,6 +50,7 @@ botonHamburguesa.addEventListener('click', () => {
       lineaCentral.style.opacity = '1';
     }, 300);
   }
+  actualizarFondoBarraNavegacion();
 });
 
 function bloquearDeslizamiento() {
@@ -78,3 +81,26 @@ function desbloquearDeslizamiento() {
 function calcularAnchoBarraDeslizamiento() {
   return window.innerWidth - document.documentElement.clientWidth;
 }
+
+/* Fondo transparente (Seguramente solo en la homepage) */
+window.addEventListener('load', actualizarFondoBarraNavegacion);
+window.addEventListener('scroll', actualizarFondoBarraNavegacion);
+
+function actualizarFondoBarraNavegacion() {
+  if (menuLateral.classList.contains('activo')) {
+    barraNavegacion.classList.remove('barra-navegacion--transparente');
+    barraNavegacion.classList.add('barra-navegacion--menu-abierto');
+  } else {
+    barraNavegacion.classList.remove('barra-navegacion--menu-abierto');
+
+    if (window.scrollY === 0) {
+      barraNavegacion.classList.add('barra-navegacion--transparente');
+    } else {
+      barraNavegacion.classList.remove('barra-navegacion--transparente');
+    }
+  }
+}
+
+
+
+/* ===== HERO BANNER ===== */
