@@ -186,7 +186,7 @@ body {
 }
 
 .menu-lateral {
-    z-index: 100;
+    z-index: 1000;
 }
 
 .hero-banner-contenido {
@@ -275,5 +275,15 @@ body {
 
     to {
         transform: translateX(calc(-100% - 1rem));
+    }
+}
+
+@media (max-width: 650px) {
+    .marquee {
+        gap: 2rem;
+    }
+
+    .marquee-contenido {
+        gap: 2rem;
     }
 }
