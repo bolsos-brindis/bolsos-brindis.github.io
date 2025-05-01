@@ -212,24 +212,35 @@ body {
 }
 
 .hero-banner-contenido {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-banner-encabezado,
+.hero-banner-texto {
     display: none;
 }
 
-.boton {
+.hero-banner-cta {
     padding: .5rem 1rem;
-    background-color: white;
     border-radius: .25rem;
+    font-size: 1.25rem;
     text-align: center;
-
-    transition: background .2s ease-out, color .2s ease-out, box-shadow .2s ease-out, webkit-box-shadow .2s ease-out;
-
-    display: block;
-}
-
-.boton:hover {
     background-color: var(--color-texto);
     color: white;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: background .2s ease-out, color .2s ease-out, box-shadow .2s ease-out, webkit-box-shadow .2s ease-out;
+
+    margin-bottom: 5rem;
+}
+
+.hero-banner-cta:hover {
+    background-color: white;
+    color: var(--color-texto);
+    text-shadow: 0 3px 8px rgba(0, 0, 0, .1);
 }
 
 /* Marquee babe */
