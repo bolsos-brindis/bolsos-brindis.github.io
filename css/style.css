@@ -29,7 +29,7 @@ body {
 
     position: sticky;
     top: 0;
-    
+
     background-color: white;
     transition: background-color .3s ease;
 }
@@ -176,11 +176,7 @@ body {
     }
 }
 
-/* HERO BANNER */
-.hero-banner-contenido {
-    display: none;
-}
-
+/* Stuff */
 .barra-navegacion {
     z-index: 20;
 }
@@ -193,8 +189,13 @@ body {
     z-index: 100;
 }
 
+.hero-banner-contenido {
+    z-index: 200;
+}
 
+/* HERO BANNER */
 .hero-banner {
+    display: flex;
     position: relative;
     width: 100%;
     /* Height calculado con JS */
@@ -208,4 +209,60 @@ body {
 
     object-fit: cover;
     object-position: top;
+}
+
+.hero-banner-contenido {
+    display: none;
+}
+
+.boton {
+    padding: .5rem 1rem;
+    background-color: white;
+    border-radius: .25rem;
+    text-align: center;
+
+    transition: background .2s ease-out, color .2s ease-out, box-shadow .2s ease-out, webkit-box-shadow .2s ease-out;
+
+    display: block;
+}
+
+.boton:hover {
+    background-color: var(--color-texto);
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Marquee babe */
+.marquee {
+    display: flex;
+    overflow: hidden;
+    gap: .5rem;
+    position: relative;
+    user-select: none;
+    background-color: white;
+    padding: 1.5rem;
+}
+
+.marquee-contenido {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: .5rem;
+
+    animation: desplazar 20s linear infinite;
+}
+
+.marquee:hover .marquee-contenido {
+    animation-play-state: paused;
+}
+
+@keyframes desplazar {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 1rem));
+    }
 }

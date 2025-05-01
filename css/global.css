@@ -120,6 +120,7 @@ button {
     cursor: pointer;
     /* Mostrar el contorno (outline) al tabular sobre el botón */
     outline: revert;
+    box-sizing: border-box;
 }
 
 /* Asegurar que los elementos que reciben el foco a través de la tabulación muestren su contorno */
