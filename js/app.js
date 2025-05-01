@@ -116,5 +116,8 @@ function calcularAlturaHeroBanner() {
 }
 
 window.addEventListener('load', calcularAlturaHeroBanner);
+window.matchMedia('(max-width: 1200px').addEventListener('change', calcularAlturaHeroBanner);
+
+
 // Run on media queries change instead
 // window.addEventListener('resize', calcularAlturaHeroBanner);

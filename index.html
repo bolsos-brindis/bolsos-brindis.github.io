@@ -115,7 +115,10 @@
 
     <main>
         <section id="heroBannerContenedor" class="hero-banner">
-            <img id="heroBannerImagen" class="hero-banner-imagen" src="/assets/images/hero.avif" alt="">
+            <picture>
+                <source media="(max-width:850px)" srcset="/assets/images/hero-movil-1.avif">
+                <img id="heroBannerImagen" class="hero-banner-imagen" src="/assets/images/hero-escritorio-1.avif" alt="">
+            </picture>
             <div class="hero-banner-contenido">
                 <h2 class="hero-banner-encabezado">Diseños con la mezcla perfecta</h2>
                 <p class="hero-banner-texto">Estilo, funcionalidad y libertad sin cables</p>
