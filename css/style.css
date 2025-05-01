@@ -193,22 +193,25 @@ body {
     z-index: 100;
 }
 
-
-
-
+.hero-banner {
+    position: relative;
+    width: 100%;
+    /* Height calculado con JS */
+}
 
 .hero-banner-imagen {
     position: absolute;
-    top: 32px;
+    /* Top calculado con JS */
     left: 0;
     width: 100%;
-    height: calc(100% - 32px);
-    /* min-height: 100%; */
-    /* height: calc(100%); */
+    height: calc(100vh - 2rem);
 
     object-fit: cover;
     object-position: top;
 }
+
+/* PROBLEMS 
+Weird scaling on phone */
 
 /* 
     The object-fit: cover works nicely when making the viewport smaller if paired with a height

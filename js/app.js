@@ -104,3 +104,17 @@ function actualizarFondoBarraNavegacion() {
 
 
 /* ===== HERO BANNER ===== */
+function calcularAlturaHeroBanner() {
+  const heroBannerContenedor = document.getElementById('heroBannerContenedor');
+  const heroBannerImagen = document.getElementById('heroBannerImagen');
+  const alturaViewport = window.innerHeight;
+  const alturaBarraNavegacion = window.getComputedStyle(barraNavegacion).height;
+
+  heroBannerContenedor.style.height = `calc(${alturaViewport}px - 2rem - ${alturaBarraNavegacion})`;
+  heroBannerImagen.style.top = `-${alturaBarraNavegacion}`;
+  heroBannerImagen.style.height = `calc(${alturaViewport}px - 2rem)`;
+}
+
+window.addEventListener('load', calcularAlturaHeroBanner);
+// Run on media queries change instead
+// window.addEventListener('resize', calcularAlturaHeroBanner);
