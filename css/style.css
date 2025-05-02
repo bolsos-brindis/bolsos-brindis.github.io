@@ -178,7 +178,7 @@ body {
 
 /* Stuff */
 .barra-navegacion {
-    z-index: 20;
+    z-index: 201
 }
 
 .banner-promocional {
@@ -286,4 +286,51 @@ body {
     .marquee-contenido {
         gap: 2rem;
     }
+}
+
+/* Swipable container */
+.swipe-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1rem;
+    will-change: transform;
+
+    /* 
+        Se tiene que utilizar junto a scroll-snap-align.
+    */
+    /* scroll-snap-type: x mandatory; */
+
+    /* La oculta tanto en Chrome como en Safari */
+    /* scrollbar-width: none; */
+
+    /* Esto hace que no pueda deslizar en vertical al pulsar sobre el contenedor. No me gusta */
+    /* touch-action: pan-x; */    
+
+}
+
+@media (pointer: coarse) {
+    .swipe-container {
+        scroll-snap-type: x mandatory;
+    }
+}
+
+.swipe-container.activo {
+    user-select: none;
+    /* scroll-snap-type: none; */
+}
+
+/* La oculta igual que la opción de arriba */
+/* .swipe-container::-webkit-scrollbar {
+    display: none;
+} */
+
+.swipe-item {
+    /* Shrink, Grow, Basis */
+    flex: 0 0 auto;
+    width: 350px;
+    height: 500px;
+    background-color: var(--color-pomelo);
+
+    scroll-snap-align: start;
 }

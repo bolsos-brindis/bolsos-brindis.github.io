@@ -114,10 +114,74 @@ function calcularAlturaHeroBanner() {
   heroBannerImagen.style.top = `-${alturaBarraNavegacion}`;
   heroBannerImagen.style.height = `calc(${alturaViewport}px - 2rem)`;
 }
-
-window.addEventListener('load', calcularAlturaHeroBanner);
-window.matchMedia('(max-width: 1200px').addEventListener('change', calcularAlturaHeroBanner);
+// 👁️👁️👁️👁️👁️ COMENTADO PARA PROBAR NUEVAS FUNCIONALIDADES
+// window.addEventListener('load', calcularAlturaHeroBanner);
+// window.matchMedia('(max-width: 1200px').addEventListener('change', calcularAlturaHeroBanner);
 
 
 // Run on media queries change instead
 // window.addEventListener('resize', calcularAlturaHeroBanner);
+
+/* ===== Swipable Buying ===== */
+const slider = document.getElementById("swipeContainer");
+let isDown = false;
+// Posición relativa al slider en píxeles
+let startX;
+// Cantidad de píxeles deslizados
+let scrollLeft;
+let lastMove = 0;
+
+slider.addEventListener('mousedown', (e) => {
+  isDown = true;
+  /*
+    `pageX` devuelve la posición absoluta en la página.
+    `offsetLeft` devuelve el espacio entre el comienzo del documento y el elemento.
+  */
+  slider.classList.add('activo');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 1;
+  slider.scrollLeft = scrollLeft - walk;
+  lastMove = walk;
+});
+
+// Al salir del contenedor. Codigo duplicado
+slider.addEventListener('mouseleave', () => {
+  if (!isDown) return;
+  isDown = false;
+  slider.classList.remove('activo');
+  simulateBounce(slider, lastMove);
+});
+
+slider.addEventListener('mouseup', (e) => {
+  if (!isDown) return;
+  isDown = false;
+  slider.classList.remove('activo');
+  simulateBounce(slider, lastMove);
+});
+
+function simulateBounce(container, velocity) {
+  const maxScroll = container.scrollWidth - container.clientWidth;
+
+  if (container.scrollLeft < 0 || container.scrollLeft > maxScroll) {
+    const direction = container.scrollLeft < 0 ? 1 : -1;
+    container.style.transition = 'transform 0.3s ease';
+    container.style.transform = `translateX(${20 * direction}px)`;
+
+    setTimeout(() => {
+      container.style.transform = 'translateX(0)';
+      setTimeout(() => {
+        container.style.transition = '';
+        container.style.transform = '';
+      }, 300);
+    }, 100);
+  }
+}
+
+
