@@ -1,37 +1,3 @@
-
-
-body {
-    min-height: 500vh;
-}
-
-
-
-/* BANNER PROMOCIONAL */
-.banner-promocional {
-    padding: .25rem;
-    background-color: var(--color-acento);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: .8rem;
-    text-align: center;
-    line-height: 1.5rem;
-}
-
-/* BARRA DE NAVEGACIÓN */
-
-
-/* Nivel Superior */
-.barra-navegacion {
-    display: flex;
-    align-items: center;
-    padding: 1.5rem 3rem;
-
-    position: sticky;
-    top: 0;
-
-    background-color: white;
-    transition: background-color .3s ease;
-}
-
 /* Fondo Transparente */
 .barra-navegacion--transparente {
     background-color: transparent;
@@ -43,153 +9,41 @@ body {
     }
 }
 
-.barra-navegacion--menu-abierto {
-    background-color: white !important;
-}
 
-.barra-navegacion-izquierda {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-}
 
-.barra-navegacion-derecha {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
 
-/* Soluciona un error donde <li> mide +5px de alto */
-.barra-navegacion li {
-    display: flex;
-}
 
-/* ⬅️ Parte Izquierda */
-.barra-navegacion-izquierda-movil {
-    display: none;
-}
 
-.barra-navegacion-izquierda-escritorio {
-    display: flex;
-    gap: 1rem;
-}
 
-.barra-navegacion-izquierda-escritorio li a {
-    display: block;
-    padding: .6rem;
-}
 
-.barra-navegacion-izquierda-escritorio li a:hover {
-    background-color: var(--color-fondo);
-    border-radius: .25rem;
-}
 
-@media (max-width: 1200px) {
-    .barra-navegacion-izquierda-escritorio {
-        display: none;
-    }
 
-    /* Necesita la referencia específica para sobrescribir el estilo que soluciona el +5px de alto */
-    .barra-navegacion-acciones .boton-cuenta {
-        display: none;
-    }
 
-    .barra-navegacion-izquierda-movil {
-        display: flex;
-        gap: 1.5rem;
-    }
-}
 
-/* ➡️ Parte Derecha */
-.barra-navegacion-acciones {
-    display: flex;
-    gap: 1.5rem;
-}
 
-/* 🖼️ Logo */
-.logo {
-    font-family: "Univers 67 Condensed";
-    font-size: 1.2rem;
-    color: var(--color-texto);
-}
 
-/* Iconos */
-.icono {
-    width: 1.5rem;
-    color: var(--color-texto);
-}
 
-.icono-favoritos {
-    fill: transparent;
-    transition-property: fill transform;
-    transition-duration: .35s;
-}
 
-/* Se puede mejorar asignando una clase especial al <li> de favoritos */
-.barra-navegacion-acciones button:hover .icono-favoritos {
-    fill: var(--color-barbie);
-    transform: rotate(15deg) scale(1.2);
-}
 
-/* Menú Lateral */
-/* 👁️: Cuidado con los z-index. El menú lateral debería de tener uno menor que el navbar */
-/* El top, height y width se calculan dinámicamente desde JS */
-.menu-lateral {
-    position: fixed;
-    left: 0;
-    background-color: white;
 
-    overflow: hidden;
-    clip-path: inset(0 0 100% 0);
-    transition: clip-path 0.4s ease, opacity 0.4s ease;
-    opacity: 0;
-    pointer-events: none;
-}
 
-.menu-lateral.activo {
-    clip-path: inset(0 0 0% 0);
-    opacity: 1;
-    pointer-events: auto;
-}
 
-/* Animación icono hamburguesa */
-.boton-hamburguesa .linea {
-    transform-origin: center;
-    transform-box: fill-box;
-    transition: transform 300ms ease, opacity 300ms ease;
-}
 
-.boton-hamburguesa[aria-expanded="true"] .linea {
-    transition: transform 300ms ease, opacity 300ms ease;
-}
 
-/* 📱 Responsive */
-@media (max-width: 1200px) {
-    .barra-navegacion {
-        padding: 1rem 1.25rem;
-    }
 
-    .logo {
-        font-size: 1rem;
-    }
-}
 
-/* Stuff */
-.barra-navegacion {
-    z-index: 201
-}
 
-.banner-promocional {
-    z-index: 50;
-}
 
-.menu-lateral {
-    z-index: 1000;
-}
 
-.hero-banner-contenido {
-    z-index: 200;
-}
+
+
+
+
+
+
+
+
+
 
 /* HERO BANNER */
 .hero-banner {
@@ -216,6 +70,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    z-index: 10;
 }
 
 .hero-banner-encabezado,
@@ -397,4 +252,39 @@ body {
 /* Todavía no funciona bien esto. El agarrar en escritorio. */
 .productos-contenedor.activo {
     user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    min-height: 500vh;
+}
+
+
+
+/* BANNER PROMOCIONAL */
+.banner-promocional {
+    padding: .25rem;
+    background-color: var(--color-acento);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    text-align: center;
+    line-height: 1.5rem;
 }
