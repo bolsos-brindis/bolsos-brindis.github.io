@@ -1,0 +1,81 @@
+/* ⚙️ CONFIG */
+body {
+    min-height: 500dvh;
+}
+
+.barra-navegacion {
+    margin-bottom: 5rem;
+}
+
+/* Okay, Okay, I'm not Okay... */
+
+.reseñas {
+    position: relative;
+    overflow-x: auto;
+    width: 100%;
+    height: auto;
+
+}
+
+.reseñas-contenedor {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.reseña {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2.5rem 5rem;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.reseña-contenido {
+    /* background-color: green; */
+    flex: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.reseña-mensaje {
+    font-family: "TT Chocolates";
+    /* font-weight: 700; */
+    font-size: 2rem;
+}
+
+.reseña-imagen {
+    flex: 1;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: right;
+}
+
+.reseña-imagen img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    /* border-radius: 1rem; */
+    object-fit: cover;
+}
+
+.reseñas-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+}
+
+.reseñas-flecha.izquierda {
+    left: 2rem;
+}
+
+.reseñas-flecha.derecha {
+    right: 2rem;
+}
