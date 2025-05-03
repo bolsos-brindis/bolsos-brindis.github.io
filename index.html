@@ -48,6 +48,7 @@
 
     <!-- Scripts -->
     <script src="/js/app.js" defer></script>
+    <script src="/js/homepage.js" defer></script>
 </head>
 
 <body>
@@ -141,36 +142,16 @@
             </div>
         </nav>
         <aside id="menuLateral" class="menu-lateral">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur maxime, accusamus a harum eaque
-                officiis
-                eius totam sapiente ipsum. Hic necessitatibus delectus voluptatibus laborum et non totam nulla harum
-                blanditiis.</p>
-            <ol>
-                <li>List 1</li>
-                <li>Item 2</li>
-            </ol>
+            <p>Hola</p>
         </aside>
     </header>
-
-
-
-
-    <aside id="menuLateral" class="menu-lateral">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur maxime, accusamus a harum eaque officiis
-            eius totam sapiente ipsum. Hic necessitatibus delectus voluptatibus laborum et non totam nulla harum
-            blanditiis.</p>
-        <ol>
-            <li>List 1</li>
-            <li>Item 2</li>
-        </ol>
-    </aside>
 
     <main>
         <section id="heroBannerContenedor" class="hero-banner">
             <picture>
-                <source media="(max-width:850px)" srcset="/assets/images/hero-movil-1.avif">
-                <img id="heroBannerImagen" class="hero-banner-imagen" src="/assets/images/hero-escritorio-1.avif"
-                    alt="">
+                <source media="(max-width:850px)" srcset="/assets/images/homepage/hero/hero-movil.avif">
+                <img id="heroBannerImagen" class="hero-banner-imagen"
+                    src="/assets/images/homepage/hero/hero-escritorio.avif">
             </picture>
             <div class="hero-banner-contenido">
                 <h2 class="hero-banner-encabezado">DISEÑOS CON LA MEZCLA PERFECTA</h2>
@@ -194,12 +175,40 @@
             </ul>
         </div>
 
-        <div class="swipe-container">
-            <div class="swipe-item"></div>
-            <div class="swipe-item"></div>
-            <div class="swipe-item"></div>
-            <div class="swipe-item"></div>
-        </div>
+        <section class="productos">
+            <div class="contenedor">
+                <h2 class="encabezado productos-encabezado">COMPRA TU BRINDIS</h2>
+                <div id="productosContenedor" class="productos-contenedor">
+                    <article class="producto-tarjeta">
+                        <a href="#">
+                            <img src="/assets/images/homepage/productos/daikiri.avif">
+                            <h3>DAIKIRI</h3>
+                        </a>
+                    </article>
+
+                    <article class="producto-tarjeta">
+                        <a href="#">
+                            <img src="/assets/images/homepage/productos/blody-marry.avif">
+                            <h3>BLOODY MARY</h3>
+                        </a>
+                    </article>
+
+                    <article class="producto-tarjeta">
+                        <a href="#">
+                            <img src="/assets/images/homepage/productos/cosmopolitan.avif">
+                            <h3>COSMOPOLITAN</h3>
+                        </a>
+                    </article>
+
+                    <article class="producto-tarjeta">
+                        <a href="#">
+                            <img src="/assets/images/homepage/productos/martini-2.avif">
+                            <h3>MARTINI</h3>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
 </body>

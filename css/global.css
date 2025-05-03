@@ -54,6 +54,7 @@
     font-style: normal;
 }
 
+
 /* ===== 🎨 COLORES ===== */
 
 :root {
@@ -97,8 +98,8 @@ ol {
 }
 
 body {
-    /* Funciona mejor que `vh` para móviles */
-    min-height: 500dvh;
+    /* `dvh` funciona mejor que `vh` para móviles */
+    min-height: 100dvh;
     /* 
         Evita que el navegador haga cosas raras al intentar aplicar un font-style 
         no disponible a una fuente personalizada (@font-face) 
@@ -147,6 +148,9 @@ select {
     -webkit-tap-highlight-color: transparent;
 }
 
+
+/* ===== 🧱 ESTILOS GENERALES ===== */
+
 html {
     font-family: "TT Chocolates", "Poppins", "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
@@ -154,6 +158,18 @@ html {
     line-height: 1.5;
     color: var(--color-texto);
     background-color: var(--color-fondo);
+}
+
+.contenedor {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.encabezado {
+    font-family: "Univers LT Std";
+    font-weight: 700;
+    color: var(--color-principal);
 }
 
 /* 

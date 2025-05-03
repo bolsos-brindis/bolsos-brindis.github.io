@@ -1,4 +1,10 @@
-/* Fondo Transparente */
+/* 🛝 PLAYGROUND */
+body {
+    min-height: 500vh;
+}
+
+
+/* Fondo transparente en la barra de navegación */
 .barra-navegacion--transparente {
     background-color: transparent;
 }
@@ -10,42 +16,18 @@
 }
 
 
+/* 🍾 BANNER PROMOCIONAL */
+.banner-promocional {
+    padding: .25rem;
+    background-color: var(--color-acento);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* HERO BANNER */
+/* 🍾 HERO BANNER */
 .hero-banner {
     display: flex;
     position: relative;
@@ -96,7 +78,8 @@
     text-shadow: 0 3px 8px rgba(0, 0, 0, .1);
 }
 
-/* Marquee babe */
+
+/* 🍾 MARQUEE */
 .marquee {
     display: flex;
     overflow: hidden;
@@ -141,8 +124,6 @@
     }
 }
 
-/* Swipable container */
-
 
 
 
@@ -165,6 +146,13 @@
 
 
 
+
+
+/* 🍾 PRODUCTOS */
+.productos {
+    margin-top: 3rem;
+}
+
 .productos-contenedor {
     display: flex;
     flex-wrap: nowrap;
@@ -175,15 +163,17 @@
     scrollbar-width: none;
     /* Sin el, se ve un poco el color de fondo de .producto-tarjeta en la parte inferior */
     align-items: center;
+}
 
-    /* justify-content: center; */
+.productos-encabezado {
+    margin: 1.5rem 0;
 }
 
 .producto-tarjeta {
     flex-grow: 0;
     flex-shrink: 1;
+    /* 4 tarjetas menos el gap (1.5rem x 3 / 4) */
     flex-basis: calc(25% - 1.125rem);
-    /* 4 cards in a row minus gap */
 
     border-radius: .75rem;
     overflow: hidden;
@@ -211,7 +201,6 @@
 .producto-tarjeta h3 {
     position: absolute;
     bottom: 0;
-    /* background-color: red; */
     width: 100%;
     text-align: left;
     margin: 1rem 2rem;
@@ -226,11 +215,9 @@
         0 2px 4px rgba(0, 0, 0, 0.2),
         0 0 8px rgba(255, 255, 255, 0.15);
     ;
-
 }
 
-
-
+/* Activar deslizado */
 @media (max-width: 750px) {
     .producto-tarjeta {
         flex-shrink: 0;
@@ -273,18 +260,3 @@
 
 
 
-body {
-    min-height: 500vh;
-}
-
-
-
-/* BANNER PROMOCIONAL */
-.banner-promocional {
-    padding: .25rem;
-    background-color: var(--color-acento);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: .8rem;
-    text-align: center;
-    line-height: 1.5rem;
-}
