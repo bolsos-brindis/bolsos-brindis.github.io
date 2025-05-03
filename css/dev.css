@@ -140,6 +140,32 @@ body {
     }
 }
 
+.reseña-estrellas {
+    display: flex;
+    gap: .25rem;
+}
+
+.reseña-estrellas svg {
+    width: 1.5rem;
+    fill: var(--color-principal);
+}
+
+.reseña-contenido {
+    text-transform: lowercase;
+}
+
+.reseña-mensaje {
+    font-style: italic;
+}
+
+.reseña-autor {
+    font-weight: 700;
+}
+
+.reseña-imagen img {
+    border-radius: .25rem;
+}
+
 /* @media (pointer: coarse) {
     .reseñas-contenedor {
         scroll-snap-type: x mandatory;

@@ -25,6 +25,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "TT Chocolates";
+    src: url("/assets/fonts/tt-chocolates/tt-chocolates-italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+
 /*
     Fuentes alternativas para "Univers 67 Condensed":
     "Helvetica Neue Condensed", "Arial Narrow", sans-serif
