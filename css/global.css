@@ -14,7 +14,7 @@
 @font-face {
     font-family: "TT Chocolates";
     src: url("/assets/fonts/tt-chocolates/tt-chocolates-regular.woff2") format("woff2");
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -77,7 +77,7 @@
 
 /* ===== 🧱 ESTILOS BÁSICOS ===== */
 
-/* Mejor control y más eficiente que utilizar el selector */
+/* Mejor control y más eficiente que utilizar el selector (*) */
 body,
 h1,
 h2,
@@ -111,7 +111,9 @@ ol {
     list-style-type: none;
 }
 
-img, svg {
+img,
+svg,
+picture {
     display: block;
     max-width: 100%;
     height: auto;
@@ -127,6 +129,7 @@ button {
     cursor: pointer;
     /* Mostrar el contorno (outline) al tabular sobre el botón */
     outline: revert;
+    /* Aunque se aplique a (*), lo pierde al hacer el all: unset */
     box-sizing: border-box;
 }
 
@@ -135,7 +138,28 @@ button {
     outline: auto;
 }
 
-/* Evitar que el texto se pueda seleccionar */
+/* Quitar cuadrado gris al pulsar en iPhone */
+button,
+a,
+input,
+textarea,
+select {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: "TT Chocolates", "Poppins", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+/* 
+    Evitar que el texto se pueda seleccionar
+    👁️: Pendiente de revisión 
+ */
 .no-seleccionar {
     -webkit-user-drag: none;
     -webkit-user-select: none;
@@ -144,11 +168,3 @@ button {
     user-select: none;
     pointer-events: auto;
 }
-
-/* Quitar cuadrado gris al pulsar en iPhone */
-button, a, input, textarea, select {
-    -webkit-tap-highlight-color: transparent;
-  }
-
-
-

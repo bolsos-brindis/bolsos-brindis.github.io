@@ -115,8 +115,8 @@ function calcularAlturaHeroBanner() {
   heroBannerImagen.style.height = `calc(${alturaViewport}px - 2rem)`;
 }
 // 👁️👁️👁️👁️👁️ COMENTADO PARA PROBAR NUEVAS FUNCIONALIDADES
-// window.addEventListener('load', calcularAlturaHeroBanner);
-// window.matchMedia('(max-width: 1200px').addEventListener('change', calcularAlturaHeroBanner);
+window.addEventListener('load', calcularAlturaHeroBanner);
+window.matchMedia('(max-width: 1200px').addEventListener('change', calcularAlturaHeroBanner);
 
 
 // Run on media queries change instead

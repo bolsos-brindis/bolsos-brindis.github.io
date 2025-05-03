@@ -1,14 +1,10 @@
-/* Debug */
-/* 👁️ Add fallback fonts and more default styling and move it to global.css */
-body {
-    font-family: "TT Chocolates";
-    color: var(--color-texto);
-    background-color: var(--color-fondo);
-}
+
 
 body {
     min-height: 500vh;
 }
+
+
 
 /* BANNER PROMOCIONAL */
 .banner-promocional {
@@ -21,6 +17,8 @@ body {
 }
 
 /* BARRA DE NAVEGACIÓN */
+
+
 /* Nivel Superior */
 .barra-navegacion {
     display: flex;
