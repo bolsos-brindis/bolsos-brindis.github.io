@@ -329,8 +329,53 @@ body {
 .producto-tarjeta {
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: calc(25% - 1.125rem); /* 4 cards in a row minus gap */
+    flex-basis: calc(25% - 1.125rem);
+    /* 4 cards in a row minus gap */
+
+    border-radius: .75rem;
+    overflow: hidden;
+    position: relative;
 }
+
+.product-tarjeta a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.producto-tarjeta img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.producto-tarjeta:hover img {
+    transform: scale(1.08);
+}
+
+.producto-tarjeta h3 {
+    position: absolute;
+    bottom: 0;
+    /* background-color: red; */
+    width: 100%;
+    text-align: left;
+    margin: 1rem 2rem;
+
+    font-family: "TT Chocolates";
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+    /* text-transform: lowercase; */
+    text-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.2),
+        0 0 8px rgba(255, 255, 255, 0.15);
+    ;
+
+}
+
 
 
 @media (max-width: 750px) {
@@ -340,12 +385,12 @@ body {
     }
 }
 
-
 /* Snap en móvil */
 @media (pointer: coarse) {
     .productos-contenedor {
         scroll-snap-type: x mandatory;
     }
+
     .producto-tarjeta {
         scroll-snap-align: start;
     }
@@ -354,8 +399,4 @@ body {
 /* Todavía no funciona bien esto. El agarrar en escritorio. */
 .productos-contenedor.activo {
     user-select: none;
-} 
-
-.producto-tarjeta h3 {
-    display: none;
 }
