@@ -42,22 +42,16 @@
 
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/homepage.css" />
+    <link rel="stylesheet" href="/css/dev.css" />
 
     <!-- Componentes -->
 
     <!-- Scripts -->
     <script src="/js/app.js" defer></script>
-    <script src="/js/homepage.js" defer></script>
+    <script src="/js/dev.js" defer></script>
 </head>
 
 <body>
-
-    <!-- Banner Promocional -->
-    <section id="bannerPromocional" class="banner-promocional" aria-label="Banner promocional">
-        <p>💓 Envío gratis para alumnos MEDAC 💓</p>
-    </section>
-
     <header>
         <nav id="barraNavegacion" class="barra-navegacion">
             <!-- Parte Izquierda -->
@@ -143,70 +137,29 @@
         </nav>
         <aside id="menuLateral" class="menu-lateral">
             <p>Hola</p>
-            <a href="/dev.html">&lt;dev /&gt;</a>
         </aside>
     </header>
 
     <main>
-        <section id="heroBannerContenedor" class="hero-banner">
-            <picture>
-                <source media="(max-width:850px)" srcset="/assets/images/homepage/hero/hero-movil.avif">
-                <img id="heroBannerImagen" class="hero-banner-imagen"
-                    src="/assets/images/homepage/hero/hero-escritorio.avif">
-            </picture>
-            <div class="hero-banner-contenido">
-                <h2 class="hero-banner-encabezado">DISEÑOS CON LA MEZCLA PERFECTA</h2>
-                <p class="hero-banner-texto">estilo, funcionalidad y libertad sin cables</p>
-                <a class="boton hero-banner-cta" href="#">¡nueva colección disponible!</a>
-            </div>
-        </section>
-
-        <div class="marquee">
-            <ul class="marquee-contenido">
-                <li>Hecho en España</li>
-                <li>Piel Vegetal</li>
-                <li>Carga Inalámbrica</li>
-                <li>Sostenible</li>
-            </ul>
-            <ul class="marquee-contenido" aria-hidden="true">
-                <li>Hecho en España</li>
-                <li>Piel Vegetal</li>
-                <li>Carga Inalámbrica</li>
-                <li>Sostenible</li>
-            </ul>
-        </div>
-
-        <section class="productos">
+        <section class="como-funciona">
             <div class="contenedor">
-                <h2 class="encabezado productos-encabezado">COMPRA TU BRINDIS</h2>
-                <div id="productosContenedor" class="productos-contenedor">
-                    <article class="producto-tarjeta">
-                        <a href="#">
-                            <img src="/assets/images/homepage/productos/daikiri.avif">
-                            <h3>DAIKIRI</h3>
-                        </a>
-                    </article>
-
-                    <article class="producto-tarjeta">
-                        <a href="#">
-                            <img src="/assets/images/homepage/productos/blody-marry.avif">
-                            <h3>BLOODY MARY</h3>
-                        </a>
-                    </article>
-
-                    <article class="producto-tarjeta">
-                        <a href="#">
-                            <img src="/assets/images/homepage/productos/cosmopolitan.avif">
-                            <h3>COSMOPOLITAN</h3>
-                        </a>
-                    </article>
-
-                    <article class="producto-tarjeta">
-                        <a href="#">
-                            <img src="/assets/images/homepage/productos/martini-2.avif">
-                            <h3>MARTINI</h3>
-                        </a>
-                    </article>
+                <div class=" contenedor-como-funciona">
+                    <div class="como-funciona-contenido">
+                        <h2 class="encabezado como-funciona-encabezado">Carga sin cables. Vive sin límites.</h2>
+                        <p>
+                            Lleva tu <strong>energía</strong> a donde vayas con un
+                            <strong>bolso que se adapta a tu ritmo</strong>.
+                            Sin enchufes, sin enredos:
+                            <strong>carga inalámbrica integrada</strong>,
+                            <strong>diseño funcional</strong> y un
+                            <strong>estilo</strong> que te acompaña a todas partes.
+                            Porque mientras tú desconectas,
+                            <strong>tu bolso se encarga del resto</strong>.
+                        </p>
+                        <a class="cta" href="#">descubre cómo funciona</a>
+                    </div>
+                    <img class="como-funciona-imagen" src="/assets/images/dev/como-funciona-1.avif"
+                        alt="Bolso con carga inalámbrica" />
                 </div>
             </div>
         </section>

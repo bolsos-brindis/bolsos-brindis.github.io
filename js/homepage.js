@@ -2,7 +2,7 @@
 window.addEventListener('load', calcularAlturaHeroBanner);
 window.matchMedia('(max-width: 1200px').addEventListener('change', calcularAlturaHeroBanner);
 // Debounce the fuck out of it
-window.addEventListener('resize', calcularAlturaHeroBanner);
+// window.addEventListener('resize', calcularAlturaHeroBanner);
 
 function calcularAlturaHeroBanner() {
     const heroBannerContenedor = document.getElementById('heroBannerContenedor');

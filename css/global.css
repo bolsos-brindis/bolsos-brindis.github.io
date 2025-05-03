@@ -155,7 +155,7 @@ html {
     font-family: "TT Chocolates", "Poppins", "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.25;
     color: var(--color-texto);
     background-color: var(--color-fondo);
 }
@@ -163,7 +163,7 @@ html {
 .contenedor {
     max-width: 1480px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 3rem;
 }
 
 .encabezado {
