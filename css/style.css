@@ -289,48 +289,73 @@ body {
 }
 
 /* Swipable container */
-.swipe-container {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 1rem;
-    will-change: transform;
 
-    /* 
-        Se tiene que utilizar junto a scroll-snap-align.
-    */
-    /* scroll-snap-type: x mandatory; */
 
-    /* La oculta tanto en Chrome como en Safari */
-    /* scrollbar-width: none; */
 
-    /* Esto hace que no pueda deslizar en vertical al pulsar sobre el contenedor. No me gusta */
-    /* touch-action: pan-x; */    
 
+
+
+
+.contenedor {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-@media (pointer: coarse) {
-    .swipe-container {
-        scroll-snap-type: x mandatory;
+.encabezado {
+    font-family: "Univers LT Std";
+    font-weight: 700;
+    color: var(--color-principal);
+}
+
+
+
+
+
+.productos-contenedor {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Permite hacer scroll */
+    overflow-x: auto;
+    gap: 1.5rem;
+    /* Esconder la scrollbar */
+    scrollbar-width: none;
+    /* Sin el, se ve un poco el color de fondo de .producto-tarjeta en la parte inferior */
+    align-items: center;
+
+    /* justify-content: center; */
+}
+
+.producto-tarjeta {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: calc(25% - 1.125rem); /* 4 cards in a row minus gap */
+}
+
+
+@media (max-width: 750px) {
+    .producto-tarjeta {
+        flex-shrink: 0;
+        flex-basis: 250px;
     }
 }
 
-.swipe-container.activo {
-    user-select: none;
-    /* scroll-snap-type: none; */
+
+/* Snap en móvil */
+@media (pointer: coarse) {
+    .productos-contenedor {
+        scroll-snap-type: x mandatory;
+    }
+    .producto-tarjeta {
+        scroll-snap-align: start;
+    }
 }
 
-/* La oculta igual que la opción de arriba */
-/* .swipe-container::-webkit-scrollbar {
+/* Todavía no funciona bien esto. El agarrar en escritorio. */
+.productos-contenedor.activo {
+    user-select: none;
+} 
+
+.producto-tarjeta h3 {
     display: none;
-} */
-
-.swipe-item {
-    /* Shrink, Grow, Basis */
-    flex: 0 0 auto;
-    width: 350px;
-    height: 500px;
-    background-color: var(--color-pomelo);
-
-    scroll-snap-align: start;
 }

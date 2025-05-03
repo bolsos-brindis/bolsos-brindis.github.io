@@ -123,7 +123,7 @@ function calcularAlturaHeroBanner() {
 // window.addEventListener('resize', calcularAlturaHeroBanner);
 
 /* ===== Swipable Buying ===== */
-const slider = document.getElementById("swipeContainer");
+const slider = document.getElementById("productosContenedor");
 let isDown = false;
 // Posición relativa al slider en píxeles
 let startX;
@@ -153,35 +153,12 @@ slider.addEventListener('mousemove', (e) => {
 
 // Al salir del contenedor. Codigo duplicado
 slider.addEventListener('mouseleave', () => {
-  if (!isDown) return;
   isDown = false;
   slider.classList.remove('activo');
-  simulateBounce(slider, lastMove);
 });
 
 slider.addEventListener('mouseup', (e) => {
-  if (!isDown) return;
   isDown = false;
   slider.classList.remove('activo');
-  simulateBounce(slider, lastMove);
 });
-
-function simulateBounce(container, velocity) {
-  const maxScroll = container.scrollWidth - container.clientWidth;
-
-  if (container.scrollLeft < 0 || container.scrollLeft > maxScroll) {
-    const direction = container.scrollLeft < 0 ? 1 : -1;
-    container.style.transition = 'transform 0.3s ease';
-    container.style.transform = `translateX(${20 * direction}px)`;
-
-    setTimeout(() => {
-      container.style.transform = 'translateX(0)';
-      setTimeout(() => {
-        container.style.transition = '';
-        container.style.transform = '';
-      }, 300);
-    }, 100);
-  }
-}
-
 
