@@ -125,29 +125,6 @@ body {
 }
 
 
-
-
-
-
-
-.contenedor {
-    max-width: 1480px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.encabezado {
-    font-family: "Univers LT Std";
-    font-weight: 700;
-    color: var(--color-principal);
-}
-
-
-
-
-
-
-
 /* 🍾 PRODUCTOS */
 .productos {
     margin-top: 3rem;
