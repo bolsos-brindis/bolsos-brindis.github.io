@@ -8,3 +8,41 @@ body {
 }
 
 /* Okay, Okay, I'm not Okay... */
+
+
+.blog-articulos {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.blog-articulo {
+    flex: 1 1 426px;
+    max-width: 426px;
+    transition: transform 0.3s ease, scale 0.3s ease;
+}
+
+.blog-articulo:nth-child(even) {
+    transform: rotate(.5deg);  
+}
+
+.blog-articulo:nth-child(odd) {
+    transform: rotate(-.5deg);  
+}
+
+.blog-articulo:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+/* 👁️ Ajustar el número de la media query, quitar el padding */
+@media (max-width: 768px) {
+    #contenedorBlog {
+        /* padding: 1rem; */
+    }
+
+    .blog-articulos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
