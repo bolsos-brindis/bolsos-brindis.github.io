@@ -320,6 +320,164 @@ body {
 }
 
 
+/* 🍾 ===== RESEÑAS ===== */
+.reseñas {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    
+    margin-top: 5rem;
+}
+
+.reseñas-contenedor {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.reseña {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2.5rem 5rem;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.reseña-contenido {
+    flex: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.reseña-estrellas {
+    font-size: 1.5rem;
+}
+
+.reseña-mensaje {
+    font-family: "TT Chocolates";
+    /* font-weight: 700; */
+    font-size: 2rem;
+}
+
+.reseña-autor {
+    font-size: 1.2rem;
+}
+
+.reseña-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+
+.reseña-imagen img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.reseñas-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    z-index: 10;
+}
+
+.reseñas-flecha.izquierda {
+    left: 2rem;
+}
+
+.reseñas-flecha.derecha {
+    right: 2rem;
+}
+
+@media (max-width: 900px) {
+    .reseña {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        text-align: center;
+    }
+
+    .reseña-imagen {
+        order: -1;
+        /* Coloca la imagen arriba del texto */
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+
+    .reseña-imagen img {
+        max-width: 90%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .reseña-contenido {
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .reseña-mensaje {
+        font-size: 1.5rem;
+    }
+
+    .reseña-estrellas {
+        font-size: 1.3rem;
+    }
+
+    .reseña-autor {
+        font-size: 1rem;
+    }
+
+    .reseñas-flecha {
+        top: auto;
+        bottom: 1rem;
+        transform: none;
+        font-size: 2.5rem;
+    }
+
+    .reseñas-flecha.izquierda {
+        left: 1rem;
+    }
+
+    .reseñas-flecha.derecha {
+        right: 1rem;
+    }
+}
+
+.reseña-estrellas {
+    display: flex;
+    gap: .25rem;
+}
+
+.reseña-estrellas svg {
+    width: 1.5rem;
+    fill: var(--color-principal);
+}
+
+.reseña-contenido {
+    text-transform: lowercase;
+}
+
+.reseña-mensaje {
+    font-style: italic;
+}
+
+.reseña-autor {
+    font-weight: 700;
+}
+
+.reseña-imagen img {
+    border-radius: .25rem;
+}
 
 
 
