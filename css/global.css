@@ -20,6 +20,13 @@
 
 @font-face {
     font-family: "TT Chocolates";
+    src: url("/assets/fonts/tt-chocolates/tt-chocolates-demibold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TT Chocolates";
     src: url("/assets/fonts/tt-chocolates/tt-chocolates-bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;

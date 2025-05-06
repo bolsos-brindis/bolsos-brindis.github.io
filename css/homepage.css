@@ -523,7 +523,71 @@ body {
 }
 
 
+/* 🍾 ===== COLLAGE ===== */
+.collage {
+    margin-top: 5rem;
+}
 
+.collage-contenedor {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.collage-item {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.collage-item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+  }
+
+.collage-item img {
+    /* border-radius: 1rem; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.collage-item:hover img {
+    transform: scale(1.05); 
+    filter: brightness(1.05);
+}
+
+.collage-item-destacado {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+/* Primera imagen destacada */
+.collage-item-destacado-primero {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+  }
+  
+  /* Última imagen destacada */
+  .collage-item-destacado-ultimo {
+    grid-column: 4 / span 2;
+    grid-row: 3 / span 2;
+  }
+
+  @media (max-width: 768px) {
+    .collage-contenedor {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+  
+    .collage-item-destacado {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
 
 
 
