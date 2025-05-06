@@ -175,6 +175,38 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Color al subrayar */
+::selection {
+    background-color: var(--color-chicle);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: var(--color-chicle);
+    color: white;
+}
+
+/* Barra de desplazamineto */
+::-webkit-scrollbar {
+    width: 7.5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    /* Color de fondo */
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-texto);
+    /* el “pulgón” o la barra que se arrastra */
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-principal);
+}
+
 .contenedor {
     /* max-width: 1480px; */
     max-width: 1600px;
@@ -185,7 +217,7 @@ html {
 .encabezado {
     font-family: "Univers LT Std";
     font-weight: 700;
-    color: var(--color-principal);    
+    color: var(--color-principal);
 }
 
 .encabezado-seccion {

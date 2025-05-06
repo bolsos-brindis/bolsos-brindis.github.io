@@ -73,7 +73,18 @@ function desbloquearDeslizamiento() {
   document.body.style.top = '';
   document.body.style.width = '';
 
+
+  // Desactiva scroll-behavior para que sea instantáneo
+  const html = document.documentElement;
+  const originalScrollBehavior = html.style.scrollBehavior;
+  html.style.scrollBehavior = 'auto';
+
   window.scrollTo(0, posicionDeslizamiento);
+
+  // Restaura el comportamiento original
+  requestAnimationFrame(() => {
+    html.style.scrollBehavior = originalScrollBehavior;
+  });
 }
 
 function calcularAnchoBarraDeslizamiento() {

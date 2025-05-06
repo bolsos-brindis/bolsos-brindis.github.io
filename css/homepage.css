@@ -545,7 +545,7 @@
 
 /* 🍾 ===== COLLAGE ===== */
 .collage {
-    margin-bottom: 7.5rem;
+    margin-bottom: 10rem;
 }
 
 .collage-encabezado {
@@ -663,9 +663,9 @@
 }
 
 /* 🍾 ===== NEWSLETTER ===== */
-/* .newsletter {
-    
-} */
+.newsletter {
+    margin-bottom: 5rem;
+}
 
 .newsletter form {
     display: flex;
@@ -689,7 +689,7 @@
 
 .newsletter-formulario input {
     flex: 1;
-    padding: .75rem 1rem;
+    padding: .6rem 1rem;
     border: 1px solid var(--color-texto);
     border-radius: .25rem;
     background-color: transparent;
@@ -710,4 +710,26 @@
 
 .newsletter-aviso a {
     text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    #contenedorNewsletter {
+        padding: 0 1rem;
+    }
+
+    .newsletter {
+        margin-bottom: 2.5rem;
+    }
+
+    .newsletter-encabezado {
+        font-size: 1rem;
+    }
+    
+    .newsletter-aviso {
+        font-size: .75rem
+    }
+
+    .newsletter-formulario button {
+        padding: .5rem .75rem;
+    }
 }
