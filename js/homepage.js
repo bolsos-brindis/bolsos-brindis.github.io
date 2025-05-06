@@ -1,6 +1,9 @@
 /* ===== 🍾 HERO BANNER ===== */
 window.addEventListener('load', calcularAlturaHeroBanner);
-window.matchMedia('(max-width: 1200px').addEventListener('change', calcularAlturaHeroBanner);
+window.matchMedia('(max-width: 1200px)').addEventListener('change', calcularAlturaHeroBanner);
+window.addEventListener('orientationchange', () => {
+    setTimeout(calcularAlturaHeroBanner, 300);
+  });
 // Debounce the fuck out of it
 // window.addEventListener('resize', calcularAlturaHeroBanner);
 
@@ -27,8 +30,6 @@ document.getElementById('ctaHero').addEventListener('click', () => {
 
 
 /* ===== 🍾 PRODUCTOS ===== */
-
-/* 🏗️ Bajo Construcción */
 const slider = document.getElementById("productosContenedor");
 let isDown = false;
 let isDragging = false;
