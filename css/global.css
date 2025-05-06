@@ -184,8 +184,19 @@ html {
 .encabezado {
     font-family: "Univers LT Std";
     font-weight: 700;
-    color: var(--color-principal);
+    color: var(--color-principal);    
+}
+
+.encabezado-seccion {
     font-size: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+@media (max-width: 700px) {
+    .encabezado-seccion {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .cta {
@@ -219,10 +230,14 @@ html {
  */
 .no-seleccionar {
     user-select: none;
-    -webkit-user-select: none; /* Safari y navegadores móviles basados en WebKit */
-    -ms-user-select: none;      /* Compatibilidad con IE/Edge antiguo */
-    touch-action: manipulation; /* Evita zoom/text select en taps largos */
-    -webkit-tap-highlight-color: transparent; /* Quita el flash azul al tocar */
+    -webkit-user-select: none;
+    /* Safari y navegadores móviles basados en WebKit */
+    -ms-user-select: none;
+    /* Compatibilidad con IE/Edge antiguo */
+    touch-action: manipulation;
+    /* Evita zoom/text select en taps largos */
+    -webkit-tap-highlight-color: transparent;
+    /* Quita el flash azul al tocar */
 }
 
 

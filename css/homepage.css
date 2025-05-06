@@ -81,15 +81,22 @@
 
 /* 🍾 MARQUEE */
 .marquee {
+    margin-bottom: 5rem;
     display: flex;
     overflow: hidden;
     gap: 0rem;
     position: relative;
     background-color: white;
     padding: 1.65rem;
-  }
-  
-  .marquee-contenido {
+}
+
+@media(max-width: 700px) {
+    .marquee {
+        margin-bottom: 3.5rem;
+    }
+}
+
+.marquee-contenido {
     flex-shrink: 0;
     display: flex;
     justify-content: space-around;
@@ -97,22 +104,23 @@
     gap: 0rem;
     animation: desplazar 30s linear infinite;
     text-transform: lowercase;
-  }
-  
-  @media (hover: hover) and (pointer: fine) {
+}
+
+@media (hover: hover) and (pointer: fine) {
     .marquee:hover .marquee-contenido {
-      animation-play-state: paused;
+        animation-play-state: paused;
     }
-  }
-  
-  @keyframes desplazar {
+}
+
+@keyframes desplazar {
     0% {
-      transform: translateX(0%);
+        transform: translateX(0%);
     }
+
     100% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
-  }
+}
 
 @media (max-width: 700px) {
     .marquee {
@@ -127,9 +135,6 @@
 
 
 /* 🍾 PRODUCTOS */
-.productos {
-    margin-top: 3rem;
-}
 
 .productos-contenedor {
     display: flex;
@@ -141,10 +146,6 @@
     scrollbar-width: none;
     /* Sin el, se ve un poco el color de fondo de .producto-tarjeta en la parte inferior */
     align-items: center;
-}
-
-.productos-encabezado {
-    margin: 1.5rem 0;
 }
 
 .producto-tarjeta {
