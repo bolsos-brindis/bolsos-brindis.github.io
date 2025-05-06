@@ -171,6 +171,8 @@
     display: block;
     object-fit: cover;
     transition: transform .4s ease;
+    -webkit-user-drag: none;
+    pointer-events: none;
 }
 
 .producto-tarjeta:hover img {

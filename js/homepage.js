@@ -21,6 +21,7 @@ function calcularAlturaHeroBanner() {
 /* 🏗️ Bajo Construcción */
 const slider = document.getElementById("productosContenedor");
 let isDown = false;
+let isDragging = false;
 // Posición relativa al slider en píxeles
 let startX;
 // Cantidad de píxeles deslizados
@@ -29,6 +30,7 @@ let lastMove = 0;
 
 slider.addEventListener('mousedown', (e) => {
     isDown = true;
+    isDragging = false;
     /*
       `pageX` devuelve la posición absoluta en la página.
       `offsetLeft` devuelve el espacio entre el comienzo del documento y el elemento.
@@ -45,6 +47,7 @@ slider.addEventListener('mousemove', (e) => {
     const walk = (x - startX) * 1;
     slider.scrollLeft = scrollLeft - walk;
     lastMove = walk;
+    if (Math.abs(walk) > 5) isDragging = true;
 });
 
 // Al salir del contenedor. Codigo duplicado
@@ -57,6 +60,18 @@ slider.addEventListener('mouseup', (e) => {
     isDown = false;
     slider.classList.remove('activo');
 });
+
+slider.addEventListener('click', (e) => {
+    if (isDragging) {
+        e.preventDefault();
+        e.stopPropagation(); // opcional: bloquea burbuja
+    }
+});
+
+slider.querySelectorAll('a, img').forEach(el => {
+    el.setAttribute('draggable', 'false');
+});
+
 
 /* ===== 🍾 RESEÑAS ===== */
 const contenedor = document.querySelector('.reseñas-contenedor');

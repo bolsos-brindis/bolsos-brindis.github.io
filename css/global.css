@@ -172,6 +172,7 @@ html {
     line-height: 1.25;
     color: var(--color-texto);
     background-color: var(--color-fondo);
+    scroll-behavior: smooth;
 }
 
 .contenedor {
