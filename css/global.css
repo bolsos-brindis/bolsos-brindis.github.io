@@ -206,14 +206,21 @@ html {
 /* 
     Evitar que el texto se pueda seleccionar
     👁️: Pendiente de revisión 
- */
-.no-seleccionar {
-    -webkit-user-drag: none;
+
+      -webkit-user-drag: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     pointer-events: auto;
+
+ */
+.no-seleccionar {
+    user-select: none;
+    -webkit-user-select: none; /* Safari y navegadores móviles basados en WebKit */
+    -ms-user-select: none;      /* Compatibilidad con IE/Edge antiguo */
+    touch-action: manipulation; /* Evita zoom/text select en taps largos */
+    -webkit-tap-highlight-color: transparent; /* Quita el flash azul al tocar */
 }
 
 
