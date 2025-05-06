@@ -72,11 +72,14 @@
     margin-bottom: 5rem;
 }
 
-.hero-banner-cta:hover {
-    background-color: white;
-    color: var(--color-texto);
-    text-shadow: 0 3px 8px rgba(0, 0, 0, .1);
+@media (hover:hover) {
+    .hero-banner-cta:hover {
+        background-color: white;
+        color: var(--color-texto);
+        text-shadow: 0 3px 8px rgba(0, 0, 0, .1);
+    }
 }
+
 
 
 /* 🍾 MARQUEE */

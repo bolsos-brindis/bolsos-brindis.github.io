@@ -15,6 +15,16 @@ function calcularAlturaHeroBanner() {
     heroBannerImagen.style.height = `calc(${alturaViewport}px - 2rem)`;
 }
 
+document.getElementById('ctaHero').addEventListener('click', () => {
+    const destino = document.getElementById('marquee');
+    const barraNavegacionAltura = document.getElementById('barraNavegacion').offsetHeight;
+    const offset = destino.getBoundingClientRect().top + window.scrollY - barraNavegacionAltura + 1;
+    window.scrollTo({
+      top: offset,
+      behavior: 'smooth'
+    });
+  });
+
 
 /* ===== 🍾 PRODUCTOS ===== */
 
