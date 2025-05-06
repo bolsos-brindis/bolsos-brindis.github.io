@@ -175,7 +175,8 @@ html {
 }
 
 .contenedor {
-    max-width: 1480px;
+    /* max-width: 1480px; */
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 3rem;
 }
@@ -184,6 +185,7 @@ html {
     font-family: "Univers LT Std";
     font-weight: 700;
     color: var(--color-principal);
+    font-size: 2rem;
 }
 
 .cta {
