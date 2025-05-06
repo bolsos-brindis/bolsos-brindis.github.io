@@ -545,7 +545,7 @@
 
 /* 🍾 ===== COLLAGE ===== */
 .collage {
-    margin-top: 5rem;
+    margin-bottom: 7.5rem;
 }
 
 .collage-encabezado {
@@ -663,9 +663,9 @@
 }
 
 /* 🍾 ===== NEWSLETTER ===== */
-.newsletter {
-    margin-top: 5rem;
-}
+/* .newsletter {
+    
+} */
 
 .newsletter form {
     display: flex;
