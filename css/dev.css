@@ -8,3 +8,31 @@ body {
 }
 
 /* Okay, Okay, I'm not Okay... */
+footer {
+    background-color: white;
+}
+
+footer svg {
+    width: 1.5rem;
+    fill: var(--color-principal);
+}
+
+.footer-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.footer-bloque ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-legal a {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    text-align: center;
+}
