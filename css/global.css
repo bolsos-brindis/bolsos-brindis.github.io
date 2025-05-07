@@ -1,6 +1,13 @@
 /* ===== ✍️ FUENTES ===== */
 
 @font-face {
+    font-family: "Dancing Script";
+    src: url("/assets/fonts/dancing-script/dancing-script-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "Tan Nimbus";
     src: url("/assets/fonts/tan-nimbus/tan-nimbus.woff2") format("woff2");
     font-weight: 400;
@@ -400,6 +407,89 @@ header {
     clip-path: inset(0 0 0% 0);
     opacity: 1;
     pointer-events: auto;
+}
+
+/* MENÚ LATERAL CONTENIDO */
+.menu-lateral-contenedor {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.menu-lateral nav {
+    padding: 1rem;
+}
+
+.menu-lateral ul li a {
+    display: block;
+    padding-top: 1.25rem;
+    padding-bottom: 1.15rem;
+    box-shadow: inset 0 -1px 0 #e7dae2;
+    color: var(--color-principal);
+    font-family: "Univers LT Std";
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.menu-lateral ul li:last-child a {
+    box-shadow: none;
+}
+
+.menu-lateral ul li a span {
+    transition: background-color 0.2s ease;
+    background-color: transparent;
+    border-radius: .25rem;
+    padding: .5rem;
+}
+
+.menu-lateral ul li a:hover span {
+    background-color: var(--color-fondo);
+}
+
+.menu-lateral-eslogan {
+    font-family: "Dancing Script";
+    font-size: 2rem;
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    bottom: 2rem;
+    color: var(--color-texto);
+    opacity: 0.8;
+}
+
+@media (max-width: 700px) {
+    .menu-lateral-eslogan {
+        font-size: 1.5rem;
+    }
+}
+
+.eslogan-contenedor {
+    display: inline-block;
+    position: relative;
+}
+
+.estrella {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+    color: var(--color-texto);
+    opacity: 0.8;
+}
+
+.estrella-izquierda {
+    bottom: -0.6rem;
+    left: -1.2rem;
+    bottom: -0.6rem;
+    left: -1rem;
+}
+
+.estrella-derecha {
+    top: -0.6rem;
+    right: -1.2rem;
+    top: 0;
+    right: -1rem;
 }
 
 /* Animación icono hamburguesa */

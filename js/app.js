@@ -18,7 +18,7 @@ botonHamburguesa.addEventListener('click', () => {
 
   menuLateral.style.top = `${distanciaDesdeArriba}px`;
   menuLateral.style.width = `calc(100% - ${calcularAnchoBarraDeslizamiento()}px)`;
-  menuLateral.style.height = `calc(100vh - ${distanciaDesdeArriba}px)`;
+  menuLateral.style.height = `calc(100dvh - ${distanciaDesdeArriba}px)`;
 
   if (menuLateral.classList.toggle('activo')) {
     bloquearDeslizamiento();
