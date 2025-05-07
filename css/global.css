@@ -243,10 +243,12 @@ html {
     text-transform: lowercase;
 }
 
-.cta:hover {
-    background-color: var(--color-texto);
-    color: white;
-    text-shadow: 0 3px 8px rgba(0, 0, 0, .1);
+@media (hover:hover) {
+    .cta:hover {
+        background-color: var(--color-texto);
+        color: white;
+        text-shadow: 0 3px 8px rgba(0, 0, 0, .1);
+    }
 }
 
 /* 

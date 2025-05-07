@@ -569,12 +569,26 @@
 }
 
 @keyframes float-natural {
-    0%   { transform: translate(0px, 0px); }
-    25%  { transform: translate(2px, -3px); }
-    50%  { transform: translate(3px, 2px); }
-    75%  { transform: translate(-2px, 3px); }
-    100% { transform: translate(0px, 0px); }
-  }
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        transform: translate(2px, -3px);
+    }
+
+    50% {
+        transform: translate(3px, 2px);
+    }
+
+    75% {
+        transform: translate(-2px, 3px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
 
 .collage-contenedor {
     display: grid;
@@ -592,15 +606,15 @@
     transform: perspective(800px);
     transform-style: preserve-3d;
     z-index: 0;
-  }
-  
-  .collage-item:hover {
+}
+
+.collage-item:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     transform: translateY(-4px);
     z-index: 2;
-  }
-  
-  .collage-item::after {
+}
+
+.collage-item::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -609,25 +623,25 @@
     transition: box-shadow 0.4s ease;
     pointer-events: none;
     z-index: 1;
-  }
-  
-  .collage-item:hover::after {
+}
+
+.collage-item:hover::after {
     box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.1);
-  }
-  
-  .collage-item img {
+}
+
+.collage-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     transition: transform 0.5s ease, filter 0.4s ease;
     will-change: transform, filter;
-  }
-  
-  .collage-item:hover img {
+}
+
+.collage-item:hover img {
     transform: scale(1.07) rotateZ(0.2deg);
     filter: brightness(1.08) contrast(1.03) saturate(1.05);
-  }
+}
 
 .collage-item-destacado {
     grid-column: span 2;
@@ -664,7 +678,7 @@
 
 /* 🍾 ===== NEWSLETTER ===== */
 .newsletter {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .newsletter form {
@@ -712,6 +726,32 @@
     text-decoration: underline;
 }
 
+/* Modal */
+.newsletter-modal {
+    max-width: 710px;
+    margin: 0 auto;
+
+    margin-top: 1rem;
+    padding: .6rem 1rem;
+    /* border-radius: .25rem; */
+    /* border: 1px solid var(--color-texto); */
+    background-color: var(--color-acento);
+    font-size: 1rem;
+
+    opacity: 0;
+    transform: translateY(1rem);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+  }
+  
+  /* Cuando esté activo */
+  .newsletter-modal.activo {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
 @media (max-width: 700px) {
     #contenedorNewsletter {
         padding: 0 1rem;
@@ -724,7 +764,7 @@
     .newsletter-encabezado {
         font-size: 1rem;
     }
-    
+
     .newsletter-aviso {
         font-size: .75rem
     }

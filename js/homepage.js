@@ -3,7 +3,7 @@ window.addEventListener('load', calcularAlturaHeroBanner);
 window.matchMedia('(max-width: 1200px)').addEventListener('change', calcularAlturaHeroBanner);
 window.addEventListener('orientationchange', () => {
     setTimeout(calcularAlturaHeroBanner, 300);
-  });
+});
 // Debounce the fuck out of it
 // window.addEventListener('resize', calcularAlturaHeroBanner);
 
@@ -23,10 +23,10 @@ document.getElementById('ctaHero').addEventListener('click', () => {
     const barraNavegacionAltura = document.getElementById('barraNavegacion').offsetHeight;
     const offset = destino.getBoundingClientRect().top + window.scrollY - barraNavegacionAltura + 1;
     window.scrollTo({
-      top: offset,
-      behavior: 'smooth'
+        top: offset,
+        behavior: 'smooth'
     });
-  });
+});
 
 
 /* ===== 🍾 PRODUCTOS ===== */
@@ -134,4 +134,28 @@ contenedor.addEventListener('transitionend', () => {
 window.addEventListener('resize', () => {
     const ancho = reseñas[0].offsetWidth;
     contenedor.style.transform = `translateX(-${index * ancho}px)`;
+});
+
+
+/* ===== 🍾 NEWSLETTER ===== */
+const formulario = document.querySelector('.newsletter form');
+const modal = document.getElementById('newsletterModal');
+const inputCorreo = document.getElementById('emailNewsletter');
+const spanCorreo = document.getElementById('correoMostrado');
+
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const correo = inputCorreo.value.trim();
+    if (!correo) return;
+
+    spanCorreo.textContent = correo;
+    modal.classList.add('activo');
+
+    inputCorreo.value = ''; // vaciar el input
+
+    // Ocultar el modal después de 3 segundos
+    setTimeout(() => {
+        modal.classList.remove('activo');
+    }, 3000);
 });
