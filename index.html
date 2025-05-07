@@ -91,10 +91,10 @@
                     </li>
                 </ul>
                 <ul class="barra-navegacion-izquierda-escritorio">
-                    <li><a href="#">diseños</a></li>
+                    <li><a href="#marquee" class="scroll-con-offset">diseños</a></li>
                     <li><a href="#">cómo funciona</a></li>
                     <li><a href="#">about</a></li>
-                    <li><a href="#">blog</a></li>
+                    <li><a href="#blog" class="scroll-con-offset espaciado">blog</a></li>
                 </ul>
             </div>
 
@@ -149,6 +149,7 @@
                         <li><a href="#"><span>cómo funciona</span></a></li>
                         <li><a href="#"><span>about</span></a></li>
                         <li><a href="#"><span>blog</span></a></li>
+                        <!-- <li><a href="#"><span>contacto</span></a></li> -->
                     </ul>
                 </nav>
                 <p class="menu-lateral-eslogan">
@@ -180,7 +181,10 @@
             <div class="hero-banner-contenido">
                 <h2 class="hero-banner-encabezado">DISEÑOS CON LA MEZCLA PERFECTA</h2>
                 <p class="hero-banner-texto">estilo, funcionalidad y libertad sin cables</p>
-                <button id="ctaHero" class="boton hero-banner-cta" type="button">¡nueva colección disponible!</button>
+                <button id="ctaHero" class="boton hero-banner-cta scroll-con-offset" type="button"
+                    data-scroll="#marquee">
+                    ¡nueva colección disponible!
+                </button>
             </div>
         </section>
 
@@ -207,7 +211,7 @@
             </ul>
         </div>
 
-        <section class="productos">
+        <section id="productos" class="productos">
             <div id="contenedorProductos" class="contenedor">
                 <h2 class="encabezado encabezado-seccion productos-encabezado">COMPRA TU BRINDIS</h2>
                 <div id="productosContenedor" class="productos-contenedor">
@@ -442,7 +446,7 @@
             <button class="reseñas-flecha derecha" type="button">›</button>
         </section>
 
-        <section class="blog">
+        <section id="blog" class="blog">
             <div id="contenedorBlog" class="contenedor">
                 <h2 class="encabezado encabezado-seccion blog-encabezado">BLOG</h2>
                 <div class="blog-articulos">
@@ -583,7 +587,7 @@
                         <li><a href="#">contacto</a></li>
                         <li><a href="#">faq</a></li>
                         <li><a href="#">about</a></li>
-                        <li><a href="#">diseños</a></li>
+                        <li><a href="#marquee" class="scroll-con-offset">diseños</a></li>
                     </ul>
                 </nav>
 

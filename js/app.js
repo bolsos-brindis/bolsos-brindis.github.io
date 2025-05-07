@@ -109,3 +109,35 @@ function actualizarFondoBarraNavegacion() {
     }
   }
 }
+
+/* ===== 🍾 SCROLL CON OFFSET ===== */
+/*
+  # Hay que darle la clase de "scroll-con-offset" al botón o anchor.
+  # En caso de <a>, usamos href="#idDestino"; para botones, data-scroll="#idDestino"
+  # Añadir la clase .espaciado para dejar espacio superior.
+*/
+
+document.querySelectorAll('.scroll-con-offset').forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const barra = document.getElementById('barraNavegacion');
+    const alturaBarra = barra?.offsetHeight || 0;
+
+    const targetID = el.getAttribute('data-scroll') || el.getAttribute('href');
+    if (!targetID || !targetID.startsWith('#')) return;
+
+    const destino = document.querySelector(targetID);
+    if (!destino) return;
+
+    // Si existe la clase .espaciado, añadimos un margen extra
+    const espaciadoExtra = el.classList.contains('espaciado') ? 32 : 0; // 2 rem
+
+    const offset = destino.getBoundingClientRect().top + window.scrollY - alturaBarra - espaciadoExtra + 1;
+
+    window.scrollTo({
+      top: offset,
+      behavior: 'smooth'
+    });
+  });
+});
