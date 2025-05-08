@@ -1,11 +1,11 @@
-/* 
-    # Hacer la altura mínima del .faq (o main) de 100dvh - footer - altura final de navbar.
-*/
-
 main {
     background-color: white;
     padding-top: 2rem;
     padding-bottom: 5rem;
+}
+
+strong {
+    font-weight: 600;
 }
 
 #contenedorFAQ {
@@ -60,4 +60,9 @@ main {
 
 .faq-item .contenido p {
     margin-bottom: 1rem;
+}
+
+.email-contacto {
+    font-weight: 600;
+    border-bottom: 1px solid var(--color-texto);
 }

@@ -95,7 +95,10 @@
     --color-texto: #393939;
     /* Banner promocional */
     --color-acento: #efd7e5;
+    /* Sidebar, faq, etc. */
     --color-separador: #e7dae2;
+    /* Underline sutil */
+    --color-underline: #aeaaac;
 }
 
 /* ===== 🧱 ESTILOS BÁSICOS ===== */
@@ -145,6 +148,18 @@ picture {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+a.underline {
+    border-bottom: 1px solid var(--color-underline);
+}
+
+a.underline:hover {
+    border-bottom: 1px solid var(--color-texto);
+}
+
+strong {
+    font-weight: 600;
 }
 
 button {

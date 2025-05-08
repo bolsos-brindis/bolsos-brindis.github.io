@@ -1,0 +1,103 @@
+main {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#contactoContenedor {
+    max-width: 600px;
+}
+
+@media (max-width: 700px) {
+    #contactoContenedor {
+        padding: 0 2rem;
+    }
+
+    .contacto-contenedor-datos {
+        flex-direction: column;
+    }
+}
+
+.contacto-encabezado {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.contacto-texto {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: .95rem;
+}
+
+.contacto-texto .email-contacto {
+    font-weight: 600;
+}
+
+.contacto-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contacto-contenedor-datos {
+    display: flex;
+    gap: 1rem;
+}
+
+.contacto-nombre,
+.contacto-email {
+    flex: 1;
+}
+
+.contacto-formulario label {
+    display: block;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+    width: 100%;
+    padding: .6rem 1rem;
+    border: none;
+    border-radius: .25rem;
+    font-family: "TT Chocolates";
+    font-size: .95rem;
+    background-color: white;
+}
+
+.contacto-formulario input:focus,
+.contacto-formulario textarea:focus {
+    outline: none;
+}
+
+.contacto-formulario button {
+    padding: .6rem;
+    border: 1px solid var(--color-texto);
+    background-color: transparent;
+}
+
+.contacto-aviso-legal {
+    font-size: .75rem;
+    text-align: center;
+    color: black;
+}
+
+.contacto-modal {
+    margin-top: 1rem;
+    padding: .6rem 1rem;
+    /* border-radius: .25rem; */
+    /* border: 1px solid var(--color-texto); */
+    background-color: var(--color-acento);
+    font-size: .95rem;
+
+    /* opacity: 0; */
+    transform: translateY(1rem);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+}
+
+.newsletter-modal.activo {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}

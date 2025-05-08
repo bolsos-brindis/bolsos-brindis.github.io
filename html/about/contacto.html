@@ -42,13 +42,13 @@
 
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/about/faq.css" />
+    <link rel="stylesheet" href="/css/about/contacto.css" />
 
     <!-- Componentes -->
 
     <!-- Scripts -->
     <script src="/js/app.js" defer></script>
-    <script src="/js/about/faq.js" defer></script>
+    <!-- <script src="/js/about/contacto.js" defer></script> -->
 </head>
 
 <body>
@@ -166,95 +166,50 @@
     </header>
 
     <main>
-        <section class="faq">
-            <div id="contenedorFAQ" class="contenedor">
-                <h1 class="encabezado encabezado-seccion faq-encabezado">FAQ</h1>
-                <div class="faq-preguntas">
-                    <details class="faq-item">
-                        <summary>¿Cuánto dura la batería integrada?</summary>
-                        <div class="contenido">
-                            <p>
-                                Cada modelo tiene una capacidad diferente, pero en promedio puedes disfrutar de
-                                <strong>hasta dos cargas completas</strong> para tu móvil.
-                            </p>
+        <section class="contacto">
+            <div id="contactoContenedor" class="contenedor">
+                <h1 class="encabezado contacto-encabezado">CONTACTO</h1>
+                <p class="contacto-texto">
+                    si tienes dudas sobre nuestros bolsos con batería integrada, te invitamos a visitar nuestra sección
+                    de
+                    <a class="underline" href="/html/about/faq.html">FAQ</a>. si aún necesitas asistencia, estaremos
+                    encantadas de
+                    brindarte
+                    una respuesta. escríbenos a través del formulario o envíanos un correo a
+                    <a class="email-contacto" href="mailto:hola@bolsosbrindis.es">hola@bolsosbrindis.es</a>.
+                </p>
+                <form class="contacto-formulario" action="#">
+                    <div class="contacto-contenedor-datos">
+                        <div class="contacto-nombre">
+                            <label for="contactoInputNombre">nombre</label>
+                            <input id="contactoInputNombre" type="text" required />
                         </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary>¿Es seguro viajar con los bolsos Brindis?</summary>
-                        <div class="contenido">
-                            <p>
-                                ¡Por supuesto! Nuestros bolsos cumplen con todas las normativas vigentes y son
-                                completamente aptos para viajar en avión.
-                            </p>
+                        <div class="contacto-email">
+                            <label for="contactoInputEmail">email</label>
+                            <input id="contactoInputEmail" type="email" required />
                         </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary>¿Cuáles son los tiempos de envío?</summary>
-                        <div class="contenido">
-                            <p>
-                                Tu pedido llegará en <strong>24 a 48 horas</strong> dentro de España.
-                            </p>
-                            <p>
-                                Para otros destinos, los plazos varían entre 3 y 7 días laborables.
-                            </p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary>¿Cómo puedo solicitar una devolución?</summary>
-                        <div class="contenido">
-                            <p>
-                                Si tu Brindis no es lo que esperabas, tienes 14 días naturales para devolverlo desde que
-                                lo recibes.
-                            </p>
-                            <p>
-                                El bolso debe estar en perfectas condiciones, con su embalaje original y todos sus
-                                accesorios.
-                            </p>
-                            <p>
-                                Te reembolsaremos el importe dentro de 14 días desde que recibamos tu devolución.
-                            </p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary>¿Puedo realizar un cambio de artículo?</summary>
-                        <div class="contenido">
-                            <p>
-                                En Brindis no gestionamos cambios directos, pero puedes devolver tu bolso y hacer un
-                                nuevo pedido. Una vez recibamos tu devolución, te reembolsaremos el importe
-                                correspondiente.
-                            </p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary>¿Cómo cuidar de mi bolso Brindis?</summary>
-                        <div class="contenido">
-                            <p>
-                                <strong>Modelos de piel sintética:</strong> Límpialo con jabón neutro o toallitas sin
-                                alcohol. Evita el contacto con perfumes, hidrogel o productos agresivos, ya que pueden
-                                dañar los materiales.
-                            </p>
-                            <p>
-                                <strong>Modelos de tela:</strong> Lávalo a mano, evitando jabones ácidos.
-                            </p>
-                            <p>
-                                Para mantener tu bolso impecable, guárdalo en la bolsa protectora incluida con tu
-                                compra.
-                            </p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary>¿Qué pasa si mi bolso tiene un defecto?</summary>
-                        <div class="contenido">
-                            <p>
-                                Cada bolso Brindis es revisado con cariño antes de enviarse. Sin embargo, si notas algún
-                                desperfecto, escríbenos a <a class="email-contacto" href="mailto:hola@bolsosbrindis.es">
-                                    hola@bolsosbrindis.es</a>
-                                dentro de las primeras
-                                <strong>72 horas</strong> desde que recibes el bolso. Pasado ese plazo, no podremos
-                                hacernos responsables del desperfecto.
-                            </p>
-                        </div>
-                    </details>
+                    </div>
+                    <div class="contacto-mensaje">
+                        <label for="contactoInputMensaje">mensaje</label>
+                        <textarea id="contactoInputMensaje" name="contactoInputMensaje" rows="5" required></textarea>
+                    </div>
+                    <button class="cta" type="submit">enviar</button>
+                </form>
+                <p class="contacto-aviso-legal">
+                    al enviar este formulario, aceptas nuestra política de protección de datos y el uso responsable de
+                    tu
+                    información. queremos que tu experiencia con brindis sea segura y transparente. puedes consultar
+                    todos
+                    los detalles en nuestra <a class="underline" href="#">política de privacidad</a>
+                </p>
+                <div id="contactoModal" class="modal contacto-modal">
+                    ¡gracias por confiar en brindis,
+                    <strong>
+                        <span id="nombreMostrado">sebastian</span>
+                    </strong>!<br><br>
+                    en breve nos pondremos en contacto contigo. mientras tanto,
+                    ¿qué te parece descubrir nuestra <a class="underline" href="#">última colección</a>?
+                    segura que encuentras algo que te encanta 💛
                 </div>
             </div>
         </section>
