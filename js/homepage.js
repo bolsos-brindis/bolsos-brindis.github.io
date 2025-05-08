@@ -159,3 +159,5 @@ formulario.addEventListener('submit', (e) => {
         modal.classList.remove('activo');
     }, 3000);
 });
+
+
