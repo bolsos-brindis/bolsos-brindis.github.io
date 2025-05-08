@@ -99,53 +99,10 @@ function actualizarFondoBarraNavegacion() {
   }
 }
 
-// ===============================
-// 🍾 SCROLL CON OFFSET (index.html)
-// ===============================
 
-function getAlturaBarra() {
-  const barra = document.getElementById('barraNavegacion');
-  return barra?.offsetHeight || 0;
-}
-
-function scrollConOffset(destino, espaciado = 0) {
-  if (!destino) return;
-  const alturaBarra = getAlturaBarra();
-  const offset = destino.getBoundingClientRect().top + window.scrollY - alturaBarra - espaciado + 1;
-  window.scrollTo({
-    top: offset,
-    behavior: 'smooth'
-  });
-}
-
-// Enlaces normales en la homepage
-document.querySelectorAll('.scroll-con-offset').forEach(el => {
-  el.addEventListener('click', e => {
-    const rawHref = el.getAttribute('data-scroll') || el.getAttribute('href');
-    if (!rawHref || !rawHref.startsWith('#')) return;
-
-    const destino = document.querySelector(rawHref);
-    if (!destino) return;
-
-    e.preventDefault();
-    const espaciadoExtra = el.hasAttribute('data-espaciado') ? 32 : 0;
-    scrollConOffset(destino, espaciadoExtra);
-  });
-});
-
-// Enlaces del menú lateral (index.html)
-document.querySelectorAll('#menuLateral a.scroll-con-offset').forEach(enlace => {
-  enlace.addEventListener('click', e => {
-    const rawHref = enlace.getAttribute('href');
-    if (!rawHref || !rawHref.startsWith('#')) return;
-
-    const destino = document.querySelector(rawHref);
-    if (!destino) return;
-
-    e.preventDefault();
-    cerrarMenuLateral();
-
-    const espaciadoExtra = enlace.hasAttribute('data-espaciado') ? 32 : 0;
-    scrollConOffset(destino, espaciadoExtra);
+/* SCROLL */
+document.querySelectorAll('a[data-scroll]').forEach(el => {
+  el.addEventListener('click', () => {
+      sessionStorage.setItem('scrollDestino', el.getAttribute('data-scroll'));
   });
 });

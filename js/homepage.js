@@ -161,3 +161,79 @@ formulario.addEventListener('submit', (e) => {
 });
 
 
+// ===============================
+// 🍾 SCROLL CON OFFSET (index.html)
+// ===============================
+
+function getAlturaBarra() {
+    const barra = document.getElementById('barraNavegacion');
+    return barra?.offsetHeight || 0;
+}
+
+function scrollConOffset(destino, espaciado = 0) {
+    if (!destino) return;
+    const alturaBarra = getAlturaBarra();
+    const offset = destino.getBoundingClientRect().top + window.scrollY - alturaBarra - espaciado + 1;
+    window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+    });
+}
+
+// Enlaces normales en la homepage
+document.querySelectorAll('.scroll-con-offset').forEach(el => {
+    el.addEventListener('click', e => {
+        const rawHref = el.getAttribute('data-scroll') || el.getAttribute('href');
+        if (!rawHref || !rawHref.startsWith('#')) return;
+
+        const destino = document.querySelector(rawHref);
+        if (!destino) return;
+
+        e.preventDefault();
+        const espaciadoExtra = el.hasAttribute('data-espaciado') ? 32 : 0;
+        scrollConOffset(destino, espaciadoExtra);
+    });
+});
+
+// Enlaces del menú lateral (index.html)
+document.querySelectorAll('#menuLateral a.scroll-con-offset').forEach(enlace => {
+    enlace.addEventListener('click', e => {
+        const rawHref = enlace.getAttribute('href');
+        if (!rawHref || !rawHref.startsWith('#')) return;
+
+        const destino = document.querySelector(rawHref);
+        if (!destino) return;
+
+        e.preventDefault();
+        cerrarMenuLateral();
+
+        const espaciadoExtra = enlace.hasAttribute('data-espaciado') ? 32 : 0;
+        scrollConOffset(destino, espaciadoExtra);
+    });
+});
+
+// FUERA DE HOMEPAGE
+window.addEventListener('load', () => {
+    const destinoID = sessionStorage.getItem('scrollDestino');
+    if (!destinoID) return;
+  
+    sessionStorage.removeItem('scrollDestino');
+  
+    const destino = document.querySelector(destinoID);
+    if (!destino) return;
+  
+    const alturaBarra = document.getElementById('barraNavegacion')?.offsetHeight || 0;
+  
+    // ¿Requiere espaciado extra?
+    const requiereEspaciado = destino.hasAttribute('data-espaciado');
+    const espaciadoExtra = requiereEspaciado ? 32 : 0;
+  
+    const y = destino.getBoundingClientRect().top + window.scrollY - alturaBarra - espaciadoExtra;
+  
+    window.scrollTo({ top: y, behavior: 'auto' });
+  });
+
+  /*
+    # Dos tipos de data-espaciado. Uno para interno que se pone en el enlace
+      Otro externo, que se pone en la sección destino.
+  */
