@@ -106,3 +106,47 @@ document.querySelectorAll('a[data-scroll]').forEach(el => {
       sessionStorage.setItem('scrollDestino', el.getAttribute('data-scroll'));
   });
 });
+
+
+/* MAIN CON ALTURA MÍNIMA DE 100DVH - FOOTER Y HEADER */
+/*
+  # De momento, hay que ponerle al main el id de #main y al footer #footer. En los documentos que se quiera llamar, se podrán usar los listeners de abajo.
+  
+  # Con el código no comentado, ya iría solo sin tener que añadir los IDs.
+*/
+// function ajustarMinHeightMain() {
+//   const main = document.getElementById('main');
+//   const footer = document.getElementById('footer');
+
+//   const alturaFooter = footer.offsetHeight;
+//   const bottomNav = barraNavegacion.getBoundingClientRect().bottom + window.scrollY;
+
+//   const alturaViewport = window.innerHeight;
+//   const alturaDisponible = alturaViewport - alturaFooter - bottomNav;
+
+//   main.style.minHeight = `${alturaDisponible}px`;
+// }
+
+// // Llamar al cargar y al redimensionar
+// window.addEventListener('load', ajustarMinHeightMain);
+// window.addEventListener('resize', ajustarMinHeightMain);
+
+
+function ajustarMinHeightMain() {
+  const main = document.querySelector('main');
+  const footer = document.querySelector('footer');
+  const nav = document.querySelector('header');
+
+  if (!main || !footer || !nav) return;
+
+  const alturaFooter = footer.offsetHeight;
+  const bottomNav = nav.getBoundingClientRect().bottom + window.scrollY;
+
+  const alturaViewport = window.innerHeight;
+  const alturaDisponible = alturaViewport - alturaFooter - bottomNav;
+
+  main.style.minHeight = `${alturaDisponible}px`;
+}
+
+window.addEventListener('load', ajustarMinHeightMain);
+window.addEventListener('resize', ajustarMinHeightMain);

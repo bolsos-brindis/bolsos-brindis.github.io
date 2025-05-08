@@ -95,6 +95,7 @@
     --color-texto: #393939;
     /* Banner promocional */
     --color-acento: #efd7e5;
+    --color-separador: #e7dae2;
 }
 
 /* ===== 🧱 ESTILOS BÁSICOS ===== */
@@ -165,10 +166,14 @@ button,
 a,
 input,
 textarea,
-select {
+select,
+summary {
     -webkit-tap-highlight-color: transparent;
 }
 
+details summary {
+    list-style: none;
+}
 
 /* ===== 🧱 ESTILOS GENERALES ===== */
 
@@ -297,7 +302,7 @@ header {
     padding: 1.5rem 3rem;
     background-color: white;
     transition: background-color .3s ease;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .barra-navegacion--menu-abierto {
@@ -424,7 +429,7 @@ header {
     display: block;
     padding-top: 1.25rem;
     padding-bottom: 1.15rem;
-    box-shadow: inset 0 -1px 0 #e7dae2;
+    box-shadow: inset 0 -1px 0 var(--color-separador);
     color: var(--color-principal);
     font-family: "Univers LT Std";
     font-weight: 700;
@@ -518,6 +523,7 @@ header {
 footer {
     padding-top: 2rem;
     padding-bottom: 3.5rem;
+    /* background-color: var(--color-fondo); */
 }
 
 .footer-social svg {

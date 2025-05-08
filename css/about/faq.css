@@ -1,0 +1,63 @@
+/* 
+    # Hacer la altura mínima del .faq (o main) de 100dvh - footer - altura final de navbar.
+*/
+
+main {
+    background-color: white;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+#contenedorFAQ {
+    max-width: 900px;
+}
+
+@media (max-width: 700px) {
+    #contenedorFAQ {
+        padding: 0 1rem;
+    }
+}
+
+.faq-encabezado {
+    text-align: center;
+}
+
+.faq-preguntas summary {
+    color: var(--color-principal);
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+.faq-preguntas details {
+    border-bottom: 1px solid var(--color-separador);
+    padding: 1rem 0;
+    text-transform: lowercase;
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: -.25rem;
+    font-size: 1.5rem;
+    transition: transform .3s ease;
+}
+
+.faq-item.activo summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-item .contenido {
+    margin-top: 1rem;
+    font-size: .95rem;
+    line-height: 1.6;
+
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
+
+.faq-item .contenido p {
+    margin-bottom: 1rem;
+}

@@ -49,27 +49,6 @@
     <!-- Scripts -->
     <script src="/js/app.js" defer></script>
     <script src="/js/homepage.js" defer></script>
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            const hash = window.location.hash;
-            if (!hash) return;
-
-            const destino = document.querySelector(hash);
-            if (!destino) return;
-
-            // Forzamos a ir al top primero para anular scroll automático del navegador
-            window.scrollTo(0, 0);
-
-            // En el siguiente frame, hacemos scroll exacto al top del elemento
-            requestAnimationFrame(() => {
-                const offset = destino.getBoundingClientRect().top + window.scrollY;
-                window.scrollTo({
-                    top: offset,
-                    behavior: 'auto'
-                });
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -606,7 +585,7 @@
                 <nav class="footer-bloque footer-enlaces">
                     <ul>
                         <li><a href="#">contacto</a></li>
-                        <li><a href="#">faq</a></li>
+                        <li><a href="/html/about/faq.html">faq</a></li>
                         <li><a href="#">about</a></li>
                         <li><a href="#marquee" class="scroll-con-offset">diseños</a></li>
                     </ul>
