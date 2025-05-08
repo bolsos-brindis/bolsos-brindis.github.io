@@ -1,21 +1,32 @@
-// const formulario = document.querySelector('.contacto-formulario');
-// const modal = document.getElementById('contactoModal');
-// const inputCorreo = document.getElementById('contactoInputEmail');
-// const spanModal = document.getElementById('nombreMostrado');
+const formulario = document.querySelector('.contacto-formulario');
+const modal = document.getElementById('contactoModal');
+const inputNombre = document.getElementById('contactoInputNombre');
+const inputCorreo = document.getElementById('contactoInputEmail');
+const inputMensaje = document.getElementById('contactoInputMensaje');
+const spanNombre = document.getElementById('nombreMostrado');
+const botonEnviar = document.getElementById('contactoBotonEnviar');
 
-// formulario.addEventListener('submit', (e) => {
-//     e.preventDefault();
+formulario.addEventListener('submit', (e) => {
+    console.log("xd");
+    e.preventDefault();
 
-//     const correo = inputCorreo.value.trim();
-//     if (!correo) return;
+    const nombre = inputNombre.value.trim().toLowerCase();
+    if (!nombre) return;
 
-//     spanCorreo.textContent = correo;
-//     modal.classList.add('activo');
+    spanNombre.textContent = nombre;
+    modal.classList.add('activo');
 
-//     inputCorreo.value = ''; // vaciar el input
+    inputNombre.disabled = true;
+    inputCorreo.disabled = true;
+    inputMensaje.disabled = true;
+    botonEnviar.disabled = true;
+    botonEnviar.textContent = "enviado";
+    // botonEnviar.style.backgroundColor = "transparent";
+    // botonEnviar.style.color = "#393939";
+    botonEnviar.style.pointerEvents = "none";
 
-//     // Ocultar el modal después de 3 segundos
-//     setTimeout(() => {
-//         modal.classList.remove('activo');
-//     }, 3000);
-// });
+    // Ocultar el modal después de 3 segundos
+    // setTimeout(() => {
+    //     modal.classList.remove('activo');
+    // }, 3000);
+});

@@ -48,7 +48,7 @@
 
     <!-- Scripts -->
     <script src="/js/app.js" defer></script>
-    <!-- <script src="/js/about/contacto.js" defer></script> -->
+    <script src="/js/about/contacto.js" defer></script>
 </head>
 
 <body>
@@ -193,7 +193,7 @@
                         <label for="contactoInputMensaje">mensaje</label>
                         <textarea id="contactoInputMensaje" name="contactoInputMensaje" rows="5" required></textarea>
                     </div>
-                    <button class="cta" type="submit">enviar</button>
+                    <button id="contactoBotonEnviar" class="cta" type="submit">enviar</button>
                 </form>
                 <p class="contacto-aviso-legal">
                     al enviar este formulario, aceptas nuestra política de protección de datos y el uso responsable de
@@ -205,7 +205,7 @@
                 <div id="contactoModal" class="modal contacto-modal">
                     ¡gracias por confiar en brindis,
                     <strong>
-                        <span id="nombreMostrado">sebastian</span>
+                        <span id="nombreMostrado"></span>
                     </strong>!<br><br>
                     en breve nos pondremos en contacto contigo. mientras tanto,
                     ¿qué te parece descubrir nuestra <a class="underline" href="#">última colección</a>?
