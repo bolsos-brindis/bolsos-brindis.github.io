@@ -161,9 +161,21 @@ formulario.addEventListener('submit', (e) => {
 });
 
 
-// ===============================
-// 🍾 SCROLL CON OFFSET (index.html)
-// ===============================
+/* ===== 🍾 SCROLL ===== */
+/*
+    # La única forma de hacerlo funcionar ha sido dividir el header y footer en dos versiones,
+      la de index.html y el resto.
+    
+    # Las secciones que vayan a tener scroll, tendrán que tener un id y `data-espaciado`
+      si quieren tener un márgen superior. Por ejemplo, <id="blog" data-espaciado>.
+    
+    # Para la versión del index.html, los enlaces tendrán que tener href="#idSeccion" y
+      la clase .scroll-con-offset.
+
+    # Para la versión externa, los enlaces tendrán href="/index.html" data-scroll="#idSeccion" (incluir #)
+
+    # Se podría mejorar implementando .scroll-con-offset también en externo o unificando ambas versiones.
+*/
 
 function getAlturaBarra() {
     const barra = document.getElementById('barraNavegacion');
@@ -180,7 +192,11 @@ function scrollConOffset(destino, espaciado = 0) {
     });
 }
 
-// Enlaces normales en la homepage
+function obtenerEspaciadoDesdeSeccion(elDestino) {
+    return elDestino?.hasAttribute('data-espaciado') ? 32 : 0;
+}
+
+// Enlaces normales (index.html)
 document.querySelectorAll('.scroll-con-offset').forEach(el => {
     el.addEventListener('click', e => {
         const rawHref = el.getAttribute('data-scroll') || el.getAttribute('href');
@@ -190,7 +206,7 @@ document.querySelectorAll('.scroll-con-offset').forEach(el => {
         if (!destino) return;
 
         e.preventDefault();
-        const espaciadoExtra = el.hasAttribute('data-espaciado') ? 32 : 0;
+        const espaciadoExtra = obtenerEspaciadoDesdeSeccion(destino);
         scrollConOffset(destino, espaciadoExtra);
     });
 });
@@ -207,33 +223,24 @@ document.querySelectorAll('#menuLateral a.scroll-con-offset').forEach(enlace => 
         e.preventDefault();
         cerrarMenuLateral();
 
-        const espaciadoExtra = enlace.hasAttribute('data-espaciado') ? 32 : 0;
+        const espaciadoExtra = obtenerEspaciadoDesdeSeccion(destino);
         scrollConOffset(destino, espaciadoExtra);
     });
 });
 
-// FUERA DE HOMEPAGE
+// Desde sessionStorage (externo)
 window.addEventListener('load', () => {
     const destinoID = sessionStorage.getItem('scrollDestino');
     if (!destinoID) return;
-  
+
     sessionStorage.removeItem('scrollDestino');
-  
+
     const destino = document.querySelector(destinoID);
     if (!destino) return;
-  
-    const alturaBarra = document.getElementById('barraNavegacion')?.offsetHeight || 0;
-  
-    // ¿Requiere espaciado extra?
-    const requiereEspaciado = destino.hasAttribute('data-espaciado');
-    const espaciadoExtra = requiereEspaciado ? 32 : 0;
-  
-    const y = destino.getBoundingClientRect().top + window.scrollY - alturaBarra - espaciadoExtra;
-  
-    window.scrollTo({ top: y, behavior: 'auto' });
-  });
 
-  /*
-    # Dos tipos de data-espaciado. Uno para interno que se pone en el enlace
-      Otro externo, que se pone en la sección destino.
-  */
+    const alturaBarra = document.getElementById('barraNavegacion')?.offsetHeight || 0;
+    const espaciadoExtra = obtenerEspaciadoDesdeSeccion(destino);
+
+    const y = destino.getBoundingClientRect().top + window.scrollY - alturaBarra - espaciadoExtra;
+    window.scrollTo({ top: y, behavior: 'auto' });
+});

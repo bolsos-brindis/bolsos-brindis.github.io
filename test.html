@@ -49,6 +49,27 @@
     <!-- Scripts -->
     <script src="/js/app.js" defer></script>
     <script src="/js/homepage.js" defer></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash;
+            if (!hash) return;
+
+            const destino = document.querySelector(hash);
+            if (!destino) return;
+
+            // Forzamos a ir al top primero para anular scroll automático del navegador
+            window.scrollTo(0, 0);
+
+            // En el siguiente frame, hacemos scroll exacto al top del elemento
+            requestAnimationFrame(() => {
+                const offset = destino.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({
+                    top: offset,
+                    behavior: 'auto'
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -148,7 +169,7 @@
                         <li><a href="/index.html" data-scroll="#marquee"><span>diseños</span></a></li>
                         <li><a href="#"><span>cómo funciona</span></a></li>
                         <li><a href="#"><span>about</span></a></li>
-                        <li><a href="/index.html" data-scroll="#blog" data-espaciado><span>blog</span></a></li>
+                        <li><a href="/index.html" data-scroll="#blog"><span>blog</span></a></li>
                         <!-- <li><a href="#"><span>contacto</span></a></li> -->
                     </ul>
                 </nav>
@@ -446,7 +467,7 @@
             <button class="reseñas-flecha derecha" type="button">›</button>
         </section>
 
-        <section id="blog" class="blog">
+        <section id="blog" class="blog" data-espaciado>
             <div id="contenedorBlog" class="contenedor">
                 <h2 class="encabezado encabezado-seccion blog-encabezado">BLOG</h2>
                 <div class="blog-articulos">
@@ -606,10 +627,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        
-    </script>
 
 </body>
 
