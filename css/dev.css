@@ -6,7 +6,6 @@
     display: flex;
     justify-content: center;
     gap: 120px;
-    background-color: green;
 
     margin-top: 60px;
 }
@@ -14,13 +13,11 @@
 .producto-visual {
     display: flex;
     gap: 20px;
-    background-color: purple;
 }
 
 .barra-imagenes {
     flex: 0 0 60px;
     width: 100%;
-    background-color: blue;
 
     display: flex;
     flex-direction: column;
@@ -31,18 +28,32 @@
     aspect-ratio: 3 / 4;
     width: 100%;
     object-fit: cover;
+
+    outline: 1px solid transparent;
+    opacity: 0.6;
+    transition: outline 0.2s ease, opacity 0.2s ease;
+    cursor: pointer;
+    border-radius: .25rem;
+}
+
+.barra-imagenes img:hover {
+    opacity: 1;
+}
+
+.barra-imagenes img.active {
+    outline: 1px solid var(--color-texto);
+    opacity: 1;
 }
 
 .imagen-principal {
     max-width: 650px;
-    background-color: yellow;
 }
 
 .carrusel-principal {
     display: flex;
     overflow-x: auto;
-    
     scrollbar-width: none;
+    border-radius: .25rem;
 }
 
 .carrusel-principal.dragging {
