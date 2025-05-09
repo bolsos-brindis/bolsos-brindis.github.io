@@ -21,6 +21,16 @@
     flex: 0 0 60px;
     width: 100%;
     background-color: blue;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.barra-imagenes img {
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    object-fit: cover;
 }
 
 .imagen-principal {
@@ -28,10 +38,26 @@
     background-color: yellow;
 }
 
-.imagen-principal img {
-    aspect-ratio: 4 / 5;
+.carrusel-principal {
+    display: flex;
+    overflow-x: auto;
+    
+    scrollbar-width: none;
+}
+
+.carrusel-principal.dragging {
+    scroll-snap-type: none;
+}
+
+.carrusel-principal img {
+    flex: 0 0 100%;
     width: 100%;
+    scroll-snap-align: start;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
+    /* user-select: none; */
+    -webkit-user-drag: none;
+    pointer-events: none;
 }
 
 .producto-detalles {
