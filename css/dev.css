@@ -66,18 +66,39 @@
     scroll-snap-align: start;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    /* user-select: none; */
     -webkit-user-drag: none;
     pointer-events: none;
 }
 
 .producto-detalles {
     width: 540px;
-    background-color: red;
+    background-color: blue;
 }
 
 @media (max-width: 1200px) {
     .producto {
         background-color: black !important;
+
+        flex-direction: column;
+        padding: 0 2rem;
+    }
+
+    .barra-imagenes {
+        display: none;
+    }
+
+    .imagen-principal {
+        max-width: 100%;
+        background-color: red;
+    }
+
+    .producto-detalles {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .producto {
+        padding: 0 1rem;
     }
 }
