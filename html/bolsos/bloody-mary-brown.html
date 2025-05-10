@@ -45,6 +45,8 @@
     <link rel="stylesheet" href="/css/bolsos/bolsos.css" />
 
     <!-- Componentes -->
+    <script src="/components/footer.js" defer></script>
+    <script src="/components/header.js" defer></script>
 
     <!-- Scripts -->
     <script src="/js/app.js" defer></script>
@@ -53,116 +55,7 @@
 
 <body>
     <header>
-        <nav id="barraNavegacion" class="barra-navegacion">
-            <!-- Parte Izquierda -->
-            <div class="barra-navegacion-izquierda">
-                <ul class="barra-navegacion-izquierda-movil">
-                    <li>
-                        <button id="botonHamburguesa" class="boton-hamburguesa" type="button"
-                            aria-label="Abrir menú lateral" aria-expanded="false" aria-controls="menuLateral">
-                            <svg id="iconoHamburguesa" class="icono" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" fill="none">
-                                <rect class="linea superior" x="1" y="4.25" width="22" height="1.5" rx="0"
-                                    fill="currentColor" />
-                                <rect class="linea central" x="1" y="11.25" width="22" height="1.5" rx="0"
-                                    fill="currentColor" />
-                                <rect class="linea inferior" x="1" y="18.25" width="22" height="1.5" rx="0"
-                                    fill="currentColor" />
-                            </svg>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" aria-label="Acceder a la cuenta">
-                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497"
-                                    stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" />
-                            </svg>
-                        </button>
-                    </li>
-                </ul>
-                <ul class="barra-navegacion-izquierda-escritorio">
-                    <li><a href="/index.html" data-scroll="#marquee">diseños</a></li>
-                    <li><a href="#">cómo funciona</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="/index.html" data-scroll="#blog">blog</a></li>
-                </ul>
-            </div>
-
-            <!-- Logo -->
-            <div class="logo no-seleccionar">
-                <h1><a href="/index.html">BRINDIS</a></h1>
-            </div>
-
-            <!-- Parte Derecha -->
-            <div class="barra-navegacion-derecha">
-                <ul class="barra-navegacion-acciones">
-                    <li>
-                        <button type="button" aria-label="Favoritos">
-                            <svg class="icono icono-favoritos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
-                                fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2">
-                                <path
-                                    d="M4 16 C1 12 2 6 7 4 12 2 15 6 16 8 17 6 21 2 26 4 31 6 31 12 28 16 25 20 16 28 16 28 16 28 7 20 4 16 Z" />
-                            </svg>
-                        </button>
-                    </li>
-                    <li class="boton-cuenta">
-                        <button type="button" aria-label="Acceder a la cuenta">
-                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497"
-                                    stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" />
-                            </svg>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" aria-label="Cesta de compras">
-                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M4.75 8.25A.75.75 0 0 0 4 9L3 19.125c0 1.418 1.207 2.625 2.625 2.625h12.75c1.418 0 2.625-1.149 2.625-2.566L20 9a.75.75 0 0 0-.75-.75H4.75Zm2.75 0v-1.5a4.5 4.5 0 0 1 4.5-4.5v0a4.5 4.5 0 0 1 4.5 4.5v1.5"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <aside id="menuLateral" class="menu-lateral">
-            <div class="menu-lateral-contenedor">
-                <nav>
-                    <ul>
-                        <li><a href="/index.html" data-scroll="#marquee"><span>diseños</span></a></li>
-                        <li><a href="#"><span>cómo funciona</span></a></li>
-                        <li><a href="#"><span>about</span></a></li>
-                        <li><a href="/index.html" data-scroll="#blog"><span>blog</span></a></li>
-                        <!-- <li><a href="#"><span>contacto</span></a></li> -->
-                    </ul>
-                </nav>
-                <p class="menu-lateral-eslogan">
-                    <span class="eslogan-contenedor">
-                        <svg class="estrella estrella-izquierda" xmlns="http://www.w3.org/2000/svg" fill="none">
-                            <path fill="currentColor" fill-rule="evenodd"
-                                d="M6.512.563A.527.527 0 0 1 7.26.047a.53.53 0 0 1 .308.52c-.009 1.466-.008 2.529.08 3.314.088.792.257 1.22.515 1.479.26.26.686.434 1.479.534.788.098 1.857.116 3.334.13a.527.527 0 0 1 .37.897.528.528 0 0 1-.373.154h-.002c-1.477-.009-2.547-.008-3.337.08-.793.088-1.22.257-1.48.516-.262.26-.436.687-.536 1.478-.098.785-.116 1.85-.13 3.32a.523.523 0 0 1-.537.53.527.527 0 0 1-.52-.525v-.002c.008-1.475.008-2.543-.08-3.331-.088-.793-.257-1.22-.516-1.479-.26-.261-.689-.435-1.48-.535-.789-.1-1.858-.116-3.334-.13h-.004a.527.527 0 0 1 .01-1.054h.002c1.477.01 2.547.009 3.337-.079.793-.088 1.22-.256 1.481-.514.261-.259.435-.685.535-1.477.098-.784.116-1.846.13-3.31Zm.446 12.049.006-.135v-.002h-.005v.137Zm0-.137h.006l.01-.251h-.016v.25Zm.03-4.996c.11-.207.245-.39.409-.553.165-.164.352-.296.561-.405a2.294 2.294 0 0 1-.554-.41 2.296 2.296 0 0 1-.403-.559c-.111.207-.246.392-.412.555a2.296 2.296 0 0 1-.56.403c.208.11.393.246.556.411.163.165.295.35.403.558Z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="eslogan-texto">diseños con la mezcla perfecta</span>
-                        <svg class="estrella estrella-derecha" xmlns="http://www.w3.org/2000/svg" fill="none">
-                            <path fill="currentColor" fill-rule="evenodd"
-                                d="M6.512.563A.527.527 0 0 1 7.26.047a.53.53 0 0 1 .308.52c-.009 1.466-.008 2.529.08 3.314.088.792.257 1.22.515 1.479.26.26.686.434 1.479.534.788.098 1.857.116 3.334.13a.527.527 0 0 1 .37.897.528.528 0 0 1-.373.154h-.002c-1.477-.009-2.547-.008-3.337.08-.793.088-1.22.257-1.48.516-.262.26-.436.687-.536 1.478-.098.785-.116 1.85-.13 3.32a.523.523 0 0 1-.537.53.527.527 0 0 1-.52-.525v-.002c.008-1.475.008-2.543-.08-3.331-.088-.793-.257-1.22-.516-1.479-.26-.261-.689-.435-1.48-.535-.789-.1-1.858-.116-3.334-.13h-.004a.527.527 0 0 1 .01-1.054h.002c1.477.01 2.547.009 3.337-.079.793-.088 1.22-.256 1.481-.514.261-.259.435-.685.535-1.477.098-.784.116-1.846.13-3.31Zm.446 12.049.006-.135v-.002h-.005v.137Zm0-.137h.006l.01-.251h-.016v.25Zm.03-4.996c.11-.207.245-.39.409-.553.165-.164.352-.296.561-.405a2.294 2.294 0 0 1-.554-.41 2.296 2.296 0 0 1-.403-.559c-.111.207-.246.392-.412.555a2.296 2.296 0 0 1-.56.403c.208.11.393.246.556.411.163.165.295.35.403.558Z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </span>
-                </p>
-            </div>
-        </aside>
+        <brindis-header></brindis-header>
     </header>
 
     <main>
@@ -337,62 +230,7 @@
     </main>
 
     <footer>
-        <div id="contenedorFooter" class="contenedor">
-            <div class="footer-contenedor">
-                <!-- Redes Sociales -->
-                <nav class="footer-bloque footer-social">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path
-                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path
-                                        d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                    <path
-                                        d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z" />
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <!-- Enlaces -->
-                <nav class="footer-bloque footer-enlaces">
-                    <ul>
-                        <li><a href="#">contacto</a></li>
-                        <li><a href="#">faq</a></li>
-                        <li><a href="#">about</a></li>
-                        <li><a href="/index.html" data-scroll="#marquee">diseños</a></li>
-                    </ul>
-                </nav>
-
-                <!-- Legal -->
-                <nav class="footer-bloque footer-legal">
-                    <ul>
-                        <li><a href="#">política de privacidad</a></li>
-                        <li><a href="#">cookies</a></li>
-                        <li><a href="#">condiciones de venta</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- Derechos de Autor -->
-            <div class="footer-copyright">
-                © 2025 brindis
-            </div>
-        </div>
+        <brindis-footer></brindis-footer>
     </footer>
 
 </body>
