@@ -202,6 +202,10 @@ html {
     scroll-behavior: smooth;
 }
 
+input {
+    font-family: "TT Chocolates", "Poppins", "Helvetica Neue", Arial, sans-serif;
+}
+
 /* Color al subrayar */
 ::selection {
     background-color: var(--color-chicle);

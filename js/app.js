@@ -1,3 +1,8 @@
+// Detectar si es un dispositivo táctil
+function isTouchDevice() {
+  return window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+}
+
 // ===============================
 // 🍔 MENÚ LATERAL + HAMBURGUESA
 // ===============================
@@ -103,7 +108,7 @@ function actualizarFondoBarraNavegacion() {
 /* SCROLL */
 document.querySelectorAll('a[data-scroll]').forEach(el => {
   el.addEventListener('click', () => {
-      sessionStorage.setItem('scrollDestino', el.getAttribute('data-scroll'));
+    sessionStorage.setItem('scrollDestino', el.getAttribute('data-scroll'));
   });
 });
 

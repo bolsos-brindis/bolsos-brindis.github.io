@@ -6,11 +6,6 @@ let startX = 0;
 let scrollStart = 0;
 let currentIndex = 0;
 
-// Detectar si es un dispositivo táctil
-function isTouchDevice() {
-    return window.matchMedia('(hover: none) and (pointer: coarse)').matches;
-}
-
 // Drag solo en dispositivos no táctiles
 if (!isTouchDevice()) {
     carrusel.addEventListener('pointerdown', (e) => {
@@ -47,6 +42,15 @@ if (!isTouchDevice()) {
     });
 
     carrusel.addEventListener('dragstart', (e) => e.preventDefault());
+
+    // Recalcular scroll al hacer resize (mantener slide actual centrado)
+    window.addEventListener('resize', () => {
+        const newWidth = carrusel.offsetWidth;
+        carrusel.scrollTo({
+            left: newWidth * currentIndex,
+            behavior: 'smooth'
+        });
+    });
 }
 
 // Snap manual al slide más cercano
@@ -77,14 +81,5 @@ miniaturas.forEach((thumb, index) => {
             behavior: 'smooth'
         });
         setActiveThumbnail(index);
-    });
-});
-
-// Recalcular scroll al hacer resize (mantener slide actual centrado)
-window.addEventListener('resize', () => {
-    const newWidth = carrusel.offsetWidth;
-    carrusel.scrollTo({
-        left: newWidth * currentIndex,
-        behavior: 'smooth'
     });
 });
