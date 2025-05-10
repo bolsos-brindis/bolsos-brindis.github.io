@@ -1,49 +1,59 @@
 const carrusel = document.querySelector('.carrusel-principal');
 const miniaturas = document.querySelectorAll('.barra-imagenes img');
 
-// Configuración drag
 let isDragging = false;
 let startX = 0;
 let scrollStart = 0;
+let currentIndex = 0;
 
-carrusel.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.clientX;
-    scrollStart = carrusel.scrollLeft;
-    carrusel.classList.add('dragging');
-});
+// Detectar si es un dispositivo táctil
+function isTouchDevice() {
+    return window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+}
 
-carrusel.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const x = e.clientX;
-    const walk = (x - startX) * 1.2; // sensibilidad
-    carrusel.scrollLeft = scrollStart - walk;
-});
+// Drag solo en dispositivos no táctiles
+if (!isTouchDevice()) {
+    carrusel.addEventListener('pointerdown', (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        scrollStart = carrusel.scrollLeft;
+        carrusel.classList.add('dragging');
+        carrusel.setPointerCapture(e.pointerId);
+    });
 
-carrusel.addEventListener('mouseup', () => {
-    if (!isDragging) return;
-    isDragging = false;
-    carrusel.classList.remove('dragging');
-    snapToClosest();
-});
+    carrusel.addEventListener('pointermove', (e) => {
+        if (!isDragging) return;
+        const walk = (e.clientX - startX) * 1.5;
+        carrusel.scrollLeft = scrollStart - walk;
+    });
 
-carrusel.addEventListener('mouseleave', () => {
-    if (!isDragging) return;
-    isDragging = false;
-    carrusel.classList.remove('dragging');
-    snapToClosest();
-});
+    carrusel.addEventListener('pointerup', (e) => {
+        isDragging = false;
+        carrusel.classList.remove('dragging');
+        carrusel.releasePointerCapture(e.pointerId);
+        snapToClosest();
+    });
 
-// Evita selección de texto e imágenes
-carrusel.addEventListener('dragstart', (e) => e.preventDefault());
-carrusel.addEventListener('click', (e) => {
-    if (isDragging) e.preventDefault();
-});
+    carrusel.addEventListener('pointerleave', () => {
+        if (isDragging) {
+            isDragging = false;
+            carrusel.classList.remove('dragging');
+            snapToClosest();
+        }
+    });
 
-// Snap al más cercano
+    carrusel.addEventListener('click', (e) => {
+        if (isDragging) e.preventDefault();
+    });
+
+    carrusel.addEventListener('dragstart', (e) => e.preventDefault());
+}
+
+// Snap manual al slide más cercano
 function snapToClosest() {
     const slideWidth = carrusel.offsetWidth;
     const index = Math.round(carrusel.scrollLeft / slideWidth);
+    currentIndex = index;
     carrusel.scrollTo({
         left: slideWidth * index,
         behavior: 'smooth'
@@ -51,7 +61,15 @@ function snapToClosest() {
     setActiveThumbnail(index);
 }
 
-// Miniaturas: scroll directo
+// Actualizar miniatura activa
+function setActiveThumbnail(index) {
+    currentIndex = index;
+    miniaturas.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+    });
+}
+
+// Miniaturas: hacer scroll al índice correspondiente
 miniaturas.forEach((thumb, index) => {
     thumb.addEventListener('click', () => {
         carrusel.scrollTo({
@@ -62,8 +80,11 @@ miniaturas.forEach((thumb, index) => {
     });
 });
 
-function setActiveThumbnail(index) {
-    miniaturas.forEach((img, i) => {
-        img.classList.toggle('active', i === index);
+// Recalcular scroll al hacer resize (mantener slide actual centrado)
+window.addEventListener('resize', () => {
+    const newWidth = carrusel.offsetWidth;
+    carrusel.scrollTo({
+        left: newWidth * currentIndex,
+        behavior: 'smooth'
     });
-}
+});
