@@ -254,6 +254,7 @@ input {
 .encabezado-seccion {
     font-size: 2rem;
     margin-bottom: 3.5rem;
+    text-transform: uppercase;
 }
 
 @media (max-width: 700px) {
