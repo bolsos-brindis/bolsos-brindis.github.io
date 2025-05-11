@@ -141,6 +141,10 @@
     margin-bottom: 7.5rem;
 }
 
+.productos-encabezado {
+    text-align: center;
+}
+
 .productos-contenedor {
     display: flex;
     flex-wrap: nowrap;
@@ -171,6 +175,7 @@
 }
 
 .producto-tarjeta img {
+    aspect-ratio: 2 / 3;
     width: 100%;
     height: auto;
     display: block;
