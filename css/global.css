@@ -203,6 +203,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.cursor {
+    cursor: url(/assets/meta/cursor/cursor.png), auto;
+}
+
 input {
     font-family: "TT Chocolates", "Poppins", "Helvetica Neue", Arial, sans-serif;
 }
