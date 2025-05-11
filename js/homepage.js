@@ -4,6 +4,10 @@ window.matchMedia('(max-width: 1200px)').addEventListener('change', calcularAltu
 window.addEventListener('orientationchange', () => {
     setTimeout(calcularAlturaHeroBanner, 300);
 });
+
+if (!isTouchDevice()) {
+    window.addEventListener('resize', calcularAlturaHeroBanner);
+}
 // Debounce the fuck out of it
 // window.addEventListener('resize', calcularAlturaHeroBanner);
 
