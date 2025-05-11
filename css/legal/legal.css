@@ -48,6 +48,11 @@ p {
     background-color: var(--color-acento);
 }
 
+.aviso-medac-enlace {
+    font-weight: 600;
+    color: var(--color-principal);
+}
+
 @media (max-width: 700px) {
     .politica-contenedor {
         padding: 0 1rem;
