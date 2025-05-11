@@ -4,25 +4,35 @@
         "nombre": "Bloody Mary",
         "tagline": "¡Siente la energía y marca la diferencia!",
         "descripcion": "La fiesta nunca termina con el Bloody Mary. Si buscas algo divertido y único, este modelo es para ti. Perfecto para noches con amigas o para darle un toque diferente a tu look diario. Con Bloody Mary, cada salida será especial.",
-        "estrellas": 5,
-        "reviews": 212,
-        "precio": "312,00 €",
+        "precio": 320.00,
         "colores": [
             {
                 "nombre": "black",
-                "codigo": "#393939"
+                "codigo": "#2c2c2c",
+                "estrellas": 5,
+                "reviews": 712,
+                "descripcion_color": "En su versión black, Bloody Mary se vuelve aún más versátil: elegante de noche, sobria de día, siempre lista para seguir tu ritmo."
             },
             {
                 "nombre": "brown",
-                "codigo": "#393939"
+                "codigo": "#6e4c47",
+                "estrellas": 5,
+                "reviews": 325,
+                "descripcion_color": "El tono brown añade un aire cálido y natural, ideal para combinar con texturas neutras o llevar en días de otoño."
             },
             {
                 "nombre": "butter",
-                "codigo": "#393939"
+                "codigo": "#f3e6b1",
+                "estrellas": 5,
+                "reviews": 205,
+                "descripcion_color": "Con su tono butter, este modelo resalta por su dulzura y estilo sutil. Una forma delicada de destacar sin esfuerzo."
             },
             {
                 "nombre": "camel",
-                "codigo": "#393939"
+                "codigo": "#d4b49d",
+                "estrellas": 4,
+                "reviews": 54,
+                "descripcion_color": "El color camel aporta una sensación de calma y sobriedad. Perfecto para un look relajado pero cuidado."
             }
         ],
         "medidas": [
@@ -35,21 +45,28 @@
         "nombre": "Cosmopolitan",
         "tagline": "Perfecto para un día ajetreado o un fin de semana relajado.",
         "descripcion": "Elegante y práctico, Cosmo es el bolso que te acompaña de la oficina a tu escapada de fin de semana. Con un diseño sofisticado y funcional, es ideal para quienes buscan un accesorio todo en uno.",
-        "estrellas": 5,
-        "reviews": 212,
-        "precio": "312,00 €",
+        "precio": 98.00,
         "colores": [
             {
                 "nombre": "gold",
-                "codigo": "#c7b18f"
+                "codigo": "#c5a97a",
+                "estrellas": 5,
+                "reviews": 712,
+                "descripcion_color": "La versión gold de Cosmopolitan brilla con elegancia contenida, ideal para destacar de forma discreta y sofisticada."
             },
             {
                 "nombre": "green",
-                "codigo": "#427755"
+                "codigo": "#597d6f",
+                "estrellas": 5,
+                "reviews": 325,
+                "descripcion_color": "El tono green aporta frescura y modernidad, con un aire sereno que lo hace perfecto para el día a día."
             },
             {
                 "nombre": "coral",
-                "codigo": "#e8a889"
+                "codigo": "#e8a8a1",
+                "estrellas": 5,
+                "reviews": 205,
+                "descripcion_color": "Coral le da un giro optimista y femenino a este modelo, sin perder el toque sobrio que lo define."
             }
         ],
         "medidas": [
@@ -61,34 +78,47 @@
         "sku": "daikiri",
         "nombre": "Daikiri",
         "tagline": "¡Llévalo a donde sea y siempre estarás lista!",
-        "descripcion": "El bolso más versátil y compacto. El Daikiri es el accesorio perfecto para quienes buscan practicidad sin sacrificar estilo. Aunque es pequeño, cabe todo lo imprescindible para tu día a día. Ideal para quienes buscan comodidad y elegancia en un solo toque.",
-        "estrellas": 5,
-        "reviews": 212,
-        "precio": "312,00 €",
+        "descripcion": "El bolso más versátil y compacto. El Daikiri es el accesorio perfecto para quienes buscan practicidad sin sacrificar estilo. Aunque es pequeño, cabe todo lo imprescindible para tu día a día.",
+        "precio": 70.00,
         "colores": [
             {
                 "nombre": "beige",
-                "codigo": "#efd8b9"
+                "codigo": "#f1e7d5",
+                "estrellas": 5,
+                "reviews": 712,
+                "descripcion_color": "En beige, Daikiri se transforma en el básico neutro que va con todo, ideal para un estilo depurado y sin complicaciones."
             },
             {
                 "nombre": "black",
-                "codigo": "#0c0c0c"
+                "codigo": "#2c2c2c",
+                "estrellas": 5,
+                "reviews": 325,
+                "descripcion_color": "El tono black realza su lado más urbano. Práctico, seguro y elegante, como una extensión de tu personalidad."
             },
             {
                 "nombre": "garnet",
-                "codigo": "#54181b"
+                "codigo": "#6e2b3c",
+                "estrellas": 5,
+                "reviews": 205,
+                "descripcion_color": "Garnet suma carácter y profundidad, perfecto para destacar en un look sobrio con un toque de intensidad."
             },
             {
                 "nombre": "brown",
-                "codigo": "#693725"
+                "codigo": "#6e4c47",
+                "estrellas": 5,
+                "reviews": 205,
+                "descripcion_color": "En brown, se funde con la calidez de los tonos tierra, perfecto para estilismos con texturas orgánicas."
             },
             {
                 "nombre": "coral",
-                "codigo": "#e8a889"
+                "codigo": "#e8a8a1",
+                "estrellas": 5,
+                "reviews": 205,
+                "descripcion_color": "Coral aporta frescura y delicadeza, ideal para quienes quieren un bolso funcional que no pase desapercibido."
             }
         ],
         "medidas": [
-            "<p>Dimensiones bolso: 17 cm x 10 cm 3 cm</p>",
+            "<p>Dimensiones bolso: 17 cm x 10 cm x 3 cm</p>",
             "<p>Longitud mínima de la correa: 71 cm</p>",
             "<p>Longitud máxima de la correa: 84 cm</p>"
         ]
@@ -97,26 +127,36 @@
         "sku": "martini",
         "nombre": "Martini",
         "tagline": "¡Nunca más te quedarás sin batería!",
-        "descripcion": "Tini un bolso bandolera con la opción de llevarlo al hombro. Lo que lo hace único es su batería integrada, perfecta para mantenerte conectada. Con un diseño elegante y práctico, es el complemento ideal para cualquier ocasión.",
-        "estrellas": 5,
-        "reviews": 212,
-        "precio": "312,00 €",
+        "descripcion": "Tini es un bolso bandolera con la opción de llevarlo al hombro. Lo que lo hace único es su batería integrada, perfecta para mantenerte conectada. Con un diseño elegante y práctico, es el complemento ideal para cualquier ocasión.",
+        "precio": 159.90,
         "colores": [
             {
                 "nombre": "black",
-                "codigo": "#393939"
+                "codigo": "#2c2c2c",
+                "estrellas": 5,
+                "reviews": 712,
+                "descripcion_color": "En negro, Martini se convierte en un básico de elegancia funcional, ideal para moverte por la ciudad con estilo."
             },
             {
                 "nombre": "gold",
-                "codigo": "#393939"
+                "codigo": "#c5a97a",
+                "estrellas": 5,
+                "reviews": 325,
+                "descripcion_color": "La versión gold transmite confianza y sofisticación. Una elección perfecta para momentos especiales o looks pulidos."
             },
             {
                 "nombre": "red",
-                "codigo": "#393939"
+                "codigo": "#9e3f4f",
+                "estrellas": 5,
+                "reviews": 205,
+                "descripcion_color": "El tono red intensifica la personalidad del Martini. Seguro de sí mismo, atrevido y sin complejos."
             },
             {
                 "nombre": "silver",
-                "codigo": "#393939"
+                "codigo": "#c9c9c9",
+                "estrellas": 5,
+                "reviews": 205,
+                "descripcion_color": "Silver aporta un aire moderno y tecnológico, ideal para quienes apuestan por un look contemporáneo con intención."
             }
         ],
         "medidas": [
