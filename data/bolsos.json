@@ -23,15 +23,15 @@
             {
                 "nombre": "butter",
                 "codigo": "#f3e6b1",
-                "estrellas": 5,
+                "estrellas": 4,
                 "reviews": 205,
                 "descripcion_color": "Con su tono butter, este modelo resalta por su dulzura y estilo sutil. Una forma delicada de destacar sin esfuerzo."
             },
             {
                 "nombre": "camel",
                 "codigo": "#d4b49d",
-                "estrellas": 4,
-                "reviews": 54,
+                "estrellas": 5,
+                "reviews": 146,
                 "descripcion_color": "El color camel aporta una sensación de calma y sobriedad. Perfecto para un look relajado pero cuidado."
             }
         ],
@@ -51,21 +51,21 @@
                 "nombre": "gold",
                 "codigo": "#c5a97a",
                 "estrellas": 5,
-                "reviews": 712,
+                "reviews": 118,
                 "descripcion_color": "La versión gold de Cosmopolitan brilla con elegancia contenida, ideal para destacar de forma discreta y sofisticada."
             },
             {
                 "nombre": "green",
                 "codigo": "#597d6f",
                 "estrellas": 5,
-                "reviews": 325,
+                "reviews": 62,
                 "descripcion_color": "El tono green aporta frescura y modernidad, con un aire sereno que lo hace perfecto para el día a día."
             },
             {
                 "nombre": "coral",
                 "codigo": "#e8a8a1",
-                "estrellas": 5,
-                "reviews": 205,
+                "estrellas": 3,
+                "reviews": 57,
                 "descripcion_color": "Coral le da un giro optimista y femenino a este modelo, sin perder el toque sobrio que lo define."
             }
         ],
@@ -85,35 +85,35 @@
                 "nombre": "beige",
                 "codigo": "#f1e7d5",
                 "estrellas": 5,
-                "reviews": 712,
+                "reviews": 203,
                 "descripcion_color": "En beige, Daikiri se transforma en el básico neutro que va con todo, ideal para un estilo depurado y sin complicaciones."
             },
             {
                 "nombre": "black",
                 "codigo": "#2c2c2c",
                 "estrellas": 5,
-                "reviews": 325,
+                "reviews": 166,
                 "descripcion_color": "El tono black realza su lado más urbano. Práctico, seguro y elegante, como una extensión de tu personalidad."
             },
             {
                 "nombre": "garnet",
                 "codigo": "#6e2b3c",
-                "estrellas": 5,
-                "reviews": 205,
+                "estrellas": 4,
+                "reviews": 37,
                 "descripcion_color": "Garnet suma carácter y profundidad, perfecto para destacar en un look sobrio con un toque de intensidad."
             },
             {
                 "nombre": "brown",
                 "codigo": "#6e4c47",
                 "estrellas": 5,
-                "reviews": 205,
+                "reviews": 52,
                 "descripcion_color": "En brown, se funde con la calidez de los tonos tierra, perfecto para estilismos con texturas orgánicas."
             },
             {
                 "nombre": "coral",
                 "codigo": "#e8a8a1",
-                "estrellas": 5,
-                "reviews": 205,
+                "estrellas": 3,
+                "reviews": 18,
                 "descripcion_color": "Coral aporta frescura y delicadeza, ideal para quienes quieren un bolso funcional que no pase desapercibido."
             }
         ],
@@ -134,28 +134,28 @@
                 "nombre": "black",
                 "codigo": "#2c2c2c",
                 "estrellas": 5,
-                "reviews": 712,
+                "reviews": 290,
                 "descripcion_color": "En negro, Martini se convierte en un básico de elegancia funcional, ideal para moverte por la ciudad con estilo."
             },
             {
                 "nombre": "gold",
                 "codigo": "#c5a97a",
                 "estrellas": 5,
-                "reviews": 325,
+                "reviews": 256,
                 "descripcion_color": "La versión gold transmite confianza y sofisticación. Una elección perfecta para momentos especiales o looks pulidos."
             },
             {
                 "nombre": "red",
                 "codigo": "#9e3f4f",
-                "estrellas": 5,
-                "reviews": 205,
+                "estrellas": 4,
+                "reviews": 169,
                 "descripcion_color": "El tono red intensifica la personalidad del Martini. Seguro de sí mismo, atrevido y sin complejos."
             },
             {
                 "nombre": "silver",
                 "codigo": "#c9c9c9",
                 "estrellas": 5,
-                "reviews": 205,
+                "reviews": 199,
                 "descripcion_color": "Silver aporta un aire moderno y tecnológico, ideal para quienes apuestan por un look contemporáneo con intención."
             }
         ],

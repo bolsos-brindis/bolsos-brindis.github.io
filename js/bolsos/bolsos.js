@@ -83,3 +83,33 @@ miniaturas.forEach((thumb, index) => {
         setActiveThumbnail(index);
     });
 });
+
+
+// Cantidad Cesta
+const inputCantidad = document.querySelector('.producto-cesta-cantidad input');
+const btnIncrementar = document.querySelector('.cesta-boton-incrementar');
+const btnDecrementar = document.querySelector('.cesta-boton-decrementar');
+
+function normalizarValor() {
+    let valor = parseInt(inputCantidad.value);
+    if (isNaN(valor) || valor < 1) valor = 1;
+    if (valor > 10) valor = 10;
+    inputCantidad.value = valor;
+}
+
+// Validación al escribir manualmente
+inputCantidad.addEventListener('input', normalizarValor);
+
+// Incrementar
+btnIncrementar.addEventListener('click', () => {
+    normalizarValor();
+    let valor = parseInt(inputCantidad.value);
+    if (valor < 10) inputCantidad.value = valor + 1;
+});
+
+// Decrementar
+btnDecrementar.addEventListener('click', () => {
+    normalizarValor();
+    let valor = parseInt(inputCantidad.value);
+    if (valor > 1) inputCantidad.value = valor - 1;
+});

@@ -95,10 +95,12 @@
 .producto-nombre {
     font-weight: 600;
     font-size: 1.75rem;
+    text-transform: lowercase;
 }
 
 .producto-tagline {
     margin-bottom: .75rem;
+    text-transform: lowercase;
 }
 
 .producto-reviews {

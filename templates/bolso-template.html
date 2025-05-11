@@ -119,7 +119,7 @@
                 <div class="producto-cesta-contenedor">
                     <div class="producto-cesta-cantidad">
                         <button type="button" class="cesta-boton-decrementar">-</button>
-                        <input inputmode="numeric" value="1" aria-label="Cantidad de productos">
+                        <input inputmode="numeric" min="1" max="10" value="1" aria-label="Cantidad de productos">
                         <button type="button" class="cesta-boton-incrementar">+</button>
                     </div>
                     <button class="cta producto-cesta-boton" type="button">añadir a la cesta</button>
@@ -130,7 +130,7 @@
                     <details class="producto-info-item" open>
                         <summary class="no-seleccionar">detalles</summary>
                         <div>
-                            <p>{{descripcion}}</p>
+                            {{descripcion}}
                         </div>
                     </details>
                     <details class="producto-info-item">
@@ -143,17 +143,18 @@
                         <summary class="no-seleccionar">envíos y devoluciones</summary>
                         <div>
                             <p>
-                                Envío estándar en 24-48 horas laborables en península; 3-5 días laborables en Islas
-                                Baleares, Islas Canarias y el resto de Europa.
+                                Realizamos envíos estándar en un plazo de 24 a 48 horas laborables dentro de la
+                                península, y en 3 a 5 días laborables para Islas Baleares, Islas Canarias y el resto de
+                                Europa.
                             </p>
                             <p>
-                                Puedes devolver tu producto hasta 14 días después de la entrega. Los costes de
-                                devolución son de 6€ para península e Islas Baleares, y de 15€ para Europa e Islas
-                                Canarias.
+                                Dispones de 14 días desde la entrega para devolver tu pedido. Los gastos de devolución
+                                son de 6 € para envíos dentro de la península e Islas Baleares, y de 15 € para Europa e
+                                Islas Canarias.
                             </p>
                             <p>
-                                Actualmente no realizamos cambios. Si deseas cambiar un artículo, deberás devolverlo y
-                                realizar una nueva compra con el producto deseado.
+                                Actualmente no gestionamos cambios. Si deseas un artículo diferente, solo tienes que
+                                devolver el que tienes y realizar una nueva compra con el modelo que prefieras.
                             </p>
                         </div>
                     </details>
