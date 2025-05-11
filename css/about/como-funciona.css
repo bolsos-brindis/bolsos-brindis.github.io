@@ -1,0 +1,158 @@
+main {
+    background-image: linear-gradient(white, var(--color-fondo));
+}
+
+.como-funciona {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+}
+
+/* ===== Versión lineal (escritorio) ===== */
+
+.media-contenedor {
+    position: relative;
+}
+
+.media-lineal {
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    text-transform: lowercase;
+}
+
+.media-izquierda,
+.media-derecha {
+    font-size: 5rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.media-lineal .media-video {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 15%;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(59, 59, 59, 0.1);
+}
+
+.media-lineal .media-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 1 / 1;
+}
+
+/* ===== Versión circular (móvil) ===== */
+.media-circular {
+    position: relative;
+    width: 275px;
+    height: 275px;
+    margin: 0 auto;
+    display: block;
+}
+
+.media-svg {
+    position: absolute;
+    top: -13%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    /* transform: translate(-50%, -50%); */
+    animation: spinText 18s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.media-svg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.media-svg text {
+    font-size: 1rem;
+    fill: var(--color-principal);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.media-circular .media-video {
+    position: relative;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(59, 59, 59, 0.1);
+}
+
+.media-circular .media-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* === Animación circular === */
+@keyframes spinText {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.media-circular {
+    display: none;
+}
+
+/* === Media Query para cambiar versión === */
+@media (max-width: 1000px) {
+    .media-lineal {
+        display: none;
+    }
+
+    .media-circular {
+        display: block;
+    }
+
+    .como-funciona {
+        padding-top: 2rem;
+    }
+}
+
+/* ===== 👻 TEXTO ===== */
+.texto-contenedor {
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-transform: lowercase;
+}
+
+.texto-contenedor h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    display: none;
+}
+
+.texto-contenedor p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.texto-contenedor p.tagline {
+    font-family: "Dancing Script";
+    color: var(--color-principal);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}

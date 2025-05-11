@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración básica -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Metadatos para SEO -->
+    <title>FAQ | Brindis®</title>
+    <meta name="description" content="..." />
+    <meta name="keywords" content="..., ..., ..." />
+    <meta name="author" content="..." />
+
+    <!-- Open Graph -->
+    <!-- <meta property="og:title" content="Brindis® - Página Oficial" />
+    <meta property="og:description" content="..." />
+    <meta property="og:image" content="/assets/meta/opengraph/opengraph. ..." />
+    <meta property="og:image:secure_url" content="/assets/meta/opengraph/opengraph. ..." />
+    <meta property="og:image:alt" content="..." />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Brindis" />
+    <meta property="og:url" content="/index.html" />
+    <meta property="og:locale" content="es_ES" /> -->
+
+    <!-- Favicon y Web App Manifest -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥂</text></svg>">
+    <!-- <link rel="icon" type="image/x-icon" href="/assets/meta/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/meta/favicon/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/meta/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/meta/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/meta/favicon/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/meta/favicon/favicon-512x512.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/meta/favicon/favicon.svg" /> 
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/meta/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Brindis" /> -->
+
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/about/como-funciona.css" />
+
+    <!-- Componentes -->
+    <script src="/components/header.js" defer></script>
+    <script src="/components/footer.js" defer></script>
+
+    <!-- Scripts -->
+    <script src="/js/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <brindis-header></brindis-header>
+    </header>
+
+    <main>
+        <section class="como-funciona">
+            <div class="media-contenedor">
+
+                <!-- Texto lineal (solo visible en desktop) -->
+                <div class="media-lineal">
+                    <div class="media-izquierda">¿Cómo</div>
+                    <div class="media-video">
+                        <video id="comoFuncionaVideo" autoplay muted playsinline loop preload="auto">
+                            <source src="/assets/images/dev/bolso-funciona.mp4" type="video/mp4" />
+                            Tu navegador no soporta video.
+                        </video>
+                    </div>
+                    <div class="media-derecha">Funciona?</div>
+                </div>
+
+                <!-- Texto circular (solo visible en mobile) -->
+                <div class="media-circular">
+                    <div class="media-svg">
+                        <svg viewBox="0 0 300 300">
+                            <defs>
+                                <path id="circlePath" d="M150,150 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0" />
+                            </defs>
+                            <text>
+                                <textPath href="#circlePath" startOffset="0">
+                                    ¿cómo funciona? &nbsp; · &nbsp;
+                                    ¿cómo funciona? &nbsp; · &nbsp;
+                                    ¿cómo funciona? &nbsp; · &nbsp;
+                                    ¿cómo funciona? &nbsp; · &nbsp;
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="media-video">
+                        <video id="comoFuncionaVideoCircular" autoplay muted playsinline loop preload="auto">
+                            <source src="/assets/images/dev/bolso-funciona.mp4" type="video/mp4" />
+                            Tu navegador no soporta video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="texto-contenedor">
+                <h2>Tu bolso se carga solo. Tú solo déjalo donde siempre.</h2>
+
+                <p>
+                    Llegas a casa, sueltas el bolso en tu rincón de siempre… y listo. Sin enchufarlo, sin buscar cables,
+                    sin pensar. Tu Brindis empieza a cargarse solo, porque sí, porque puede.
+                </p>
+
+                <p>
+                    Solo necesitas tener la base de carga donde te sea más cómodo: en la mesita del recibidor, en una
+                    estantería, en tu escritorio… Cada vez que dejes el bolso encima, su batería se recarga sin que
+                    tengas que hacer absolutamente nada.
+                </p>
+
+                <p>
+                    Y cuando sales, esa misma batería está lista para darte un empujón extra durante el día. Porque tu
+                    Brindis también carga tu móvil mientras vas de aquí para allá.
+                </p>
+
+                <p><strong>Sin cables. Sin límites. Sin quedarte sin batería.</strong></p>
+
+                <p>
+                    ¿Sabías que tu <a class="underline" href="/html/bolsos/cosmopolitan-green.html">cosmopolitan</a> puede darte hasta <strong>4 cargas
+                        completas</strong>? Gracias a su batería de alta capacidad y su diseño elegante pero espacioso,
+                    es perfecto para esos días en los que sales de casa por la mañana… y vuelves cuando ya ha caído la
+                    noche.
+                </p>
+
+                <p>
+                    Y cuando tengas tu Brindis en mano, ya sabes: si te surge alguna duda, estamos <a class="underline" href="/html/about/contacto.html">aquí</a> para ayudarte. Y si aún estás esperando a que llegue… pásate por nuestra comunidad en <a class="underline" href="/index.html" data-scroll="#instagram">Instagram</a> para ver cómo lo llevan otras Brindis lovers — inspiración, trucos y muchas ganas de estrenar.
+                  </p>                  
+
+                <p class="tagline">Energía que te sigue el ritmo.</p>
+            </div>
+
+        </section>
+    </main>
+
+
+    <footer>
+        <brindis-footer></brindis-footer>
+    </footer>
+</body>
+
+</html>
