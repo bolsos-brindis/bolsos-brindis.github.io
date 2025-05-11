@@ -5,6 +5,8 @@ main {
 .como-funciona {
     max-width: 900px;
     margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
 }
 
 /* ===== Versión lineal (escritorio) ===== */
@@ -14,11 +16,13 @@ main {
 }
 
 .media-lineal {
+    margin-bottom: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     position: relative;
+    text-transform: lowercase;
 }
 
 .media-izquierda,
@@ -126,38 +130,29 @@ main {
     }
 }
 
-
-
-
-
-
-
+/* ===== 👻 TEXTO ===== */
 .texto-contenedor {
-    max-width: 500px;
     margin: 0 auto;
+    padding: 0 2rem;
+    text-transform: lowercase;
 }
 
 .texto-contenedor h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     font-weight: 600;
-    color: #393939;
+    display: none;
 }
 
 .texto-contenedor p {
     font-size: 1.1rem;
     line-height: 1.7;
-    margin-bottom: 1.2rem;
-    color: #393939;
+    margin-bottom: 2rem;
 }
 
-.tagline {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #b3848f;
+.texto-contenedor p.tagline {
+    font-family: "Dancing Script";
+    color: var(--color-principal);
+    font-size: 1.5rem;
     margin-top: 2rem;
-}
-
-.texto-contenedor {
-    display: none !important;
 }
