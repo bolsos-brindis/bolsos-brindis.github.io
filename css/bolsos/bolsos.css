@@ -38,6 +38,7 @@
     transition: outline 0.2s ease, opacity 0.2s ease;
     cursor: pointer;
     border-radius: .25rem;
+    background: linear-gradient(to bottom, #e4e4e6, #f0f0f0);
 }
 
 .barra-imagenes img:hover {
@@ -72,6 +73,7 @@
     object-fit: cover;
     -webkit-user-drag: none;
     pointer-events: none;
+    background: linear-gradient(to bottom, #e4e4e6, #f0f0f0);
 }
 
 
