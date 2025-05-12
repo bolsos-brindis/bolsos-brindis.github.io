@@ -1,0 +1,23 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    text-align: center;
+}
+
+.error-codigo {
+    font-size: 10rem;
+}
+
+.error-descripcion {
+    margin-bottom: 2rem;
+    text-transform: lowercase;
+}
+
+.propuesta-indecente {
+    font-family: "Dancing Script";
+    font-size: 1.5rem;
+}
