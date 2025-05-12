@@ -151,11 +151,11 @@ a {
     color: inherit;
 }
 
-a.underline {
+a.underline, button.underline {
     border-bottom: 1px solid var(--color-underline);
 }
 
-a.underline:hover {
+a.underline:hover, button.underline:hover {
     border-bottom: 1px solid var(--color-texto);
 }
 
