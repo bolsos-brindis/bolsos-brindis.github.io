@@ -9,8 +9,8 @@
     flex-direction: column;
     justify-content: space-between;
 
-    z-index: 200;
-    background-color: red;
+    z-index: 210;
+    background-color: white;
 }
 
 /* 🍾 ENCABEZADO */
@@ -19,8 +19,6 @@
     justify-content: space-between;
     padding: 1.25rem;
     font-size: 1.25rem;
-
-    background-color: yellow;
 }
 
 .boton-cerrar-cesta svg {
@@ -34,6 +32,7 @@
     display: flex;
     flex-direction: column;
     gap: .25rem;
+    border-top: 1px solid var(--color-texto);
 }
 
 .cesta-subtotal-contenedor {
@@ -61,7 +60,8 @@
     line-height: 1.5;
     background-color: var(--color-texto);
     color: white;
-    transition: background .2s ease-out, color .2s ease-out, box-shadow .2s ease-out, webkit-box-shadow .2s ease-out;
+    outline: 1px solid transparent;
+    transition: background .2s ease-out, color .2s ease-out, box-shadow .2s ease-out, webkit-box-shadow .2s ease-out, outline .2s ease-out;
     margin-bottom: .625rem;
 }
 
@@ -70,7 +70,62 @@
         background-color: white;
         color: var(--color-texto);
         text-shadow: 0 3px 8px rgba(0, 0, 0, .1);
+        outline: 1px solid var(--color-texto);
     }
+}
+
+/* 🍾 PRODUCTOS */
+.cesta-productos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.25rem;
+    padding-top: 2rem;
+}
+
+.cesta-producto {
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    /* background-color: pink; */
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--color-separador);
+}
+
+.cesta-producto:last-child {
+    border-bottom: none;
+}
+
+.cesta-producto-imagen {
+    width: 120px;
+    height: 100%;
+    border-radius: .25rem;
+    
+    overflow: hidden;
+}
+
+.cesta-producto-imagen img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+
+/* DETALLES */
+.cesta-producto-nombre {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.cesta-producto-color-contenedor {
+    display: flex;
+    gap: .5rem;
+}
+
+.cesta-producto-color {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
 }
 
 
@@ -80,9 +135,38 @@
 
 
 
+/* Botón de Cantidad */
+.cesta-producto-cantidad {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-texto);
+    border-radius: .25rem;
+    overflow: hidden;
+    height: 35px;
+    /* width: 100px; */
+}
 
+.cesta-producto-cantidad button {
+    width: 25px;
+    padding: 0 12px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-texto);
+    /* transition: background-color 0.2s ease, color 0.2s ease; */
+}
 
-
+.cesta-producto-cantidad input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: .9rem;
+    background-color: transparent;
+}
 
 
 
@@ -90,6 +174,21 @@
 
 
 .cesta-productos {
-    flex: 1;
-    background-color: blue;
+    /* background-color: blue; */
+    /* overflow-y: scroll; */
+}
+
+::-webkit-scrollbar-track {
+    /* Color de fondo */
+    background: red;
+}
+
+.fondo-cesta {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(227, 227, 227, 0.5);
+    z-index: 200;
 }
