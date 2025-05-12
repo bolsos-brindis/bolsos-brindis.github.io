@@ -1,0 +1,95 @@
+.cesta {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 490px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    z-index: 200;
+    background-color: red;
+}
+
+/* 🍾 ENCABEZADO */
+.cesta-encabezado {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem;
+    font-size: 1.25rem;
+
+    background-color: yellow;
+}
+
+.boton-cerrar-cesta svg {
+    width: .8rem;
+    fill: var(--color-texto);
+}
+
+/* 🍾 FOOTER */
+.cesta-footer {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.cesta-subtotal-contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cesta-subtotal-contenedor p {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.cesta-subtotal-aviso {
+    font-size: .9rem;
+    margin-bottom: .25rem;
+}
+
+.cesta-comprar-boton {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    border-radius: .25rem;
+    text-align: center;
+    text-transform: lowercase;
+    line-height: 1.5;
+    background-color: var(--color-texto);
+    color: white;
+    transition: background .2s ease-out, color .2s ease-out, box-shadow .2s ease-out, webkit-box-shadow .2s ease-out;
+    margin-bottom: .625rem;
+}
+
+@media (hover:hover) {
+    .cesta-comprar-boton:hover {
+        background-color: white;
+        color: var(--color-texto);
+        text-shadow: 0 3px 8px rgba(0, 0, 0, .1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cesta-productos {
+    flex: 1;
+    background-color: blue;
+}
