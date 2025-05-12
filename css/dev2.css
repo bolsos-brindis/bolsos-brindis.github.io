@@ -1,0 +1,66 @@
+.sobre-nosotros {
+    padding: 2rem 2rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-nosotros-tarjeta {
+    display: flex;
+    align-items: flex-end;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--color-fondo);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    gap: 2rem;
+}
+
+/* Imagen pegada a la izquierda */
+.sobre-nosotros-media {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.sobre-nosotros-media img {
+    height: 420px;
+    width: auto;
+    display: block;
+}
+
+/* Texto */
+.sobre-nosotros-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.7;
+    color: var(--color-texto);
+}
+
+.sobre-nosotros-firma {
+    font-family: 'Dancing Script';
+    font-size: 2.25rem;
+    color: var(--color-principal);
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive: imagen y texto en fila en móvil */
+@media (max-width: 768px) {
+    .sobre-nosotros-tarjeta {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .sobre-nosotros-media img {
+        height: 280px;
+    }
+
+    .sobre-nosotros-firma {
+        font-size: 1.5rem;
+    }
+}
