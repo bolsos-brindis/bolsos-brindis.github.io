@@ -23,9 +23,13 @@ const plantilla = fs.readFileSync(rutaPlantilla, "utf8");
 inventario.forEach(producto => {
   const { sku, nombre, tagline, descripcion, precio, colores, medidas } = producto;
 
+  // Recorrer colores
   colores.forEach(color => {
     const { nombre: nombreColor, codigo, estrellas, reviews, descripcion_color } = color;
     const skuColor = `${sku}-${nombreColor}`;
+
+    // Generar HTML de título (meta)
+    const tituloPaginaHTML = `${nombre} (${nombreColor})`;
 
     // Generar HTML de colores
     const coloresHTML = colores.map(c => {
@@ -66,6 +70,7 @@ inventario.forEach(producto => {
 
     // Reemplazar en plantilla
     let paginaHTML = plantilla
+      .replace(/{{titulo-pagina}}/g, tituloPaginaHTML)
       .replace(/{{sku}}/g, sku)
       .replace(/{{nombre}}/g, nombre)
       .replace(/{{tagline}}/g, tagline)
