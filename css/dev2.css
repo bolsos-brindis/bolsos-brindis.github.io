@@ -8,17 +8,13 @@
     }
 }
 
-.sobre-nosotros {
-    /* background-image: linear-gradient(white, var(--color-fondo)); */
-}
-
 .sobre-nosotros-tarjeta {
     position: relative;
     display: block;
     max-width: 900px;
     height: 100%;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: auto;
     /* background-color: #f2dde0; */
     /* background-image: radial-gradient(circle at center, #f2dde0 10%, var(--color-fondo) 90%); */
     display: flex;
@@ -71,6 +67,34 @@
 }
 
 .parrafo-final {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .sobre-nosotros-tarjeta {
+        border: none;
+        border-top: 1px solid var(--color-texto);
+        border-bottom: 1px solid var(--color-texto);
+    }
+}
+
+@media (max-width: 650px) {
+    .sobre-nosotros-espaciado {
+        flex: 0 0 40%;
+    }
+    
+    .sobre-nosotros-texto {
+        flex: 0 0 60%;
+        margin-top: 10%;
+    }
+
+    .sobre-nosotros-parrafos {
+        line-height: 1.5;
+        padding-right: 1rem;
+    }
+    
+    .sobre-nosotros-parrafos p {
+        margin-bottom: 1.25rem;
+    }
 }
