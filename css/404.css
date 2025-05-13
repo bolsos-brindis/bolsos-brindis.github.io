@@ -9,14 +9,26 @@
     }
 }
 
-main {
+/* main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.error {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.error {
-    text-align: center;
+.error-contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: -3.875rem;
 }
 
 .error-codigo {
