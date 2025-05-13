@@ -92,7 +92,30 @@ class Header extends HTMLElement {
                 </div>
             </nav>
 
-            
+            <aside id="cesta" class="cesta">
+                <div class="cesta-encabezado">
+                    <p><strong>cesta con</strong> <span id="cantidadTotalProductos">0</span> brindis</p>
+                    <button id="botonCerrarCesta" class="boton-cerrar-cesta" type="button" aria-label="Cerrar cesta">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path
+                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="cesta-productos"></div>
+
+                <div class="cesta-footer">
+                    <div class="cesta-subtotal-contenedor">
+                        <p>importe estimado:</p>
+                        <p id="precioTotal" class="cesta-subtotal">0,00 €</p>
+                    </div>
+                    <p class="cesta-subtotal-aviso">impuestos y envío calculados al pagar</p>
+                    <button class="cesta-comprar-boton" type="button">brindar ahora</button>
+                </div>
+            </aside>
+
+            <div class="fondo-cesta" id="fondoCesta"></div>
 
             <aside id="menuLateral" class="menu-lateral">
                 <div class="menu-lateral-contenedor">
