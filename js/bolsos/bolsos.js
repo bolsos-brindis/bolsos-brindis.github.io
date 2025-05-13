@@ -158,6 +158,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         localStorage.setItem('brindisCesta', JSON.stringify(cesta));
-        console.log(`👜 Producto añadido:`, producto);
+        abrirCesta();
+
+        const textoOriginal = btnAgregar.textContent;
+        btnAgregar.textContent = 'añadido';
+        btnAgregar.classList.add('agregado');
+
+        setTimeout(() => {
+            btnAgregar.textContent = textoOriginal;
+            btnAgregar.classList.remove('agregado');
+        }, 5000);
     });
 });

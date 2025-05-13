@@ -165,7 +165,7 @@ const btnAbrir = document.getElementById('botonAbrirCesta');
 const btnCerrar = document.getElementById('botonCerrarCesta');
 const cesta = document.getElementById('cesta');
 
-btnAbrir.addEventListener('click', () => {
+function abrirCesta() {
   cargarCestaDesdeLocalStorage();
   cesta.classList.add('abierta');
   document.body.classList.add('cesta-abierta');
@@ -173,15 +173,16 @@ btnAbrir.addEventListener('click', () => {
   const fondo = document.getElementById('fondoCesta');
   if (fondo) {
     fondo.style.display = 'block';
-    // Forzar reflow antes de animar
-    void fondo.offsetWidth;
+    void fondo.offsetWidth; // Forzar reflow para animación
     fondo.style.animation = 'aparecerFondo 0.4s forwards';
     fondo.addEventListener('click', cerrarCesta, { once: true });
   }
 
   actualizarResumenCesta();
-});
+}
 
+
+btnAbrir.addEventListener('click', abrirCesta);
 btnCerrar.addEventListener('click', cerrarCesta);
 
 function cerrarCesta() {
