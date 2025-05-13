@@ -5,6 +5,7 @@ function ajustarAlturaSobreNosotros() {
     if (barra && seccion) {
         const alturaNavbar = barra.offsetHeight;
         const alturaViewport = window.innerHeight;
+        seccion.style.height = (alturaViewport - alturaNavbar) + "px";
         seccion.style.minHeight = (alturaViewport - alturaNavbar) + "px";
     }
 }

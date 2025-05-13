@@ -1,66 +1,62 @@
+.barra-navegacion--transparente {
+    background-color: transparent;
+}
+
+@media (hover:hover) and (pointer: fine) {
+    .barra-navegacion:hover {
+        background-color: white;
+    }
+}
+
 .sobre-nosotros {
-    padding: 2rem 2rem;
-    background-color: white;
-    display: flex;
-    justify-content: center;
+    /* background-image: linear-gradient(white, var(--color-fondo)); */
 }
 
 .sobre-nosotros-tarjeta {
-    display: flex;
-    align-items: flex-end;
-    max-width: 1000px;
-    width: 100%;
-    background-color: var(--color-fondo);
-    border-radius: 0.25rem;
+    position: relative;
+    display: block;
+    max-width: 900px;
+    height: 100%;
+    margin: 0 auto;
     overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-    gap: 2rem;
+    /* background-color: #f2dde0; */
+    /* background-image: radial-gradient(circle at center, #f2dde0 10%, var(--color-fondo) 90%); */
+    display: flex;
+    /* border-radius: 1rem; */
 }
 
-/* Imagen pegada a la izquierda */
 .sobre-nosotros-media {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    position: absolute;
+    width: auto;
+    height: 75%;
+    bottom: 0;
+    left: 0;
 }
 
 .sobre-nosotros-media img {
-    height: 420px;
-    width: auto;
-    display: block;
+    height: 100%;
 }
 
-/* Texto */
+.sobre-nosotros-espaciado {
+    flex: 0 0 30%;
+}
+
 .sobre-nosotros-texto {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 1.7;
-    color: var(--color-texto);
+    flex: 0 0 70%;
+    margin-top: 10%;
 }
 
 .sobre-nosotros-firma {
-    font-family: 'Dancing Script';
-    font-size: 2.25rem;
-    color: var(--color-principal);
-    margin-bottom: 1.5rem;
+    font-family: "Dancing Script";
+    font-size: 4rem;
 }
 
-/* Responsive: imagen y texto en fila en móvil */
-@media (max-width: 768px) {
-    .sobre-nosotros-tarjeta {
-        flex-direction: row;
-        align-items: flex-end;
-        gap: 1rem;
-        padding: 1.5rem;
-    }
+.nombre {
+    border-bottom: .25rem solid #ffa9ab;
+}
 
-    .sobre-nosotros-media img {
-        height: 280px;
-    }
-
-    .sobre-nosotros-firma {
-        font-size: 1.5rem;
-    }
+.parrafo {
+    line-height: 1.7;
+    text-transform: lowercase;
+    margin-bottom: 1rem;
 }
