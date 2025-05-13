@@ -98,3 +98,9 @@
         margin-bottom: 1.25rem;
     }
 }
+
+@media (max-width: 500px) {
+    .sobre-nosotros-media {
+        height: 60%;
+    }
+}
