@@ -170,3 +170,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     });
 });
+
+// 🍾 AÑADIR PRODUCTO A FAVORITOS 🍾
+document.addEventListener('DOMContentLoaded', () => {
+    const btnFavorito = document.querySelector('.producto-favorito');
+    if (!btnFavorito) return;
+
+    btnFavorito.addEventListener('click', () => {
+        const url = window.location.pathname;
+        const partes = url.split('/').pop().replace('.html', '').split('-');
+        const sku = partes.slice(0, -1).join('-');
+        const color = partes.slice(-1)[0];
+
+        const nombre = document.querySelector('.producto-nombre')?.textContent.trim() || sku;
+        const codigoColor = document.querySelector('.producto-color.activo')?.style.backgroundColor || '#000';
+        const imagen = document.querySelector('.producto-imagen-cesta')?.src || '';
+        const precioTexto = document.querySelector('.producto-precio')?.textContent || '0';
+        const precio = parseFloat(precioTexto.replace(/[^\d,.-]/g, '').replace(',', '.')) || 0;
+
+        const favorito = {
+            sku,
+            nombre,
+            color,
+            codigoColor,
+            precio,
+            imagen
+        };
+
+        let favoritos = JSON.parse(localStorage.getItem('favoritosBrindis')) || [];
+
+        const index = favoritos.findIndex(p => p.sku === sku && p.color === color);
+
+        if (index !== -1) {
+            favoritos.splice(index, 1); 
+            btnFavorito.classList.remove('activo');
+        } else {
+            favoritos.push(favorito); // añadir
+            btnFavorito.classList.add('activo');
+        }
+
+        localStorage.setItem('favoritosBrindis', JSON.stringify(favoritos));
+        console.log(`💖 Favoritos actualizados:`, favoritos);
+    });
+});

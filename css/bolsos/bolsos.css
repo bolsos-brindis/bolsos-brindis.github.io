@@ -98,6 +98,10 @@
     text-transform: lowercase;
 }
 
+.producto-favorito.activo svg {
+    fill: var(--color-barbie);
+}
+
 .producto-tagline {
     margin-bottom: .75rem;
     text-transform: lowercase;
