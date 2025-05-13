@@ -335,3 +335,121 @@ function actualizarResumenCesta() {
   if (cantidadEl) cantidadEl.textContent = cantidadTotal;
   if (precioEl) precioEl.textContent = precioTotal.toFixed(2) + ' €';
 }
+
+
+
+
+// FAVORITOS 👻
+const asideFavoritos = document.getElementById('favoritos');
+const btnCerrarFavoritos = document.getElementById('botonCerrarFavoritos');
+const btnAbrirFavoritos = document.getElementById('botonAbrirFavoritos');
+
+function abrirFavoritos() {
+  cargarFavoritosDesdeLocalStorage();
+  asideFavoritos.classList.add('abierta');
+  document.body.classList.add('cesta-abierta'); // reaprovechamos esta clase para bloquear scroll
+
+  const fondo = document.getElementById('fondoCesta');
+  if (fondo) {
+    fondo.style.display = 'block';
+    void fondo.offsetWidth;
+    fondo.style.animation = 'aparecerFondo 0.4s forwards';
+    fondo.addEventListener('click', cerrarFavoritos, { once: true });
+  }
+
+  actualizarResumenFavoritos();
+}
+
+function cerrarFavoritos() {
+  asideFavoritos.classList.remove('abierta');
+  document.body.classList.remove('cesta-abierta');
+
+  const fondo = document.getElementById('fondoCesta');
+  if (fondo) {
+    fondo.style.animation = 'desaparecerFondo 0.4s forwards';
+    fondo.addEventListener('animationend', () => {
+      fondo.style.display = 'none';
+      fondo.style.animation = '';
+    }, { once: true });
+  }
+}
+
+btnCerrarFavoritos.addEventListener('click', cerrarFavoritos);
+btnAbrirFavoritos.addEventListener('click', abrirFavoritos);
+
+function cargarFavoritosDesdeLocalStorage() {
+  const contenedor = document.getElementById('contenedorFavoritos');
+  if (!contenedor) return;
+
+  contenedor.innerHTML = '';
+
+  const favoritos = JSON.parse(localStorage.getItem('favoritosBrindis')) || [];
+
+  favoritos.forEach(producto => {
+    const div = document.createElement('div');
+    div.className = 'favorito-producto animar-entrada';
+    div.dataset.sku = producto.sku;
+    div.dataset.color = producto.color;
+
+    div.innerHTML = `
+          <div class="favorito-producto-imagen">
+              <img src="${producto.imagen}" alt="${producto.nombre}">
+          </div>
+          <div class="favorito-producto-detalles">
+              <p class="favorito-producto-nombre">${producto.nombre}</p>
+              <div class="favorito-producto-color-contenedor">
+                  <span class="favorito-producto-color" style="background-color: ${producto.codigoColor};"></span>
+                  <span class="favorito-producto-color-nombre">${producto.color}</span>
+              </div>
+              <div class="favorito-producto-precio">${producto.precio.toFixed(2)} €</div>
+              <div class="favorito-producto-quitar">
+                  <button type="button">quitar</button>
+              </div>
+          </div>
+      `;
+    contenedor.appendChild(div);
+  });
+}
+
+function actualizarResumenFavoritos() {
+  const favoritos = JSON.parse(localStorage.getItem('favoritosBrindis')) || [];
+  const cantidadEl = document.getElementById('cantidadFavoritos');
+  if (cantidadEl) cantidadEl.textContent = favoritos.length;
+}
+
+// Quitar favoritos desde el botón de quitar
+document.getElementById('contenedorFavoritos').addEventListener('click', (e) => {
+  const btn = e.target;
+  if (!btn.closest('.favorito-producto-quitar')) return;
+
+  const productoDiv = btn.closest('.favorito-producto');
+  const sku = productoDiv.dataset.sku;
+  const color = productoDiv.dataset.color;
+
+  let favoritos = JSON.parse(localStorage.getItem('favoritosBrindis')) || [];
+  const index = favoritos.findIndex(p => p.sku === sku && p.color === color);
+
+  if (index !== -1) {
+    favoritos.splice(index, 1);
+    localStorage.setItem('favoritosBrindis', JSON.stringify(favoritos));
+  }
+
+  // También desactivar el botón favorito en la página si corresponde
+  // Si hacemos clic en quitar, quitar la clase del botón de favoritos
+  const btnFavoritoPrincipal = document.querySelector('.producto-favorito');
+  if (btnFavoritoPrincipal) {
+    const url = window.location.pathname;
+    const partes = url.split('/').pop().replace('.html', '').split('-');
+    const productoActualSku = partes.slice(0, -1).join('-');
+    const productoActualColor = partes.slice(-1)[0];
+
+    if (productoActualSku === sku && productoActualColor === color) {
+      btnFavoritoPrincipal.classList.remove('activo');
+    }
+  }
+
+  productoDiv.classList.add('animar-salida');
+  productoDiv.addEventListener('animationend', () => productoDiv.remove(), { once: true });
+
+  actualizarResumenFavoritos();
+});

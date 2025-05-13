@@ -151,11 +151,13 @@ a {
     color: inherit;
 }
 
-a.underline, button.underline {
+a.underline,
+button.underline {
     border-bottom: 1px solid var(--color-underline);
 }
 
-a.underline:hover, button.underline:hover {
+a.underline:hover,
+button.underline:hover {
     border-bottom: 1px solid var(--color-texto);
 }
 
@@ -908,9 +910,12 @@ body.cesta-abierta {
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
-    display: none;     /* 🔒 OCULTO de entrada */
-    opacity: 0;        /* 🔒 Invisible */
-    animation: none;   /* 🚫 Sin animación de entrada por defecto */
+    display: none;
+    /* 🔒 OCULTO de entrada */
+    opacity: 0;
+    /* 🔒 Invisible */
+    animation: none;
+    /* 🚫 Sin animación de entrada por defecto */
 }
 
 .fondo-cesta.visible {
@@ -926,5 +931,160 @@ body.cesta-abierta {
 @keyframes desaparecerFondo {
     to {
         opacity: 0;
+    }
+}
+
+
+
+
+
+
+/* ===== 💖 FAVORITOS ===== */
+
+.favoritos {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 490px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 998;
+    /* Menor que la cesta si ambas se superponen */
+    background-color: white;
+
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.favoritos.abierta {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.favoritos-encabezado {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1.25rem;
+    font-size: 1.25rem;
+}
+
+.favoritos-productos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    overflow-y: auto;
+}
+
+.favorito-producto {
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--color-separador);
+    gap: 1.5rem;
+}
+
+.favorito-producto:last-child {
+    border-bottom: none;
+}
+
+.favorito-producto-imagen {
+    width: 150px;
+    flex: none;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    border-radius: .25rem;
+    overflow: hidden;
+}
+
+.favorito-producto-imagen img {
+    object-fit: cover;
+}
+
+.favorito-producto-detalles {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+
+.favorito-producto-nombre {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+.favorito-producto-color-contenedor {
+    display: flex;
+    gap: .25rem;
+    align-items: center;
+    margin-bottom: .75rem;
+}
+
+.favorito-producto-color {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+.favorito-producto-color-nombre {
+    font-size: .9rem;
+    color: var(--color-texto);
+    font-style: italic;
+    opacity: .85;
+}
+
+.favorito-producto-precio {
+    width: max-content;
+    text-align: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: .25rem;
+    background-color: var(--color-acento);
+    font-weight: 600;
+    margin-bottom: auto;
+}
+
+.favorito-producto .cesta-producto-cantidad {
+    display: none !important;
+}
+
+.favorito-producto-quitar button {
+    font-family: "Dancing Script";
+    opacity: .7;
+}
+
+.favorito-producto-quitar button:hover {
+    opacity: 1;
+}
+
+.favorito-producto.animar-salida {
+    animation: fadeOutDown 0.3s ease forwards;
+}
+
+@keyframes favoritoPum {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.producto-favorito.animar-favorito {
+    animation: favoritoPum 0.4s ease;
+}
+
+@media (max-width: 700px) {
+    .favoritos {
+        width: 100%;
     }
 }

@@ -176,40 +176,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnFavorito = document.querySelector('.producto-favorito');
     if (!btnFavorito) return;
 
-    btnFavorito.addEventListener('click', () => {
-        const url = window.location.pathname;
-        const partes = url.split('/').pop().replace('.html', '').split('-');
-        const sku = partes.slice(0, -1).join('-');
-        const color = partes.slice(-1)[0];
+    // Obtener SKU y color desde la URL
+    const url = window.location.pathname;
+    const partes = url.split('/').pop().replace('.html', '').split('-');
+    const sku = partes.slice(0, -1).join('-');
+    const color = partes.slice(-1)[0];
 
+    // Al cargar la página: marcar como activo si ya es favorito
+    const favoritos = JSON.parse(localStorage.getItem('favoritosBrindis')) || [];
+    const yaEsFavorito = favoritos.some(p => p.sku === sku && p.color === color);
+    if (yaEsFavorito) btnFavorito.classList.add('activo');
+
+    // Evento al hacer clic
+    btnFavorito.addEventListener('click', () => {
         const nombre = document.querySelector('.producto-nombre')?.textContent.trim() || sku;
         const codigoColor = document.querySelector('.producto-color.activo')?.style.backgroundColor || '#000';
         const imagen = document.querySelector('.producto-imagen-cesta')?.src || '';
         const precioTexto = document.querySelector('.producto-precio')?.textContent || '0';
         const precio = parseFloat(precioTexto.replace(/[^\d,.-]/g, '').replace(',', '.')) || 0;
 
-        const favorito = {
-            sku,
-            nombre,
-            color,
-            codigoColor,
-            precio,
-            imagen
-        };
-
+        const favorito = { sku, nombre, color, codigoColor, precio, imagen };
         let favoritos = JSON.parse(localStorage.getItem('favoritosBrindis')) || [];
-
         const index = favoritos.findIndex(p => p.sku === sku && p.color === color);
 
         if (index !== -1) {
-            favoritos.splice(index, 1); 
+            favoritos.splice(index, 1);
             btnFavorito.classList.remove('activo');
         } else {
-            favoritos.push(favorito); // añadir
+            favoritos.push(favorito);
             btnFavorito.classList.add('activo');
         }
 
         localStorage.setItem('favoritosBrindis', JSON.stringify(favoritos));
-        console.log(`💖 Favoritos actualizados:`, favoritos);
+
+        // Animación de favorito
+        btnFavorito.classList.add('animar-favorito');
+        btnFavorito.addEventListener('animationend', () => {
+            btnFavorito.classList.remove('animar-favorito');
+        }, { once: true });
+
+        // Si existe función para actualizar contador, la llamamos
+        if (typeof actualizarResumenFavoritos === 'function') {
+            actualizarResumenFavoritos();
+        }
     });
 });

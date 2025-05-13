@@ -57,7 +57,7 @@ class Header extends HTMLElement {
                 <div class="barra-navegacion-derecha">
                     <ul class="barra-navegacion-acciones">
                         <li>
-                            <button type="button" aria-label="Favoritos">
+                            <button id="botonAbrirFavoritos" type="button" aria-label="Favoritos">
                                 <svg class="icono icono-favoritos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                                     fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2">
@@ -91,6 +91,21 @@ class Header extends HTMLElement {
                     </ul>
                 </div>
             </nav>
+
+            <aside id="favoritos" class="favoritos">
+            <div class="favoritos-encabezado">
+                <p><strong>tus</strong> <span id="cantidadFavoritos">0</span> brindis favoritos</p>
+                <button id="botonCerrarFavoritos" class="boton-cerrar-cesta" type="button"
+                    aria-label="Cerrar favoritos">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="favoritos-productos" id="contenedorFavoritos"></div>
+        </aside>
 
             <aside id="cesta" class="cesta">
                 <div class="cesta-encabezado">
