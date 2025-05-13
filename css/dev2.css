@@ -49,14 +49,24 @@
 .sobre-nosotros-firma {
     font-family: "Dancing Script";
     font-size: 4rem;
+    margin-bottom: 2rem;
 }
 
 .nombre {
     border-bottom: .25rem solid #ffa9ab;
 }
 
-.parrafo {
-    line-height: 1.7;
+.sobre-nosotros-parrafos {
+    line-height: 2;
     text-transform: lowercase;
-    margin-bottom: 1rem;
+    /* background-color: blue; */
+    padding-right: 2rem;
+}
+
+.sobre-nosotros-parrafos p {
+    margin-bottom: 1.5rem;
+}
+
+.parrafo-final {
+    margin-top: 2.5rem;
 }
