@@ -7,7 +7,7 @@ function ajustarAlturaSobreNosotros() {
         const alturaViewport = window.innerHeight;
         const mediaQuery = window.matchMedia("(max-width: 900px)");
 
-        let ajuste = mediaQuery.matches ? 0 : 16;
+        let ajuste = mediaQuery.matches ? -1 : 16;
 
         seccion.style.height = (alturaViewport - alturaNavbar - ajuste) + "px";
         seccion.style.minHeight = (alturaViewport - alturaNavbar - ajuste) + "px";

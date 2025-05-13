@@ -1,12 +1,16 @@
+.barra-navegacion {
+    background-color: var(--color-fondo);
+}
+
 .barra-navegacion--transparente {
     background-color: transparent;
 }
 
-@media (hover:hover) and (pointer: fine) {
+/* @media (hover:hover) and (pointer: fine) {
     .barra-navegacion:hover {
         background-color: white;
     }
-}
+} */
 
 .sobre-nosotros-tarjeta {
     position: relative;
@@ -74,12 +78,12 @@
 @media (max-width: 900px) {
     .sobre-nosotros-tarjeta {
         border: none;
-        border-top: 1px solid var(--color-texto);
+        /* border-top: 1px solid var(--color-texto); */
         border-bottom: 1px solid var(--color-texto);
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
     .sobre-nosotros-espaciado {
         flex: 0 0 40%;
     }
@@ -99,7 +103,7 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 525px) {
     .sobre-nosotros-media {
         height: 60%;
     }
