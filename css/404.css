@@ -1,3 +1,14 @@
+/* Fondo transparente en la barra de navegación */
+.barra-navegacion--transparente {
+    background-color: transparent;
+}
+
+@media (hover:hover) and (pointer: fine) {
+    .barra-navegacion:hover {
+        background-color: white;
+    }
+}
+
 main {
     display: flex;
     justify-content: center;
