@@ -113,3 +113,51 @@ btnDecrementar.addEventListener('click', () => {
     let valor = parseInt(inputCantidad.value);
     if (valor > 1) inputCantidad.value = valor - 1;
 });
+
+
+
+// ===== 🍾 AÑADIR PRODUCTO AL CARRITO (LOCAL_STORAGE) =====
+document.addEventListener('DOMContentLoaded', () => {
+    const btnAgregar = document.querySelector('.producto-cesta-boton');
+    if (!btnAgregar) return;
+
+    btnAgregar.addEventListener('click', () => {
+        // Obtener SKU y color desde la URL: /bolsos/bloody-mary-brown.html
+        const url = window.location.pathname;
+        const partes = url.split('/').pop().replace('.html', '').split('-');
+        const sku = partes.slice(0, -1).join('-');
+        const color = partes.slice(-1)[0];
+
+        // Recoger datos del DOM
+        const nombre = document.querySelector('.producto-nombre')?.textContent.trim() || sku;
+        const codigoColor = document.querySelector('.producto-color.activo')?.style.backgroundColor || '#000';
+        const imagen = document.querySelector('.producto-imagen-cesta')?.src || '';
+        const precioTexto = document.querySelector('.producto-precio')?.textContent || '0';
+        const precio = parseFloat(precioTexto.replace(/[^\d,.-]/g, '').replace(',', '.')) || 0;
+        const cantidad = parseInt(document.querySelector('.producto-cesta-cantidad input')?.value) || 1;
+
+        // Estructura del producto a guardar
+        const producto = {
+            sku,
+            nombre,
+            color,
+            codigoColor,
+            precio,
+            cantidad,
+            imagen
+        };
+
+        // Guardar en localStorage
+        let cesta = JSON.parse(localStorage.getItem('brindisCesta')) || [];
+
+        const index = cesta.findIndex(p => p.sku === sku && p.color === color);
+        if (index !== -1) {
+            cesta[index].cantidad += cantidad;
+        } else {
+            cesta.push(producto);
+        }
+
+        localStorage.setItem('brindisCesta', JSON.stringify(cesta));
+        console.log(`👜 Producto añadido:`, producto);
+    });
+});

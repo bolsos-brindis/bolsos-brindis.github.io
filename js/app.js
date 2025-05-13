@@ -155,3 +155,6 @@ function ajustarMinHeightMain() {
 
 window.addEventListener('load', ajustarMinHeightMain);
 window.addEventListener('resize', ajustarMinHeightMain);
+
+
+// ===== 🍾 CESTA DE LA COMPRA =====

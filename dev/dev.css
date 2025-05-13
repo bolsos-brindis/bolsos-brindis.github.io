@@ -209,9 +209,9 @@
 
 .cesta-producto-quitar button:hover {
     opacity: 1;
-  }
+}
 
-.fondo-cesta {
+/* .fondo-cesta {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -219,10 +219,86 @@
     left: 0;
     background-color: rgba(227, 227, 227, 0.5);
     z-index: 200;
-}
+} */
 
 @media (max-width: 700px) {
     .cesta {
         width: 100%;
+    }
+}
+
+/* ANIMACIÓN AL AÑADIR / QUITAR PRODUCTO */
+/* Animación al añadir producto */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cesta-producto.animar-entrada {
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+/* Animación al quitar producto */
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.cesta-producto.animar-salida {
+    animation: fadeOutDown 0.3s ease forwards;
+}
+
+/* OCULTAR CESTA */
+.cesta {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.cesta.abierta {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Fondo oscuro */
+body.cesta-abierta {
+    overflow: hidden;
+}
+
+.fondo-cesta {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    opacity: 0;
+    animation: aparecerFondo 0.4s forwards;
+}
+
+@keyframes aparecerFondo {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes desaparecerFondo {
+    to {
+        opacity: 0;
     }
 }

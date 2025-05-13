@@ -79,7 +79,7 @@ class Header extends HTMLElement {
                             </button>
                         </li>
                         <li>
-                            <button type="button" aria-label="Cesta de compras">
+                            <button id="botonAbrirCesta" type="button" aria-label="Abrir la cesta de la compra">
                                 <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                                     <path
                                         d="M4.75 8.25A.75.75 0 0 0 4 9L3 19.125c0 1.418 1.207 2.625 2.625 2.625h12.75c1.418 0 2.625-1.149 2.625-2.566L20 9a.75.75 0 0 0-.75-.75H4.75Zm2.75 0v-1.5a4.5 4.5 0 0 1 4.5-4.5v0a4.5 4.5 0 0 1 4.5 4.5v1.5"
@@ -91,6 +91,9 @@ class Header extends HTMLElement {
                     </ul>
                 </div>
             </nav>
+
+            
+
             <aside id="menuLateral" class="menu-lateral">
                 <div class="menu-lateral-contenedor">
                     <nav>

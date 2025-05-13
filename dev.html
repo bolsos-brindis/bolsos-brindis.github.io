@@ -59,12 +59,12 @@
     </header>
 
     <main>
-        <div class="fondo-cesta"></div>
+        <!-- <div class="fondo-cesta"></div> -->
 
-        <section class="cesta">
+        <section id="cesta" class="cesta">
             <div class="cesta-encabezado">
-                <p><strong>cesta con</strong> <span>0</span> brindis</p>
-                <button class="boton-cerrar-cesta" type="button" aria-label="Cerrar cesta">
+                <p><strong>cesta con</strong> <span id="cantidadTotalProductos">0</span> brindis</p>
+                <button id="botonCerrarCesta" class="boton-cerrar-cesta" type="button" aria-label="Cerrar cesta">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                         <path
                             d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
@@ -84,135 +84,7 @@
                             <span class="cesta-producto-color" style="background-color: #6e4c47;"></span>
                             <span class="cesta-producto-color-nombre">brown</span>
                         </div>
-                        <div class="cesta-producto-precio">420,69 €</div>
-                        <div class="cesta-producto-botones">
-                            <div class="cesta-producto-cantidad">
-                                <button type="button" class="cesta-boton-decrementar">-</button>
-                                <input inputmode="numeric" min="1" max="10" value="1"
-                                    aria-label="Cantidad de productos">
-                                <button type="button" class="cesta-boton-incrementar">+</button>
-                            </div>
-                            <div class="cesta-producto-quitar">
-                                <button class="underline" type="button">quitar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="cesta-producto">
-                    <div class="cesta-producto-imagen">
-                        <img src="/dev/assets/producto.webp">
-                    </div>
-                    <div class="cesta-producto-detalles">
-                        <p class="cesta-producto-nombre">bloody mary</p>
-                        <div class="cesta-producto-color-contenedor">
-                            <span class="cesta-producto-color" style="background-color: #6e4c47;"></span>
-                            <span class="cesta-producto-color-nombre">brown</span>
-                        </div>
-                        <div class="cesta-producto-precio">420,69 €</div>
-                        <div class="cesta-producto-botones">
-                            <div class="cesta-producto-cantidad">
-                                <button type="button" class="cesta-boton-decrementar">-</button>
-                                <input inputmode="numeric" min="1" max="10" value="1"
-                                    aria-label="Cantidad de productos">
-                                <button type="button" class="cesta-boton-incrementar">+</button>
-                            </div>
-                            <div class="cesta-producto-quitar">
-                                <button class="underline" type="button">quitar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="cesta-producto">
-                    <div class="cesta-producto-imagen">
-                        <img src="/dev/assets/producto.webp">
-                    </div>
-                    <div class="cesta-producto-detalles">
-                        <p class="cesta-producto-nombre">bloody mary</p>
-                        <div class="cesta-producto-color-contenedor">
-                            <span class="cesta-producto-color" style="background-color: #6e4c47;"></span>
-                            <span class="cesta-producto-color-nombre">brown</span>
-                        </div>
-                        <div class="cesta-producto-precio">420,69 €</div>
-                        <div class="cesta-producto-botones">
-                            <div class="cesta-producto-cantidad">
-                                <button type="button" class="cesta-boton-decrementar">-</button>
-                                <input inputmode="numeric" min="1" max="10" value="1"
-                                    aria-label="Cantidad de productos">
-                                <button type="button" class="cesta-boton-incrementar">+</button>
-                            </div>
-                            <div class="cesta-producto-quitar">
-                                <button class="underline" type="button">quitar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="cesta-producto">
-                    <div class="cesta-producto-imagen">
-                        <img src="/dev/assets/producto.webp">
-                    </div>
-                    <div class="cesta-producto-detalles">
-                        <p class="cesta-producto-nombre">bloody mary</p>
-                        <div class="cesta-producto-color-contenedor">
-                            <span class="cesta-producto-color" style="background-color: #6e4c47;"></span>
-                            <span class="cesta-producto-color-nombre">brown</span>
-                        </div>
-                        <div class="cesta-producto-precio">420,69 €</div>
-                        <div class="cesta-producto-botones">
-                            <div class="cesta-producto-cantidad">
-                                <button type="button" class="cesta-boton-decrementar">-</button>
-                                <input inputmode="numeric" min="1" max="10" value="1"
-                                    aria-label="Cantidad de productos">
-                                <button type="button" class="cesta-boton-incrementar">+</button>
-                            </div>
-                            <div class="cesta-producto-quitar">
-                                <button class="underline" type="button">quitar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cesta-producto">
-                    <div class="cesta-producto-imagen">
-                        <img src="/dev/assets/producto.webp">
-                    </div>
-                    <div class="cesta-producto-detalles">
-                        <p class="cesta-producto-nombre">bloody mary</p>
-                        <div class="cesta-producto-color-contenedor">
-                            <span class="cesta-producto-color" style="background-color: #6e4c47;"></span>
-                            <span class="cesta-producto-color-nombre">brown</span>
-                        </div>
-                        <div class="cesta-producto-precio">420,69 €</div>
-                        <div class="cesta-producto-botones">
-                            <div class="cesta-producto-cantidad">
-                                <button type="button" class="cesta-boton-decrementar">-</button>
-                                <input inputmode="numeric" min="1" max="10" value="1"
-                                    aria-label="Cantidad de productos">
-                                <button type="button" class="cesta-boton-incrementar">+</button>
-                            </div>
-                            <div class="cesta-producto-quitar">
-                                <button class="underline" type="button">quitar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cesta-producto">
-                    <div class="cesta-producto-imagen">
-                        <img src="/dev/assets/producto.webp">
-                    </div>
-                    <div class="cesta-producto-detalles">
-                        <p class="cesta-producto-nombre">bloody mary</p>
-                        <div class="cesta-producto-color-contenedor">
-                            <span class="cesta-producto-color" style="background-color: #6e4c47;"></span>
-                            <span class="cesta-producto-color-nombre">brown</span>
-                        </div>
-                        <div class="cesta-producto-precio">420,69 €</div>
+                        <div>420,69 €</div>
                         <div class="cesta-producto-botones">
                             <div class="cesta-producto-cantidad">
                                 <button type="button" class="cesta-boton-decrementar">-</button>
@@ -232,7 +104,7 @@
             <div class="cesta-footer">
                 <div class="cesta-subtotal-contenedor">
                     <p>importe estimado:</p>
-                    <p class="cesta-subtotal">420,69 €</p>
+                    <p id="precioTotal" class="cesta-subtotal">420,69 €</p>
                 </div>
                 <p class="cesta-subtotal-aviso">impuestos y envío calculados al pagar</p>
                 <button class="cesta-comprar-boton" type="button">brindar ahora</button>
