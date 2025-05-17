@@ -15,6 +15,7 @@ main {
     transform: rotate(.5deg);
     transition: transform 0.3s ease, scale 0.3s ease;
     margin-bottom: 2rem;
+    border-radius: .1rem;
 }
 
 .articulo-imagen:hover {
@@ -45,14 +46,14 @@ main {
 .articulo-contenedor h3 {
     text-transform: uppercase;
     font-size: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .articulo-contenedor p {
-    line-height: 1.6;
+    line-height: 1.7;
     font-size: 1.1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .articulo-cta {
