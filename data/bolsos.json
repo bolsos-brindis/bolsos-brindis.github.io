@@ -4,7 +4,7 @@
         "nombre": "Bloody Mary",
         "tagline": "¡Siente la energía y marca la diferencia!",
         "descripcion": "La fiesta nunca termina con el Bloody Mary. Si buscas algo divertido y único, este modelo es para ti. Perfecto para noches con amigas o para darle un toque diferente a tu look diario. Con Bloody Mary, cada salida será especial.",
-        "precio": 320.00,
+        "precio": 140.00,
         "colores": [
             {
                 "nombre": "black",
@@ -45,7 +45,7 @@
         "nombre": "Cosmopolitan",
         "tagline": "Perfecto para un día ajetreado o un fin de semana relajado.",
         "descripcion": "Elegante y práctico, Cosmo es el bolso que te acompaña de la oficina a tu escapada de fin de semana. Con un diseño sofisticado y funcional, es ideal para quienes buscan un accesorio todo en uno.",
-        "precio": 98.00,
+        "precio": 159.00,
         "colores": [
             {
                 "nombre": "gold",
@@ -79,14 +79,14 @@
         "nombre": "Daikiri",
         "tagline": "¡Llévalo a donde sea y siempre estarás lista!",
         "descripcion": "El bolso más versátil y compacto. El Daikiri es el accesorio perfecto para quienes buscan practicidad sin sacrificar estilo. Aunque es pequeño, cabe todo lo imprescindible para tu día a día.",
-        "precio": 70.00,
+        "precio": 80.00,
         "colores": [
             {
                 "nombre": "beige",
                 "codigo": "#f1e7d5",
                 "estrellas": 5,
                 "reviews": 203,
-                "descripcion_color": "En beige, Daikiri se transforma en el básico neutro que va con todo, ideal para un estilo depurado y sin complicaciones."
+                "descripcion_color": "En beige, Daikiri se transforma en el básico neutro que va con todo, ideal para las que apuestan por lo esencial y sofisticado."
             },
             {
                 "nombre": "black",
@@ -127,8 +127,8 @@
         "sku": "martini",
         "nombre": "Martini",
         "tagline": "¡Nunca más te quedarás sin batería!",
-        "descripcion": "Tini es un bolso bandolera con la opción de llevarlo al hombro. Lo que lo hace único es su batería integrada, perfecta para mantenerte conectada. Con un diseño elegante y práctico, es el complemento ideal para cualquier ocasión.",
-        "precio": 159.90,
+        "descripcion": "Tini un bolso bandolera con la opción de llevarlo al hombro con un diseño elegante y práctico, es el complemento ideal para cualquier ocasión.",
+        "precio": 92.00,
         "colores": [
             {
                 "nombre": "black",
