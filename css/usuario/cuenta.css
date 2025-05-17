@@ -1,0 +1,113 @@
+.cuenta label {
+    display: none;
+}
+
+.cuenta-contenedor {
+    max-width: 500px;
+    margin: 3rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+
+.cuenta-seccion {
+    margin: 2.5rem 0 1.5rem 0;
+    padding-bottom: 1.5rem;
+}
+
+.cuenta-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem auto 2rem auto;
+    font-size: 4rem;
+    width: 150px;
+    height: 150px;
+}
+
+.cuenta-emoji {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--color-acento);
+}
+
+.cuenta input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid var(--color-underline, #d0d0d0);
+    border-radius: 0;
+    margin: 1.3rem 0 0.7rem 0;
+    font-size: 1rem;
+    color: var(--color-texto, #222);
+    transition: border-color 0.18s;
+    padding: .5rem 0;
+    font-family: inherit;
+}
+
+.cuenta input::placeholder {
+    color: #bdbdbd;
+    opacity: 1;
+    font-size: 0.96em;
+    letter-spacing: 0.01em;
+}
+
+.cuenta input:focus {
+    outline: none;
+    border-bottom: 1.5px solid var(--color-texto, #222);
+    background-color: transparent;
+}
+
+.botones-cuenta {
+    margin-bottom: 4rem;
+}
+
+.cuenta .cta {
+    width: 100%;
+    padding: .8rem 0;
+    text-align: center;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: .25rem;
+    background: white;
+    color: var(--color-texto);
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+@media (hover:hover) {
+    .cuenta .cta:hover,
+    .cuenta .cta:focus {
+        background: var(--color-texto);
+        color: white;
+    }
+}
+
+.cuenta .cuenta-nombre,
+.cuenta .cuenta-correo {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color-texto, #222);
+    margin: 0;
+    letter-spacing: 0.025rem;
+    border-bottom: none;
+}
+
+.cuenta .cuenta-nombre {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.cuenta .cuenta-nombre::placeholder,
+.cuenta .cuenta-correo::placeholder {
+    color: #bdbdbd;
+    opacity: 1;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
+}

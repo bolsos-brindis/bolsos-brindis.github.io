@@ -59,8 +59,83 @@
     </header>
 
     <main>
-        <section class="acceso">
-            <div class="acceso-contenedor"></div>
+        <section class="cuenta">
+            <div class="cuenta-contenedor">
+                <form id="form-cuenta" autocomplete="off" class="cuenta-formulario">
+                    <div class="cuenta-perfil">
+                        <span class="cuenta-emoji" aria-label="Foto de perfil" role="img">👜</span>
+                    </div>
+                    <div class="cuenta-contenedor-datos cuenta-datos-principales">
+                        <div class="cuenta-nombre">
+                            <label for="cuentaInputNombre">nombre</label>
+                            <input id="cuentaInputNombre" class="cuenta-nombre" name="nombre" type="text"
+                                placeholder="nombre" required />
+                        </div>
+                        <div class="cuenta-correo">
+                            <label for="cuentaInputCorreo">email</label>
+                            <input id="cuentaInputCorreo" class="cuenta-correo" name="correo" type="email"
+                                placeholder="correo" required />
+                        </div>
+                    </div>
+
+                    <div class="cuenta-seccion cuenta-metodo-pago">
+                        <h3>Método de pago</h3>
+                        <div class="cuenta-contenedor-datos">
+                            <div class="cuenta-titular">
+                                <label for="cuentaInputTitular">titular</label>
+                                <input id="cuentaInputTitular" name="nombreTitular" type="text" placeholder="titular" />
+                            </div>
+                            <div class="cuenta-tarjeta">
+                                <label for="cuentaInputTarjeta">número de tarjeta</label>
+                                <input id="cuentaInputTarjeta" name="numeroTarjeta" type="text" maxlength="19"
+                                    placeholder="número de tarjeta" />
+                            </div>
+                        </div>
+                        <div class="cuenta-contenedor-datos">
+                            <div class="cuenta-caducidad">
+                                <label for="cuentaInputCaducidad">caducidad</label>
+                                <input id="cuentaInputCaducidad" name="fechaCaducidad" type="text" maxlength="5"
+                                    placeholder="MM/AA" />
+                            </div>
+                            <div class="cuenta-cvv">
+                                <label for="cuentaInputCVV">cvv</label>
+                                <input id="cuentaInputCVV" name="cvv" type="text" maxlength="4" placeholder="cvv" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cuenta-seccion cuenta-direccion-envio">
+                        <h3>Dirección de envío</h3>
+                        <div class="cuenta-contenedor-datos">
+                            <div class="cuenta-calle">
+                                <label for="cuentaInputCalle">calle</label>
+                                <input id="cuentaInputCalle" name="nombreCalle" type="text" placeholder="calle" />
+                            </div>
+                            <div class="cuenta-ciudad">
+                                <label for="cuentaInputCiudad">ciudad</label>
+                                <input id="cuentaInputCiudad" name="ciudad" type="text" placeholder="ciudad" />
+                            </div>
+                        </div>
+                        <div class="cuenta-contenedor-datos">
+                            <div class="cuenta-cp">
+                                <label for="cuentaInputCP">código postal</label>
+                                <input id="cuentaInputCP" name="codigoPostal" type="text" placeholder="código postal" />
+                            </div>
+                            <div class="cuenta-pais">
+                                <label for="cuentaInputPais">país</label>
+                                <input id="cuentaInputPais" name="pais" type="text" placeholder="país" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="cuenta-mensaje" class="cuenta-mensaje" aria-live="polite"></div>
+                    <button type="submit" class="cta cuenta-guardar">guardar cambios</button>
+                </form>
+                <div class="botones-cuenta">
+                    <button class="cta cuenta-logout">cerrar sesión</button>
+                    <button class="cta cuenta-borrar" type="button">borrar cuenta</button>
+                </div>
+            </div>
         </section>
     </main>
 
