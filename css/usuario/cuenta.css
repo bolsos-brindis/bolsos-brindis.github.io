@@ -80,8 +80,7 @@
 }
 
 @media (hover:hover) {
-    .cuenta .cta:hover,
-    .cuenta .cta:focus {
+    .cuenta .cta:hover {
         background: var(--color-texto);
         color: white;
     }
@@ -110,4 +109,25 @@
     font-size: 1.1rem;
     font-weight: 400;
     text-align: center;
+}
+
+.cuenta-mensaje {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    /* border-radius: .25rem; */
+    /* border: 1px solid var(--color-texto); */
+    background-color: var(--color-acento);
+    font-size: .95rem;
+    display: block;
+
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+}
+
+.cuenta-mensaje.activo {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }

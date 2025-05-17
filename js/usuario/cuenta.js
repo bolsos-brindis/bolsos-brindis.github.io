@@ -8,6 +8,19 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('form-cuenta');
     const mensaje = document.getElementById('cuenta-mensaje');
 
+    // Función para mostrar mensajes animados
+    function mostrarMensaje(texto, tipo = "success") {
+        mensaje.textContent = texto;
+        mensaje.classList.remove('error', 'info', 'activo');
+        if (tipo === 'error') mensaje.classList.add('error');
+        else if (tipo === 'info') mensaje.classList.add('info');
+        mensaje.classList.add('activo');
+        // Oculta el mensaje después de 2.5s
+        setTimeout(() => {
+            mensaje.classList.remove('activo');
+        }, 2500);
+    }
+
     // Rellenar los inputs
     form.nombre.value = usuario.nombre || '';
     form.correo.value = usuario.correo || '';
@@ -27,8 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // Validación simple de tarjeta (opcional)
         const tarjeta = form.numeroTarjeta.value.replace(/\s+/g, '');
         if (tarjeta && !/^\d{13,19}$/.test(tarjeta)) {
-            mensaje.textContent = 'Número de tarjeta no válido.';
-            mensaje.style.color = '#f44336';
+            mostrarMensaje('Número de tarjeta no válido.', 'error');
             return;
         }
 
@@ -48,9 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
         };
 
         localStorage.setItem('usuario', JSON.stringify(usuario));
-        mensaje.textContent = '¡Cambios guardados!';
-        mensaje.style.color = '#388e3c';
-        setTimeout(() => mensaje.textContent = '', 2000);
+        mostrarMensaje('¡Cambios guardados!');
     });
 
     // Cerrar sesión
@@ -61,10 +71,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Borrar cuenta
     document.querySelector('.cuenta-borrar').addEventListener('click', () => {
-        if (confirm('¿Seguro que quieres borrar tu cuenta? Esta acción no se puede deshacer.')) {
+        if (confirm('¿Estás segura de que quieres borrar tu cuenta?\nEsta acción no se puede deshacer.')) {
             localStorage.removeItem('usuario');
             sessionStorage.removeItem('sesionIniciada');
-            // Puedes redirigir a la home o a la página de acceso
+            // Borrar también cesta y favoritos
+            localStorage.removeItem('favoritosBrindis');
+            localStorage.removeItem('brindisCesta');
             window.location.href = '/html/usuario/acceso.html';
         }
     });
