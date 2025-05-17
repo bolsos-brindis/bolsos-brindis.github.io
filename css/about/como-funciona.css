@@ -155,4 +155,5 @@ main {
     color: var(--color-principal);
     font-size: 1.5rem;
     margin-top: 2rem;
+    text-align: center;
 }

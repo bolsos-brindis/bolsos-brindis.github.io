@@ -7,20 +7,23 @@ main {
     margin: 0 auto;
     padding: 0 1.5rem;
     padding-top: 4rem;
+    padding-bottom: 4rem;
+    /* Añadido: más espacio al final */
 }
 
 .articulo-imagen {
-    margin: 0 auto;
+    margin: 0 auto 2.5rem auto;
+    /* Más espacio inferior */
     max-width: 65%;
-    transform: rotate(.5deg);
+    transform: rotate(.25deg);
     transition: transform 0.3s ease, scale 0.3s ease;
-    margin-bottom: 2rem;
     border-radius: .1rem;
+    display: block;
 }
 
 .articulo-imagen:hover {
-    transform: rotate(0deg);
-    transform: scale(1.03);
+    transform: rotate(0deg) scale(1.03);
+    /* Un solo transform, combinando ambos efectos */
 }
 
 .articulo-titulo {
@@ -28,7 +31,11 @@ main {
     text-align: center;
     font-size: 2rem;
     color: var(--color-texto);
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
+    /* Un poco más de aire */
+    margin-top: 0.5rem;
+    /* Por si acaso la imagen no está justo encima */
+    letter-spacing: 0.03em;
 }
 
 .articulo-contenedor .articulo-autor {
@@ -37,58 +44,79 @@ main {
     font-weight: 600;
     max-width: max-content;
     border-radius: .25rem;
-    padding: .25rem .5rem;
-    margin: 0 auto;
-    margin-bottom: 4rem;
-    font-size: .9rem;
+    padding: .25rem .7rem;
+    margin: 0.5rem auto 3rem auto;
+    /* Más aire arriba, menos abajo */
+    font-size: .95rem;
 }
 
 .articulo-contenedor h3 {
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     margin-top: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
 }
 
 .articulo-contenedor p {
-    line-height: 1.6;
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    /* Un poco más de aire entre líneas */
+    font-size: 1.08rem;
+    margin-bottom: 1.7rem;
+    /* Más aire entre párrafos */
+    margin-top: 0;
 }
 
 .articulo-contenedor ul {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.7rem;
+    margin-top: 0.5rem;
 }
 
 .articulo-contenedor ul li {
     list-style-type: disc;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+    /* Un poco menos para listas largas */
     margin-left: 1.5rem;
-    font-size: 1.1rem;
+    font-size: 1.08rem;
 }
 
 .articulo-cta {
     border-bottom: 1px solid var(--color-texto);
     font-weight: 600;
+    padding-bottom: 0.2rem;
+    /* margin-bottom: 2rem; */
+    display: inline-block;
 }
 
 .articulo-navegacion {
     max-width: 900px;
     margin: 0 auto;
-    padding: 2rem 1.5rem;
-
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    /* Un poco más arriba, menos abajo */
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    font-size: .9rem;
+    gap: 1.5rem;
+    font-size: .95rem;
 }
 
-.articulo-navegacion a:hover .articulo-flecha{
+.articulo-navegacion a:hover .articulo-flecha {
     color: black;
 }
 
 @media (max-width: 700px) {
     .articulo-imagen {
-        max-width: 90%;   
-    }       
+        max-width: 95%;
+        margin-bottom: 1.5rem;
+    }
+
+    .articulo-contenedor {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .articulo-navegacion {
+        padding: 1.5rem 0.5rem 1rem 0.5rem;
+        gap: 0.7rem;
+        font-size: .98rem;
+    }
 }
