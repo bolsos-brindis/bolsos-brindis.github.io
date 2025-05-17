@@ -1,4 +1,4 @@
-function ajustarAlturaSobreNosotros() {
+function ajustarAltura404() {
     const barra = document.getElementById("barraNavegacion");
     const seccion = document.querySelector(".error");
 
@@ -11,7 +11,7 @@ function ajustarAlturaSobreNosotros() {
 }
 
 // Ejecutar al cargar y al redimensionar
-window.addEventListener("load", ajustarAlturaSobreNosotros);
+window.addEventListener("load", ajustarAltura404);
 if (!isTouchDevice()) {
-    window.addEventListener("resize", ajustarAlturaSobreNosotros);
+    window.addEventListener("resize", ajustarAltura404);
 }
