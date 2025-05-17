@@ -456,9 +456,14 @@ document.getElementById('contenedorFavoritos').addEventListener('click', (e) => 
 
 
 /* ===== 🍾 BOTÓN DE USUARIO ===== */
-document.querySelectorAll(".botonCuenta").forEach((boton) => {
+document.querySelectorAll('.botonCuenta').forEach((boton) => {
   boton.addEventListener('click', (e) => {
+    // Al pulsar el botón de cuenta, redireccionar al usuario dependiendo de si hay una sesión iniciada.
     e.preventDefault();
-    console.log("xd");
+    if (sessionStorage.getItem('usuario') !== null) {
+      window.location.href = '/html/usuario/cuenta.html';
+    } else {
+      window.location.href = '/html/usuario/acceso.html';
+    }
   })
 });
