@@ -453,3 +453,12 @@ document.getElementById('contenedorFavoritos').addEventListener('click', (e) => 
 
   actualizarResumenFavoritos();
 });
+
+
+/* ===== 🍾 BOTÓN DE USUARIO ===== */
+document.querySelectorAll(".botonCuenta").forEach((boton) => {
+  boton.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log("xd");
+  })
+});
