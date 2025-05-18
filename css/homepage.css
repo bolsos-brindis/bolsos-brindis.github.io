@@ -220,7 +220,7 @@
     font-family: "Dancing Script";
     text-transform: lowercase;
     font-size: 2rem;
-    
+
 }
 
 /* .producto-tarjeta:hover h3 {
@@ -796,4 +796,221 @@
     .newsletter-formulario button {
         padding: .5rem .75rem;
     }
+}
+
+/* ===== 🍾 MODAL COOKIES ===== */
+.modal-cookies {
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-fondo);
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.cookies-informacion {
+    flex: 0 0 66%;
+}
+
+.cookies-informacion h2 {
+    margin-bottom: .5rem;
+}
+
+.cookies-informacion p {
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+.cookies-botones {
+    flex: 0 0 33%;
+    width: 33%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.cookies-botones button {
+    padding: .75rem 2.5rem;
+    border-radius: .15rem;
+}
+
+.fondo-cookies {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    /* display: none;
+    opacity: 0; */
+    animation: none;
+}
+
+@media (max-width: 1200px) {
+    .modal-cookies {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .cookies-informacion {
+        width: 100%;
+    }
+
+    .cookies-botones {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+}
+
+/* ===== 🍾 MODAL NEWSLETTER ===== */
+.modal-newsletter label {
+    display: none;
+}
+
+.modal-newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 150;
+    padding: 0 1.5rem;
+}
+
+.modal-contenedor {
+    background: var(--color-fondo);
+    max-width: 780px;
+
+    display: flex;
+    border-radius: .25rem;
+    overflow: hidden;
+}
+
+.newsletter-imagen {
+    flex: 0 0 50%;
+}
+
+.newsletter-imagen img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.newsletter-contenido {
+    flex: 0 0 50%;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.newsletter-contenido h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin-bottom: .8rem;
+}
+
+.newsletter-subtitulo {
+    font-size: 1.25rem;
+}
+
+.newsletter-contenido h3 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-mensaje {
+    font-size: .9rem;
+    margin-bottom: 2rem;
+}
+
+.modal-newsletter-formulario input {
+    width: 100%;
+    padding: .6rem 1rem;
+    border: none;
+    border-radius: .25rem;
+    font-family: "TT Chocolates";
+    font-size: .95rem;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+.modal-newsletter-formulario input:focus {
+    outline: none;
+}
+
+.modal-newsletter-formulario button {
+    width: 100%;
+    padding: .6rem;
+    margin-bottom: .5rem;
+}
+
+.newsletter-legal {
+    font-size: .75rem;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .newsletter-contenido {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .newsletter-contenido h2 {
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
+
+    .newsletter-subtitulo {
+        font-size: .85rem;
+    }
+
+    .newsletter-contenido h3 {
+        font-size: .75rem;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter-mensaje {
+        font-size: .75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .modal-newsletter-formulario input {
+        font-size: .75rem;
+        padding: .5rem .75rem;
+        margin-bottom: .7rem;
+    }
+
+    .modal-newsletter-formulario button {
+        padding: .45rem;
+        font-size: .90rem;
+    }
+
+    .newsletter-legal {
+        font-size: .5rem;
+    }
+}
+
+.fondo-newsletter {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    /* display: none;
+    opacity: 0; */
+    animation: none;
 }

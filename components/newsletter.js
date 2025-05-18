@@ -14,7 +14,7 @@ class Newsletter extends HTMLElement {
             <aside class="modal-newsletter">
                 <div class="modal-contenedor">
                     <div class="newsletter-imagen">
-                        <img src="/dev/assets/newsletter.avif">
+                        <img src="/assets/images/homepage/newsletter/newsletter.avif">
                     </div>
                     <div class="newsletter-contenido">
                         <h2>10% de descuento<br /><span class="newsletter-subtitulo">en tu primera compra</span></h2>
