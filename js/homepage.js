@@ -236,3 +236,13 @@ window.addEventListener('load', () => {
     const y = destino.getBoundingClientRect().top + window.scrollY - alturaBarra - espaciadoExtra;
     window.scrollTo({ top: y, behavior: 'auto' });
 });
+
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        document.querySelectorAll('img.lazy-deferred').forEach(function (img) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            img.classList.remove('lazy-deferred');
+        });
+    }, 200);
+});
