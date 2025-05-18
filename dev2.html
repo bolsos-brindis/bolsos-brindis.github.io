@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- Metadatos para SEO -->
-    <title>&lt;dev-brindis /&gt;</title>
+    <title>&lt;dev2-brindis /&gt;</title>
     <meta name="description"
         content="¡Bienvenida a Brindis! Descubre bolsos de mujer con carga inalámbrica que combinan diseño, innovación y funcionalidad. Eleva tu estilo con tecnología sin límites." />
     <meta name="keywords" content="bolsos" />
@@ -42,16 +42,16 @@
 
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/dev/dev.css" />
+    <link rel="stylesheet" href="/dev/dev2.css" />
 
     <!-- Componentes -->
     <script src="/components/header.js" defer></script>
     <script src="/components/footer.js" defer></script>
-    <script src="/components/cookies.js" defer></script>
+    <!-- <script src="/components/newsletter.js" defer></script> -->
 
     <!-- Scripts -->
     <script src="/js/app.js" defer></script>
-    <script src="/dev/dev.js" defer></script>
+    <script src="/dev/dev2.js" defer></script>
 </head>
 
 <body>
@@ -60,26 +60,44 @@
     </header>
 
     <main>
-        <!-- <div class="fondo-cookies"></div>
-        <aside class="modal-cookies">
-            <div class="cookies-informacion">
-                <h2>Valoramos tu privacidad</h2>
-                <p>Utilizamos cookies y otras tecnologías para personalizar tu experiencia, para fines de marketing y
-                    recopilar análisis. Más información en la <a class="underline" href="#">Política de Privacidad</a>
-                </p>
+        <aside class="modal-newsletter">
+            <div class="modal-contenedor">
+                <div class="newsletter-imagen">
+                    <img src="/dev/assets/newsletter.avif">
+                </div>
+                <div class="newsletter-contenido">
+                    <h2>10% de descuento<br /><span class="newsletter-subtitulo">en tu primera compra</span></h2>
+                    <h3>Solo por tiempo limitado</h3>
+                    <p class="newsletter-mensaje">
+                        Suscríbete para recibir tu <strong>descuento de primera compra</strong>. Además, disfruta de
+                        <strong>accesos exclusivos</strong> y
+                        <strong>ofertas únicas</strong>.
+                    </p>
+                    <form class="modal-newsletter-formulario">
+                        <div class="newsletter-nombre">
+                            <label for="newsletterInputNombre">nombre</label>
+                            <input id="newsletterInputNombre" class="newsletter-nombre" name="nombre" type="text"
+                                placeholder="nombre" required />
+                        </div>
+                        <div class="newsletter-correo">
+                            <label for="newsletterInputCorreo">email</label>
+                            <input id="newsletterInputCorreo" class="newsletter-correo" name="correo" type="email"
+                                placeholder="correo" />
+                        </div>
+                        <button class="cta2" type="submit">¡lo quiero!</button>
+                    </form>
+                    <p class="newsletter-legal">Al suscribirte, aceptas nuestra <a class="underline"
+                            href="/html/legal/politica-privacidad.html">Política de Privacidad</a>. Puedes
+                        darte de baja en cualquier momento.</p>
+                </div>
             </div>
-            <div class="cookies-botones">
-                <button class="cta2" type="button">Aceptar</button>
-                <button class="cta2" type="button">Rechazar</button>
-            </div>
-        </aside> -->
+        </aside>
     </main>
 
     <footer>
         <brindis-footer></brindis-footer>
     </footer>
 
-    <brindis-cookies></brindis-cookies>
 </body>
 
 </html>
