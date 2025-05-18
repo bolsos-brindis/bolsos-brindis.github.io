@@ -54,9 +54,10 @@ class Footer extends HTMLElement {
                     <!-- Legal -->
                     <nav class="footer-bloque footer-legal">
                         <ul>
+                            <li><a href="/html/legal/aviso-legal.html">aviso legal</a></li>
                             <li><a href="/html/legal/politica-privacidad.html">política de privacidad</a></li>
                             <li><a href="/html/legal/politica-cookies.html">cookies</a></li>
-                            <li><a href="/html/legal/condiciones-venta.html">condiciones de venta</a></li>
+                            <li><a href="/html/legal/terminos-y-condiciones.html">términos y condiciones</a></li>
                         </ul>
                     </nav>
                 </div>
