@@ -1,5 +1,5 @@
 /* ===== 🍾 HERO BANNER ===== */
-window.addEventListener('load', calcularAlturaHeroBanner);
+window.addEventListener('DOMContentLoaded', calcularAlturaHeroBanner);
 window.matchMedia('(max-width: 1200px)').addEventListener('change', calcularAlturaHeroBanner);
 window.addEventListener('orientationchange', () => {
     setTimeout(calcularAlturaHeroBanner, 300);
@@ -8,8 +8,6 @@ window.addEventListener('orientationchange', () => {
 if (!isTouchDevice()) {
     window.addEventListener('resize', calcularAlturaHeroBanner);
 }
-// Debounce the fuck out of it
-// window.addEventListener('resize', calcularAlturaHeroBanner);
 
 function calcularAlturaHeroBanner() {
     const heroBannerContenedor = document.getElementById('heroBannerContenedor');
@@ -21,16 +19,6 @@ function calcularAlturaHeroBanner() {
     heroBannerImagen.style.top = `-${alturaBarraNavegacion}`;
     heroBannerImagen.style.height = `calc(${alturaViewport}px - 2rem)`;
 }
-
-// document.getElementById('ctaHero').addEventListener('click', () => {
-//     const destino = document.getElementById('marquee');
-//     const barraNavegacionAltura = document.getElementById('barraNavegacion').offsetHeight;
-//     const offset = destino.getBoundingClientRect().top + window.scrollY - barraNavegacionAltura + 1;
-//     window.scrollTo({
-//         top: offset,
-//         behavior: 'smooth'
-//     });
-// });
 
 
 /* ===== 🍾 PRODUCTOS ===== */
