@@ -221,3 +221,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+// CARGAR LAS MINIATURAS SOLO SI SE VERÁN
+function cargarMiniaturasSiCorresponde() {
+    if (window.matchMedia('(min-width: 1201px)').matches) {
+        document.querySelectorAll('.barra-imagenes img[data-src]').forEach(img => {
+            img.src = img.dataset.src;
+        });
+    }
+}
+
+window.addEventListener('DOMContentLoaded', cargarMiniaturasSiCorresponde);
+window.addEventListener('resize', cargarMiniaturasSiCorresponde);
+window.addEventListener('orientationchange', cargarMiniaturasSiCorresponde);
