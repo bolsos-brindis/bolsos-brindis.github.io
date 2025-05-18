@@ -636,6 +636,20 @@ footer {
     .footer-legal ul {
         gap: 1rem;
     }
+
+    .footer-legal a {
+        font-size: .75rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer-legal ul {
+        gap: .80rem;
+    }
+
+    .footer-legal a {
+        font-size: .65rem;
+    }
 }
 
 
