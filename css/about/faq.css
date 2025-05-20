@@ -21,7 +21,7 @@ main {
 .faq-preguntas details {
     border-bottom: 1px solid var(--color-separador);
     padding: 1rem 0;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
 }
 
 .faq-preguntas summary {

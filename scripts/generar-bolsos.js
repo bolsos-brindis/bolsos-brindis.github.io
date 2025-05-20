@@ -85,6 +85,6 @@ inventario.forEach(producto => {
     // Guardar archivo
     const rutaArchivo = path.join(rutaSalida, `${skuColor}.html`);
     fs.writeFileSync(rutaArchivo, paginaHTML, "utf8");
-    console.log(`👜 Página generada: ${rutaArchivo}`);
+    console.log(`🍾 Página generada: ${rutaArchivo}`);
   });
 });

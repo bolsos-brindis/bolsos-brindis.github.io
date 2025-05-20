@@ -61,7 +61,7 @@
 
 .sobre-nosotros-parrafos {
     line-height: 2;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
     /* background-color: blue; */
     padding-right: 2rem;
 }

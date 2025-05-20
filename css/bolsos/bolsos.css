@@ -95,7 +95,7 @@
 .producto-nombre {
     font-weight: 600;
     font-size: 1.75rem;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
 }
 
 .producto-favorito.activo svg {
@@ -104,7 +104,7 @@
 
 .producto-tagline {
     margin-bottom: .75rem;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
 }
 
 .producto-reviews {
@@ -227,7 +227,7 @@
 .producto-info details {
     border-bottom: 1px solid var(--color-separador);
     padding: 1rem 0;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
 }
 
 .producto-info summary {

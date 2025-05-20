@@ -134,7 +134,7 @@ main {
 .texto-contenedor {
     margin: 0 auto;
     padding: 0 2rem;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
 }
 
 .texto-contenedor h2 {

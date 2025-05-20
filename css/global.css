@@ -416,8 +416,11 @@ header {
 
 /* 🖼️ Logo */
 .logo {
-    font-family: "Univers 67 Condensed";
-    font-size: 1.2rem;
+    /* font-family: "Univers 67 Condensed"; */
+    /* font-size: 1.2rem; */
+    font-family: "Tan Nimbus";
+    text-transform: lowercase;
+    font-size: 1rem;
     color: var(--color-texto);
 }
 
@@ -561,7 +564,7 @@ header {
     }
 
     .logo {
-        font-size: 1rem;
+        font-size: .85rem;
     }
 }
 
