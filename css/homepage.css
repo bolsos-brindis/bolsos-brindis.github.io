@@ -747,6 +747,10 @@
     text-decoration: underline;
 }
 
+.newsletter-aviso input[type="checkbox"] {
+    accent-color: var(--color-acento);    
+}
+
 /* Modal */
 .newsletter-modal {
     max-width: 710px;
@@ -787,7 +791,7 @@
     }
 
     .newsletter-aviso {
-        font-size: .75rem
+        font-size: .75rem;
     }
 
     .newsletter-formulario button {

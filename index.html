@@ -601,17 +601,23 @@
 
         <section class="newsletter">
             <div id="contenedorNewsletter" class="contenedor">
-                <form action="#">
-                    <label class="newsletter-encabezado" for="emailNewsletter">suscribete para novedades:</label>
+                <form action="#" id="newsletterForm">
+                    <label class="newsletter-encabezado" for="emailNewsletter">
+                        Suscríbete para novedades:
+                    </label>
                     <div class="newsletter-formulario">
-                        <input id="emailNewsletter" type="email" placeholder="email" required>
-                        <button class="cta" type="submit">suscribirse</button>
+                        <input id="emailNewsletter" type="email" placeholder="Email" required>
+                        <button class="cta" type="submit">Suscribirse</button>
                     </div>
-                    <p class="newsletter-aviso">al registrarte aceptas nuestros <a
-                            href="/html/legal/politica-privacidad.html">términos</a>.</p>
+                    <div class="newsletter-aviso">
+                        <input type="checkbox" id="aceptoTerminos" required>
+                        <label for="aceptoTerminos">
+                            Acepto los <a href="/html/legal/terminos-y-condiciones.html" target="_blank">términos</a> y la <a href="/html/legal/politica-privacidad.html">política de privacidad</a>.
+                        </label>
+                    </div>
                 </form>
                 <div id="newsletterModal" class="modal newsletter-modal">
-                    ¡bienvenida a brindis, <span id="correoMostrado"></span>!
+                    ¡Bienvenida a Brindis, <span id="correoMostrado"></span>!
                 </div>
             </div>
         </section>
