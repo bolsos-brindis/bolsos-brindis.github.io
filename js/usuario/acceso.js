@@ -33,7 +33,7 @@ window.addEventListener('load', () => {
             </div>
             <button class="cta acceso-boton" id="btn-iniciar-sesion">iniciar sesión</button>
             <p class="acceso-aviso">
-                Al iniciar sesión, aceptas nuestros <a href="/html/legal/terminos-y-condiciones.html">términos</a> y la <a href="/html/legal/politica-privacidad.html">política de privacidad.</a>
+                Al iniciar sesión, aceptas nuestros <a class="underline" href="/html/legal/terminos-y-condiciones.html">términos</a> y la <a class="underline" href="/html/legal/politica-privacidad.html">política de privacidad.</a>
             </p>
         `;
 
@@ -56,7 +56,7 @@ window.addEventListener('load', () => {
                 <button class="cta acceso-boton" type="submit">registrarse</button>
             </form>
             <p class="acceso-aviso">
-                Al registrarte, aceptas nuestros <a href="">términos</a> y la <a href="">política de privacidad</a>.
+                Al registrarte, aceptas nuestros <a class="underline" href="/html/legal/terminos-y-condiciones.html">términos</a> y la <a class="underline" href="/html/legal/politica-privacidad.html">política de privacidad</a>.
             </p>
         `;
 
